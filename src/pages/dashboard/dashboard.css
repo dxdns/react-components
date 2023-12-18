@@ -1,0 +1,42 @@
+main {
+    margin-top: 1.4rem;
+    grid-area: main;
+}
+
+main .insights {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.6rem;
+}
+
+main .insights>div .middle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+main .insights h3 {
+    margin: 1rem 0 0.6rem;
+    font-size: 1rem;
+}
+
+main .insights small {
+    margin-top: 1.3rem;
+    display: block;
+}
+
+/* recent orders */
+main .recent-orders {
+    margin-top: 2rem;
+}
+
+main .recent-orders h2 {
+    margin-bottom: 2rem;
+}
+
+main .recent-orders a {
+    text-align: center;
+    display: block;
+    margin: 1rem auto;
+    color: var(--color-primary);
+}
