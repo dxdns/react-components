@@ -1,0 +1,11 @@
+.update {
+    display: grid;
+    grid-template-columns: 2.6rem auto;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    align-items: center;
+}
+
+.update .message {
+    font-size: 12px;
+}

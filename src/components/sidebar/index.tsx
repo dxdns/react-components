@@ -1,16 +1,23 @@
 import React from "react"
 import Logo from "../logo"
 import { data } from "./data"
-import "./sidebar.css"
+import "./style.css"
 
 export default function Sidebar() {
     const [currentIndex, setCurrentIndex] = React.useState(0)
+
+    function closeSidebar() {
+        const sideMenu = document.querySelector("aside")
+        if (sideMenu) {
+            sideMenu.style.display = "none"
+        }
+    }
 
     return (
         <aside>
             <div className="top">
                 <Logo />
-                <div className="close" id="close-btn">
+                <div className="close" id="close-btn" onClick={closeSidebar}>
                     <span className="material-icons-sharp">close</span>
                 </div>
             </div>

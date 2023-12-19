@@ -1,13 +1,21 @@
-import "./icon.css"
+import "./style.css"
 
 type Props = {
     name: string
-    color?: "primary" | "success" | "danger"
+    bgColor?: "primary" | "success" | "danger"
+    variant?: "contained" | "outlined" | "text"
 }
 
-export default function Icon({ name, color }: Props) {
+export default function Icon({ name, bgColor = "primary", variant = "contained" }: Props) {
     return (
-        <span className="icon material-icons-sharp" style={{ backgroundColor: `var(--color-${color ?? "primary"})` }}>
+        <span
+            id="icon"
+            className={`icon material-icons-sharp ${variant}`}
+            style={{
+                backgroundColor: `var(--color-${bgColor})`,
+                // color: `var(--color-${color})`
+            }}
+        >
             {name}
         </span>
     )

@@ -1,0 +1,62 @@
+.right {
+    margin-top: 1.4rem;
+    grid-area: right;
+}
+
+.right .top {
+    display: flex;
+    justify-content: end;
+    gap: 2rem;
+    align-items: center;
+}
+
+.right .top button {
+    display: none;
+}
+
+.right .theme-toggler {
+    background: var(--color-light);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 1.6rem;
+    width: 4.2rem;
+    cursor: pointer;
+    border-radius: var(--border-radius-1);
+}
+
+.right .theme-toggler span {
+    font-size: 1.2rem;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.right .theme-toggler span.active {
+    background: var(--color-primary);
+    color: white;
+    border-radius: var(--border-radius-1);
+}
+
+.right .top .profile {
+    display: flex;
+    gap: 2rem;
+    text-align: right;
+    align-items: center;
+}
+
+.right .recent-updates, .sales-analytics {
+    margin-top: 2rem;
+}
+
+.right .recent-updates, .sales-analytics h2 {
+    margin-bottom: 0.8rem;
+}
+
+.right .sales-analytics .add-product {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

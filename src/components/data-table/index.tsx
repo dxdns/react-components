@@ -1,4 +1,4 @@
-import "./data-table.css"
+import "./style.css"
 
 type Props = {
     columns?: {

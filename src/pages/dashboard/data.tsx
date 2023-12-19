@@ -1,3 +1,5 @@
+import Icon from "../../components/icon"
+
 export const columns = [
     {
         name: "product_name",
@@ -49,5 +51,26 @@ export const rows = [
         product_number: 3,
         payment: "Due",
         status: "Delivered"
+    }
+]
+
+export const insights = [
+    {
+        icon: <Icon name="shopping_cart" />,
+        label: "Total Sales",
+        value: 25.024,
+        percent: 81 
+    },
+    {
+        icon: <Icon name="local_mall" bgColor="danger" />,
+        label: "Total Orders",
+        value: 15.024,
+        percent: 70
+    },
+    {
+        icon: <Icon name="person" bgColor="success" />,
+        label: "Total Customers",
+        value: 10.024,
+        percent: 50
     }
 ]

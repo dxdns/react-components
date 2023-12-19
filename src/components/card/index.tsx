@@ -1,4 +1,4 @@
-import "./card.css"
+import "./style.css"
 
 type Props = {
     children: JSX.Element | JSX.Element[]

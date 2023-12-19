@@ -1,16 +1,17 @@
 .button {
-    background-color: var(--color-primary);
+    background: var(--color-primary);
     font-weight: bold;
     cursor: pointer;
-    border-radius: 3px;
+    border-radius: 5px;
     color: var(--color-white);
     display: inline-block;
-    margin: 0.5rem 1rem;
+    margin: 0.5rem 0;
     padding: 0.5rem 0;
     transition: all 200ms ease-in-out;
-    width: 11rem;
+    width: 100%;
 }
 
 .button:hover {
-    background-color: var(--color-primary-variant);
+    background: var(--color-light);
+    color: var(--color-dark);
 }
