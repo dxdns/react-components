@@ -1,10 +1,14 @@
-import React from "react"
 import Logo from "../logo"
 import { data } from "./data"
 import "./style.css"
+import { Link, useLocation } from "react-router-dom"
 
 export default function Sidebar() {
-    const [currentIndex, setCurrentIndex] = React.useState(0)
+    const location = useLocation()
+
+    function linkActive(path: string) {
+        return location.pathname.split("/")[1] === path.replace("/", "")
+    }
 
     function closeSidebar() {
         const sideMenu = document.querySelector("aside")
@@ -23,17 +27,17 @@ export default function Sidebar() {
             </div>
 
             <div className="sidebar">
-                {data.map((item, idx) => (
-                    <a
+                {data.map((item) => (
+                    <Link
                         key={item.label}
-                        href="#"
-                        className={`${currentIndex === idx ? "active" : ""}`}
-                        onClick={() => setCurrentIndex(idx)}
+                        className={`${linkActive(item.path) ? "active" : ""}`}
+                        to={item.path}
                     >
                         <span className="material-icons-sharp">{item.icon}</span>
                         <h3>{item.label}</h3>
-                    </a>
+                    </Link>
                 ))}
+
             </div>
         </aside>
     )

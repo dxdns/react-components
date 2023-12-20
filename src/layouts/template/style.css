@@ -180,6 +180,14 @@
     .right .top button span {
         font-size: 2rem;
     }
+
+    #menu-btn {
+        display: inline-block;
+    }
+
+    #close-btn {
+        display: inline-block;
+    }
 }
 
 /* media queries */

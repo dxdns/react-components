@@ -2,12 +2,12 @@ export const data = [
     {
         label: "Dashboard",
         icon: "grid_view",
-        path: "#",
+        path: "/",
     },
     {
         label: "Customers",
         icon: "person_outline",
-        path: "#",
+        path: "customer",
     },
     {
         label: "Logout",

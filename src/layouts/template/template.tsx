@@ -1,13 +1,14 @@
 import "./style.css"
+import { Outlet } from "react-router-dom"
+import Sidebar from "../../components/sidebar"
+import Right from "../../components/right"
 
-type Props = {
-    children: JSX.Element | JSX.Element[]
-}
-
-export default function Template({ children }: Props) {
+export default function Template() {
     return (
         <div className="template">
-            {children}
+            <Sidebar />
+            <Outlet />
+            <Right />
         </div>
     )
 }
