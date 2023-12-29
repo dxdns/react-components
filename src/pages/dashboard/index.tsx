@@ -7,7 +7,7 @@ import { columns, insights, rows } from "./data"
 
 export default function Dashboard() {
     return (
-        <main>
+        <>
             <h1>Dashboard</h1>
             <DatePicker />
 
@@ -30,6 +30,6 @@ export default function Dashboard() {
                     <a href="">Show All</a>
                 </div>
             </Card>
-        </main>
+        </>
     )
 }

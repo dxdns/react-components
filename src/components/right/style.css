@@ -48,11 +48,13 @@
     /* padding: 1rem; */
 }
 
-.right .recent-updates, .sales-analytics {
+.right .recent-updates,
+.sales-analytics {
     margin-top: 2rem;
 }
 
-.right .recent-updates, .sales-analytics h2 {
+.right .recent-updates,
+.sales-analytics h2 {
     margin-bottom: 0.8rem;
 }
 
@@ -60,4 +62,53 @@
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+@media screen and (max-width: 768px) {
+    .right {
+        width: 94%;
+        margin: 0 auto 4rem;
+        padding: 0 1rem;
+    }
+
+    .right .top {
+        position: fixed;
+        top: 0;
+        left: 0;
+        align-items: center;
+        padding: 0 0.8rem;
+        height: 4.6rem;
+        background: var(--color-white);
+        width: 100%;
+        margin: 0;
+        z-index: 2;
+        box-shadow: 0 1rem 1rem var(--color-light);
+    }
+
+    .right .top .theme-toggler {
+        width: 4.4rem;
+        position: absolute;
+        left: 80%;
+    }
+
+    .right .profile .info {
+        display: none;
+    }
+
+    .right .top button {
+        display: inline-block;
+        background: transparent;
+        cursor: pointer;
+        color: var(--color-dark);
+        position: absolute;
+        left: 1rem;
+    }
+
+    .right .top button span {
+        font-size: 2rem;
+    }
+
+    #menu-btn {
+        display: inline-block;
+    }
 }

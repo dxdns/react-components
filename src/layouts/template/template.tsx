@@ -7,7 +7,9 @@ export default function Template() {
     return (
         <div className="template">
             <Sidebar />
-            <Outlet />
+            <main>
+                <Outlet />
+            </main>
             <Right />
         </div>
     )
