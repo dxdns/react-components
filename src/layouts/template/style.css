@@ -3,7 +3,7 @@
     width: 96%;
     margin: 0 auto;
     gap: 1.8rem;
-    grid-template-columns: 13rem auto 20rem;
+    grid-template-columns: 13rem auto 17rem;
     grid-template-areas:
         "sidebar main right"
     ;

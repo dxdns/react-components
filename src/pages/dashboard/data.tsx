@@ -71,6 +71,6 @@ export const insights = [
         icon: <Icon name="person" bgColor="success" />,
         label: "Total Customers",
         value: 10.024,
-        percent: 50
+        percent: 19
     }
 ]

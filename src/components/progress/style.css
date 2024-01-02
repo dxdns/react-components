@@ -24,9 +24,9 @@
 
 .progress svg circle {
     fill: none;
-    stroke: var(--color-primary);
+    /* stroke: var(--color-primary); */
     stroke-linecap: round;
-    transform: translate(5px, 5px);
+    /* transform: translate(5px, 5px); */
     animation: draw 1s linear forwards;
     stroke-dashoffset: 100;
 }
