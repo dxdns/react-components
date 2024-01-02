@@ -1,15 +1,9 @@
 import Logo from "../logo"
 import { data } from "./data"
 import "./style.css"
-import { Link, useLocation } from "react-router-dom"
+import { NavLink } from "react-router-dom"
 
 export default function Sidebar() {
-    const location = useLocation()
-
-    function linkActive(path: string) {
-        return location.pathname.split("/")[1] === path.replace("/", "")
-    }
-
     function closeSidebar() {
         const sideMenu = document.querySelector("aside")
         if (sideMenu) {
@@ -28,14 +22,14 @@ export default function Sidebar() {
 
             <div className="sidebar">
                 {data.map((item) => (
-                    <Link
+                    <NavLink
                         key={item.label}
-                        className={`${linkActive(item.path) ? "active" : ""}`}
+                        className={({ isActive }) => isActive ? "active" : ""}
                         to={item.path}
                     >
                         <span className="material-icons-sharp">{item.icon}</span>
                         <h3>{item.label}</h3>
-                    </Link>
+                    </NavLink>
                 ))}
 
             </div>

@@ -12,6 +12,6 @@ export const data = [
     {
         label: "Logout",
         icon: "logout",
-        path: "#",
+        path: "login",
     }
 ]
