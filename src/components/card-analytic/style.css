@@ -7,7 +7,15 @@
 .card-analytic .right {
     display: flex;
     justify-content: space-between;
-    align-items: start;
+    align-items: baseline;
     margin: 0;
     width: 100%;
+    flex-direction: column;
+    gap: 5px;
+}
+
+@media screen and (max-width: 1200px) {
+    .card-analytic .right {
+        flex-direction: row;
+    }
 }

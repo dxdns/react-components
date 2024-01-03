@@ -1,6 +1,7 @@
 aside {
     height: 100vh;
     grid-area: sidebar;
+    display: block !important;
 }
 
 aside .top {
@@ -82,7 +83,7 @@ aside .sidebar .message-count {
     border-radius: var(--border-radius-1);
 }
 
-@media screen and (max-width: 1200px) and (min-width: 768px) {
+@media screen and (max-width: 1200px) {
     aside .top {
         margin-left: 1.7rem;
     }
@@ -115,7 +116,7 @@ aside .sidebar .message-count {
         box-shadow: 1rem 3rem 4rem var(--color-light);
         height: 100vh;
         padding-right: var(--card-padding);
-        display: none;
+        display: none !important;
         animation: showMenu 400ms ease forwards;
     }
 
@@ -154,11 +155,5 @@ aside .sidebar .message-count {
 
     #close-btn {
         display: inline-block;
-    }
-}
-
-@media screen and (min-width: 768px) {
-    aside {
-        display: block !important;
     }
 }

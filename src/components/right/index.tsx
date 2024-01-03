@@ -16,7 +16,7 @@ export default function Right() {
     function openSidebar() {
         const sideMenu = document.querySelector("aside")
         if (sideMenu) {
-            sideMenu.style.display = "block"
+            sideMenu.style.setProperty("display", "block", "important")
         }
     }
 
