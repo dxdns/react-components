@@ -1,7 +1,7 @@
 import React from "react"
 import "./style.css"
 
-type Props = React.ButtonHTMLAttributes<HTMLInputElement> & {
+type Props = React.InputHTMLAttributes<HTMLInputElement> & {
     label?: string
 }
 

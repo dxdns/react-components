@@ -1,3 +1,7 @@
+input {
+    color: var(--color-dark);
+}
+
 .form-group {
     position: relative;
     padding: 15px 0 0;
@@ -8,7 +12,7 @@
 .form-field {
     width: 100%;
     border: 0;
-    border-bottom: 2px solid #9b9b9b;
+    border-bottom: 2px solid var(--color-primary);
     outline: 0;
     font-size: 1.3rem;
     padding: 7px 0;
