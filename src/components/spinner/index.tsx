@@ -1,7 +1,11 @@
 import "./style.css"
 
-export default function Spinner() {
-    return(
-        <span className="spinner"></span>
+type Props = {
+    size?: "sm" | "md" | "lg"
+}
+
+export default function Spinner({ size = "sm" }: Props) {
+    return (
+        <span className={`spinner ${size}`}></span>
     )
 }

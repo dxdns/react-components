@@ -2,7 +2,7 @@ import "./style.css"
 import Card from "../../components/card"
 import { CardStatistic } from "../../components/card-statistic"
 import DataTable from "../../components/data-table"
-import DatePicker from "../../components/date-picker/date-picker"
+import DatePicker from "../../components/date-picker"
 import { columns, insights, rows } from "./data"
 
 export default function Dashboard() {

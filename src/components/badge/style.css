@@ -1,0 +1,30 @@
+.badge {
+    display: inline-block;
+    border-radius: 3px;
+    padding: .2em .5em .3em;
+    border-radius: 2px;
+    font-weight: 600;
+    margin: .25em .1em;
+
+    &.contained {
+        background: var(--color-primary);
+        color: var(--color-white);
+    }
+
+    &.outlined {
+        border: 1px solid var(--color-primary);
+        color: var(--color-primary);
+    }
+
+    &.sm {
+        font-size: .7em;
+        display: inline-block;
+        letter-spacing: .15ch;
+        font-weight: 400;
+    }
+
+    &.lg {
+        font-size: 1.2em;
+        border-radius: 4px;
+    }
+}

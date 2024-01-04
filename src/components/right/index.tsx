@@ -1,6 +1,6 @@
 import "./style.css"
 import profile1 from "../../assets/profile-1.jpg"
-import Button from "../button/button"
+import Button from "../button"
 import Icon from "../icon"
 import CardAnalytic from "../card-analytic"
 import Card from "../card"

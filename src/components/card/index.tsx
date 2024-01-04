@@ -1,8 +1,7 @@
+import { PropsWithChildren } from "react"
 import "./style.css"
 
-type Props = {
-    children: JSX.Element | JSX.Element[]
-}
+type Props = PropsWithChildren & {}
 
 export default function Card({ children }: Props) {
     return (
