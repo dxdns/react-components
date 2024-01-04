@@ -1,5 +1,6 @@
 import Badge from "../../components/badge"
 import Button from "../../components/button"
+import Pagination from "../../components/pagination"
 
 export default function Customer() {
     return (
@@ -11,6 +12,7 @@ export default function Customer() {
             <Badge variant="outlined">
                 Opa
             </Badge>
+            <Pagination count={10} />
         </>
     )
 }

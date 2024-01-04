@@ -1,0 +1,40 @@
+.pagination {
+    margin: 25px 0 15px 0;
+}
+
+.pagination,
+.pagination li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.pagination li {
+    background: var(--color-light);
+    cursor: pointer;
+}
+
+.pagination li {
+    font-size: 18px;
+    padding-top: 1px;
+    width: 2.6rem;
+    height: 2.6rem;
+    border-radius: 0.4rem;
+
+    &:hover {
+        color: var(--color-primary);
+    }
+
+    &.active {
+        color: #fff;
+        background: var(--color-primary-variant);
+        font-weight: 600;
+    }
+
+    &.dots {
+        cursor: default;
+    }
+}
