@@ -1,5 +1,7 @@
 export default function Customer() {
-    return(
-        <>Page Customer</>
+    return (
+        <>
+            <h1>Page Customer</h1>
+        </>
     )
 }

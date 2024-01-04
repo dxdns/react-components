@@ -23,6 +23,10 @@
             font-size: 14px;
         }
 
+        >div.focused {
+            background: var(--color-light);
+        }
+
         >div:last-child {
             border: none;
         }
