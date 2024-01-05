@@ -56,19 +56,19 @@ export const rows = [
 
 export const insights = [
     {
-        icon: <Icon name="shopping_cart" />,
+        icon: <Icon name="shopping_cart" variant="contained" />,
         label: "Total Sales",
         value: 25.024,
         percent: 81 
     },
     {
-        icon: <Icon name="local_mall" bgColor="danger" />,
+        icon: <Icon name="local_mall" bgColor="danger" variant="contained" />,
         label: "Total Orders",
         value: 15.024,
         percent: 70
     },
     {
-        icon: <Icon name="person" bgColor="success" />,
+        icon: <Icon name="person" bgColor="success" variant="contained" />,
         label: "Total Customers",
         value: 10.024,
         percent: 19

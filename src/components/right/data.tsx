@@ -4,19 +4,19 @@ import profile2 from "../../assets/profile-2.jpg"
 
 export const sales = [
     {
-        icon: <Icon name="shopping_cart" />,
+        icon: <Icon name="shopping_cart" variant="contained" />,
         title: "Online Orders",
         percent: 39,
         value: 3849,
     },
     {
-        icon: <Icon name="local_mall" bgColor="danger" />,
+        icon: <Icon name="local_mall" bgColor="danger" variant="contained" />,
         title: "Offline Orders",
         percent: 17,
         value: 1100,
     },
     {
-        icon: <Icon name="person" bgColor="success" />,
+        icon: <Icon name="person" bgColor="success" variant="contained" />,
         title: "New Customers",
         percent: 25,
         value: 849,

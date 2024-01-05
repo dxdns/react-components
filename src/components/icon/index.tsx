@@ -6,7 +6,7 @@ type Props = {
     variant?: "contained" | "outlined" | "text"
 }
 
-export default function Icon({ name, bgColor = "primary", variant = "contained" }: Props) {
+export default function Icon({ name, bgColor = "primary", variant = "text" }: Props) {
     return (
         <span
             id="icon"

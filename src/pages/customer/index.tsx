@@ -2,6 +2,7 @@ import React from "react"
 import Badge from "../../components/badge"
 import Button from "../../components/button"
 import Pagination from "../../components/pagination"
+import TablePagination from "../../components/table-pagination"
 
 export default function Customer() {
     const [currentPage, setCurrentPage] = React.useState(1)
@@ -23,9 +24,11 @@ export default function Customer() {
                 Opa
             </Badge>
             <div style={{ padding: "5rem" }}>
-                {result.map((item) => (
-                    <strong key={item.id}>{item.name}</strong>
-                ))}
+                <ul>
+                    {result.map((item) => (
+                        <li key={item.id}>{item.name}</li>
+                    ))}
+                </ul>
             </div>
             <Pagination
                 count={data.length}
@@ -33,6 +36,7 @@ export default function Customer() {
                 currentPage={currentPage}
                 onPageChange={(newPage) => setCurrentPage(newPage)}
             />
+            <TablePagination />
         </>
     )
 }

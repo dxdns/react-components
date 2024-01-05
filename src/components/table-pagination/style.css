@@ -1,0 +1,17 @@
+.table-pagination {
+    &,
+    >div {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        /* word-break: break-all; */
+        justify-content: flex-end;
+
+        >span.options-text {
+            /* min-width: 80px; */
+            font-size: 9px;
+            font-weight: 400;
+            color: var(--color-info-dark);
+        }
+    }
+}
