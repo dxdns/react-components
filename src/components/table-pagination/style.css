@@ -18,13 +18,14 @@
     }
 
     .button {
-        /* background: none; */
+        background: none;
         /* border: none; */
-        /* color: var(--color-dark); */
-        /* padding: 0; */
-        /* margin: 0; */
+        color: var(--color-dark);
+        padding: 20px 0;
+        margin: 0;
         height: 20px;
         display: flex;
         align-items: center;
+        border-radius: 50%;
     }
 }

@@ -3,6 +3,8 @@ import Pagination from "../../components/pagination"
 import TablePagination from "../../components/table-pagination"
 import DataTable from "../../components/data-table"
 import Card from "../../components/card"
+import Button from "../../components/button"
+import Icon from "../../components/icon"
 
 export default function Customer() {
     const [currentPage, setCurrentPage] = React.useState(1)
@@ -16,8 +18,15 @@ export default function Customer() {
 
     return (
         <>
-            <h1>Page Customer</h1>
-            <p>Description</p>
+            <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+                <h1>Page Customer</h1>
+                <Button
+                    style={{ width: "15%" }}
+                    right={<Icon name="add" />}
+                >
+                    New Customer
+                </Button>
+            </div>
             <Card>
                 <DataTable data={result} />
                 <TablePagination />

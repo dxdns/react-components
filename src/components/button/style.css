@@ -24,4 +24,12 @@
         border: 1px solid var(--color-primary);
         color: var(--color-primary);
     }
+
+    &.has-child {
+        padding: 0 1rem;
+        margin: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 }
