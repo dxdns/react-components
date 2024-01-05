@@ -1,3 +1,4 @@
+import Button from "../button"
 import Icon from "../icon"
 import Select from "../select"
 import "./style.css"
@@ -15,8 +16,12 @@ export default function TablePagination() {
             </div>
             <span>11-11 of 15</span>
             <div>
-                <Icon name="chevron_left" variant="text" />
-                <Icon name="chevron_right" variant="text" />
+                <Button>
+                    <Icon name="chevron_left" variant="text" />
+                </Button>
+                <Button>
+                    <Icon name="chevron_right" variant="text" />
+                </Button>
             </div>
         </div>
     )

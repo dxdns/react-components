@@ -1,8 +1,8 @@
 import React from "react"
-import Badge from "../../components/badge"
-import Button from "../../components/button"
 import Pagination from "../../components/pagination"
 import TablePagination from "../../components/table-pagination"
+import DataTable from "../../components/data-table"
+import Card from "../../components/card"
 
 export default function Customer() {
     const [currentPage, setCurrentPage] = React.useState(1)
@@ -17,26 +17,17 @@ export default function Customer() {
     return (
         <>
             <h1>Page Customer</h1>
-            <Button style={{ width: 100 }}>
-                test
-            </Button>
-            <Badge variant="outlined">
-                Opa
-            </Badge>
-            <div style={{ padding: "5rem" }}>
-                <ul>
-                    {result.map((item) => (
-                        <li key={item.id}>{item.name}</li>
-                    ))}
-                </ul>
-            </div>
+            <p>Description</p>
+            <Card>
+                <DataTable data={result} />
+                <TablePagination />
+            </Card>
             <Pagination
                 count={data.length}
                 rowsPerPage={rowsPerPage}
                 currentPage={currentPage}
                 onPageChange={(newPage) => setCurrentPage(newPage)}
             />
-            <TablePagination />
         </>
     )
 }

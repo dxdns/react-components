@@ -1,4 +1,6 @@
 .table-pagination {
+    padding-top: 2rem;
+
     &,
     >div {
         display: flex;
@@ -6,12 +8,23 @@
         gap: 1rem;
         /* word-break: break-all; */
         justify-content: flex-end;
+    }
 
-        >span.options-text {
-            /* min-width: 80px; */
-            font-size: 9px;
-            font-weight: 400;
-            color: var(--color-info-dark);
-        }
+    >div>span.options-text {
+        /* min-width: 80px; */
+        font-size: 9px;
+        font-weight: 400;
+        color: var(--color-info-dark);
+    }
+
+    .button {
+        /* background: none; */
+        /* border: none; */
+        /* color: var(--color-dark); */
+        /* padding: 0; */
+        /* margin: 0; */
+        height: 20px;
+        display: flex;
+        align-items: center;
     }
 }
