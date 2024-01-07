@@ -1,7 +1,8 @@
+import { SizeType } from "../../types"
 import "./style.css"
 
 type Props = {
-    size?: "sm" | "md" | "lg"
+    size?: SizeType
 }
 
 export default function Spinner({ size = "sm" }: Props) {

@@ -1,10 +1,11 @@
 import React from "react"
 import "./style.css"
 import Spinner from "../spinner"
+import { VariantType } from "../../types"
 
 type Props = React.ButtonHTMLAttributes<HTMLButtonElement> & React.PropsWithChildren<{
     isLoading?: boolean
-    variant?: "contained" | "outlined"
+    variant?: VariantType
     right?: React.ReactNode
     left?: React.ReactNode
 }>

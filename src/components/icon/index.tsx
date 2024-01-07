@@ -1,9 +1,10 @@
+import { ColorType, VariantType } from "../../types"
 import "./style.css"
 
 type Props = {
     name: string
-    bgColor?: "primary" | "success" | "danger"
-    variant?: "contained" | "outlined" | "text"
+    bgColor?: ColorType
+    variant?: VariantType
 }
 
 export default function Icon({ name, bgColor = "primary", variant = "text" }: Props) {
