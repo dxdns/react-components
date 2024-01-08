@@ -1,6 +1,10 @@
 .right {
     margin-top: 1.4rem;
     grid-area: right;
+
+    & button {
+        width: 100%;
+    }
 }
 
 .right .top {
@@ -56,12 +60,6 @@
 .right .recent-updates,
 .sales-analytics h2 {
     margin-bottom: 0.8rem;
-}
-
-.right .sales-analytics .add-product {
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 @media screen and (max-width: 768px) {

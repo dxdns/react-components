@@ -63,11 +63,10 @@ export default function Right() {
                     />
                 ))}
 
-                <Button>
-                    <div className="add-product">
-                        <span className="material-icons-sharp">add</span>
-                        <h3>Add Product</h3>
-                    </div>
+                <Button
+                    right={<Icon name="add" />}
+                >
+                    Add Product
                 </Button>
             </div>
         </div>

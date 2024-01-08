@@ -6,9 +6,9 @@
     color: var(--color-white);
     display: inline-block;
     margin: 0.5rem 0;
-    padding: 0.5rem 0;
+    padding: 0.5rem 1rem;
     transition: all 200ms ease-in-out;
-    width: 100%;
+    /* width: 100%; */
 
     &:hover {
         background: var(--color-light) !important;
@@ -31,5 +31,11 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        gap: 2px;
+    }
+
+    &>#icon {
+        padding: 5px 2px;
+        font-size: 1.5rem;
     }
 }

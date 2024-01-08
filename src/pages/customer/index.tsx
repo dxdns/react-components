@@ -21,7 +21,6 @@ export default function Customer() {
             <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
                 <h1>Page Customer</h1>
                 <Button
-                    style={{ width: "15%" }}
                     right={<Icon name="add" />}
                 >
                     New Customer

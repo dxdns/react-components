@@ -6,6 +6,10 @@ table {
     table-layout: fixed;
 }
 
+/* table thead {
+    background: var(--color-light);
+} */
+
 table caption {
     font-size: 1.5em;
     margin: .5em 0 .75em;
@@ -36,9 +40,9 @@ table th {
 
 /* tbody tr:nth-child(even){
     background-color: var(--color-light);
-}
+} */
 
-tbody tr:hover{
+/* tbody tr:hover{
     background-color: var(--color-light);
 } */
 
