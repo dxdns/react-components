@@ -1,7 +1,7 @@
-import { PropsWithChildren } from "react"
+import React from "react"
 import "./style.css"
 
-type Props = PropsWithChildren & {}
+type Props = React.PropsWithChildren & {}
 
 export default function Card({ children }: Props) {
     return (

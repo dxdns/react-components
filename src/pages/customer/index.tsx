@@ -28,7 +28,7 @@ export default function Customer() {
             </div>
             <Card>
                 <DataTable data={result} />
-                <TablePagination />
+                <TablePagination rowsPerPageOptions={[5, 10, 25, { label: "All", value: -1 }]} />
             </Card>
             <Pagination
                 count={data.length}
