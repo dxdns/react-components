@@ -1,20 +1,22 @@
 .icon-button {
-    & button {
-        background: none;
-        color: var(--color-dark);
-        padding: 2px;
-        margin: 0;
-        height: 30px;
-        display: flex;
-        align-items: center;
-        /* border-radius: 50%; */
+    background: none;
+    color: var(--color-dark);
+    padding: 2px;
+    margin: 0;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    /* border-radius: 50%; */
 
-        /* #icon:hover {
+    .icon {
+        padding: 0;
+    }
+
+    /* #icon:hover {
             color: var(--color-primary);
         } */
 
-        /* &:hover {
+    /* &:hover {
             background: none !important;
         } */
-    }
 }

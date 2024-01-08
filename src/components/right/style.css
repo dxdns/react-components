@@ -2,7 +2,7 @@
     margin-top: 1.4rem;
     grid-area: right;
 
-    & button {
+    &>:last-child button {
         width: 100%;
     }
 }
@@ -100,6 +100,7 @@
         color: var(--color-dark);
         position: absolute;
         left: 1rem;
+        /* width: 30px; */
     }
 
     .right .top button span {
@@ -108,5 +109,9 @@
 
     #menu-btn {
         display: inline-block;
+
+        &:hover {
+            background: none !important;
+        }
     }
 }

@@ -7,6 +7,7 @@ import Card from "../card"
 import Message from "../message"
 import Switch from "../switch"
 import { messages, sales } from "./data"
+import IconButton from "../icon-button"
 
 export default function Right() {
     function toggleTheme() {
@@ -23,9 +24,11 @@ export default function Right() {
     return (
         <div className="right">
             <div className="top">
-                <button id="menu-btn" onClick={openSidebar}>
-                    <span className="material-icons-sharp">menu</span>
-                </button>
+                <IconButton
+                    id="menu-btn"
+                    name="menu"
+                    onClick={openSidebar}
+                />
                 <Switch
                     onClick={toggleTheme}
                     left={<Icon name="light_mode" variant="text" />}

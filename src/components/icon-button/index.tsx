@@ -9,10 +9,8 @@ type Props = React.ButtonHTMLAttributes<HTMLButtonElement> & {
 
 export default React.forwardRef<HTMLButtonElement, Props>(({ name, ...rest }, ref) => {
     return (
-        <div className="icon-button">
-            <Button ref={ref} {...rest} variant="text">
-                <Icon name={name} variant="text" />
-            </Button>
-        </div>
+        <Button className="icon-button" ref={ref} {...rest} variant="text">
+            <Icon name={name} variant="text" />
+        </Button>
     )
 })

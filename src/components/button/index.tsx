@@ -18,7 +18,7 @@ export default React.forwardRef<HTMLButtonElement, Props>((props, ref) => {
         <button
             ref={ref}
             {...rest}
-            className={`button ${variant} ${hasChild}`}
+            className={`button ${variant} ${hasChild} ${rest.className}`}
             disabled={isLoading}
         >
             {right}
