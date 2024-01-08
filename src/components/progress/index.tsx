@@ -12,7 +12,7 @@ export default function Progress({ percent }: Props) {
     const refSvg = React.useRef<SVGSVGElement>(null)
 
     function getColor(percent: number) {
-        return percent < 50 ? "var(--color-danger)" : "var(--color-success)"
+        return percent < 50 ? "var(--color-error)" : "var(--color-success)"
     }
 
     React.useEffect(() => {

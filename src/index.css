@@ -2,15 +2,20 @@
 
 :root {
   --color-primary: #7380ec;
-  --color-danger: #ff7782;
+  --color-error: #ff7782;
+  --color-error-variant: #b71d18;
   --color-success: #41f1b6;
+  --color-success-variant: #2e7d3280;
   --color-warning: #ffbb55;
+  --color-warning-variant: #ffab0029;
   --color-white: #fff;
   --color-info-dark: #7d8da1;
   --color-info-light: #dce1eb;
   --color-dark: #363049;
-  --color-light: rgba(132, 139, 200, 0.18);
+  --color-light: #848bc82e;
   --color-primary-variant: #111e88;
+  --color-action: #757575;
+  --color-secondary: #111e88;
   --color-dark-variant: #677483;
   --color-background: #f6f6f9;
 
@@ -108,12 +113,21 @@ b {
   color: var(--color-dark);
 }
 
-.primary {
-  color: var(--color-primary);
+.inherit {
+  color: inherit !important;
 }
 
-.danger {
-  color: var(--color-danger);
+.primary {
+  color: var(--color-primary) !important;
+  ;
+}
+
+.secondary {
+  color: var(--color-primary-variant) !important;
+}
+
+.error {
+  color: var(--color-error) !important;
 }
 
 .success {
@@ -121,11 +135,16 @@ b {
 }
 
 .warning {
-  color: var(--color-warning);
+  color: var(--color-warning) !important;
+}
+
+.info {
+  color: var(--color-info-light) !important;
 }
 
 .text-muted {
-  color: var(--color-info-dark);
+  color: var(--color-info-dark) !important;
+  ;
 }
 
 .profile-photo {

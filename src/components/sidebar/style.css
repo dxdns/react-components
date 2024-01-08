@@ -76,7 +76,7 @@ aside .sidebar a:hover span {
 }
 
 aside .sidebar .message-count {
-    background: var(--color-danger);
+    background: var(--color-error);
     color: var(--color-white);
     padding: 2px 10px;
     font-size: 11px;

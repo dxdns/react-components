@@ -3,18 +3,19 @@ import "./style.css"
 
 type Props = {
     name: string
-    bgColor?: ColorType
     variant?: VariantType
+    color?: ColorType
+    bgColor?: ColorType
 }
 
-export default function Icon({ name, bgColor = "primary", variant = "text" }: Props) {
+export default function Icon(props: Props) {
+    const { name, color = "inherit", bgColor, variant = "text" } = props
+
     return (
         <span
-            id="icon"
-            className={`icon material-icons-sharp ${variant}`}
+            className={`icon material-icons-sharp ${variant} ${color}`}
             style={{
-                backgroundColor: `var(--color-${bgColor})`,
-                // color: `var(--color-${color})`
+                backgroundColor: bgColor ? `var(--color-${bgColor ?? ""})` : ""
             }}
         >
             {name}

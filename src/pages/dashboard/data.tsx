@@ -1,3 +1,4 @@
+import Badge from "../../components/badge"
 import Icon from "../../components/icon"
 
 export const columns = [
@@ -18,9 +19,12 @@ export const columns = [
         label: "Status",
         customBodyRender: (v: string) => {
             const status = v.toLowerCase()
-            const textColor = status === "declined"? "danger" : status === "pending"? "warning" : "success"
+            const textColor = status === "declined"? "error" : status === "pending"? "warning" : "success"
             return(
-                <div className={textColor}>{v}</div>
+                // <div className={textColor}>{v}</div>
+                <Badge className={textColor} variant="outlined">
+                    {v}
+                </Badge>
             )
         }
     },
@@ -62,7 +66,7 @@ export const insights = [
         percent: 81 
     },
     {
-        icon: <Icon name="local_mall" bgColor="danger" variant="contained" />,
+        icon: <Icon name="local_mall" bgColor="error" variant="contained" />,
         label: "Total Orders",
         value: 15.024,
         percent: 70

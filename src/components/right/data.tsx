@@ -10,13 +10,13 @@ export const sales = [
         value: 3849,
     },
     {
-        icon: <Icon name="local_mall" bgColor="danger" variant="contained" />,
+        icon: <Icon name="local_mall" variant="contained" bgColor="error" />,
         title: "Offline Orders",
         percent: 17,
         value: 1100,
     },
     {
-        icon: <Icon name="person" bgColor="success" variant="contained" />,
+        icon: <Icon name="person" variant="contained" bgColor="success" />,
         title: "New Customers",
         percent: 25,
         value: 849,

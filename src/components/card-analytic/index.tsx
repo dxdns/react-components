@@ -9,7 +9,7 @@ type Props = {
 }
 
 export default function CardAnalytic({ icon, title, percent, value }: Props) {
-    const percentColor = percent >= 50 ? "success" : "danger"
+    const percentColor = percent >= 50 ? "success" : "error"
     const percentText = percent >= 50 ? `+${percent}%` : `-${percent}%`
 
     return (
@@ -17,7 +17,7 @@ export default function CardAnalytic({ icon, title, percent, value }: Props) {
             <div className="card-analytic">
                 {icon}
                 <div className="right">
-                    <div className="info">
+                    <div className="inherit">
                         <h3>{title}</h3>
                         <small className="text-muted">Last 24 hours</small>
                     </div>
