@@ -29,6 +29,7 @@
         background: none;
         padding: 0 !important;
         margin: 0 !important;
+        color: var(--color-dark);
 
         &:hover {
             background: none !important;

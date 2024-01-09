@@ -28,8 +28,10 @@ export default function Menu({ open, onClick, onClose, children }: Props) {
     }, [])
 
     return (
-        <Card ref={menuRef} className={`menu ${isOpen}`} onClick={onClick}>
-            {children}
-        </Card>
+        <div ref={menuRef} className={"menu"} onClick={onClick}>
+            <Card className={`menu-content ${isOpen}`}>
+                {children}
+            </Card>
+        </div>
     )
 }

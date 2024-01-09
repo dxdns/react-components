@@ -1,21 +1,32 @@
 .menu {
+    position: relative;
+}
+
+.menu-content {
     position: absolute;
-    z-index: 2;
-    display: none;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    padding: 0.2rem 2rem;
-    margin: 0;
-
-    &.card {
-        border-radius: 5px;
-    }
-
+    /* left: 0; */
+    /* right: 120px; */
+    /* top: calc(100% + .25rem); */
+    padding: .75rem 0;
+    border-radius: .25rem;
+    opacity: 0;
+    pointer-events: none;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    transform: translateY(-10px);
+    transition: opacity 150ms ease-in-out, transform 150ms ease-in-out;
+    
     &.show {
-        display: block;
+        opacity: 1;
+        transform: translateY(0);
+        pointer-events: auto;
     }
 
     &.hide {
-        display: none;
+        opacity: 0;
+    }
+
+    &.card {
+        border-radius: 5px;
     }
 
     & * {
