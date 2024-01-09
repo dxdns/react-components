@@ -10,7 +10,8 @@ type Props = {
 }
 
 export default function DataTable({ columns, data }: Props) {
-    const columnsNames = columns || (data.length > 0 ? Object.keys(data[0]).map((name) => ({ name, label: name })) : [])
+    const columnsData = data.length > 0 ? Object.keys(data[0]).map((name) => ({ name, label: name })) : []
+    const columnsNames = columns || columnsData
 
     const customBodyRender = (value: any, index: number) => {
         const column = columns ? columns[index] : null

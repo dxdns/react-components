@@ -1,0 +1,20 @@
+.menu {
+    position: absolute;
+    z-index: 2;
+    display: none;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    padding: 0.5rem 2rem;
+
+    &.open {
+        display: block;
+    }
+
+    & * {
+        color: red;
+        padding: 0.5rem 0;
+    }
+
+    &:hover {
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    }
+}

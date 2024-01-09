@@ -3,12 +3,12 @@ import "./style.css"
 import Spinner from "../spinner"
 import { VariantType } from "../../types"
 
-type Props = React.ButtonHTMLAttributes<HTMLButtonElement> & React.PropsWithChildren<{
+type Props = React.ButtonHTMLAttributes<HTMLButtonElement> & React.PropsWithChildren & {
     isLoading?: boolean
     variant?: VariantType
     right?: React.ReactNode
     left?: React.ReactNode
-}>
+}
 
 export default React.forwardRef<HTMLButtonElement, Props>((props, ref) => {
     const { children, isLoading, variant = "contained", right, left, ...rest } = props

@@ -1,12 +1,16 @@
 import React from "react"
 import "./style.css"
 
-type Props = React.PropsWithChildren & {}
+type Props = React.HTMLAttributes<HTMLDivElement> & React.PropsWithChildren & {}
 
-export default function Card({ children }: Props) {
+export default React.forwardRef<HTMLDivElement, Props>(({ children, ...rest }, ref) => {
     return (
-        <div className="card">
+        <div
+            ref={ref}
+            {...rest}
+            className={`card ${rest.className}`}
+        >
             {children}
         </div>
     )
-}
+})

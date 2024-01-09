@@ -27,7 +27,7 @@ table tr:last-child {
 table th,
 table td {
     padding: .625em;
-    text-align: center;
+    text-align: -webkit-center;
     height: 2.8rem;
     color: var(--color-dark-variant);
 }
