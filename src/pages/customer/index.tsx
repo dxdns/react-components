@@ -5,12 +5,10 @@ import DataTable from "../../components/data-table"
 import Card from "../../components/card"
 import Button from "../../components/button"
 import Icon from "../../components/icon"
-import Menu from "../../components/menu"
 import { columns } from "./data"
 
 export default function Customer() {
     const [currentPage, setCurrentPage] = React.useState(1)
-    const [open, setOpen] = React.useState(false)
 
     const data = Array.from({ length: 50 }, (_, i) => ({ id: i, name: `test${i}` }))
 
@@ -23,23 +21,11 @@ export default function Customer() {
         <>
             <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
                 <h1>Page Customer</h1>
-                <div>
-                    <Button
-                        right={<Icon name="add" />}
-                        onClick={() => setOpen(old => !old)}
-                    >
-                        New Customer
-                    </Button>
-                    <Menu open={open}>
-                        <ul>
-                            <li><a href="#">I'm a dropdown.</a></li>
-                            <li><a href="#">In Pure CSS</a></li>
-                            <li><a href="#">As in...</a></li>
-                            <li><a href="#">No JavaScript.</a></li>
-                            <li><a href="#">At All.</a></li>
-                        </ul>
-                    </Menu>
-                </div>
+                <Button
+                    right={<Icon name="add" />}
+                >
+                    New Customer
+                </Button>
             </div>
             <Card>
                 <DataTable

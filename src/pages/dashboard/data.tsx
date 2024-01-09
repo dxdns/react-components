@@ -19,9 +19,9 @@ export const columns = [
         label: "Status",
         customBodyRender: (v: string) => {
             const status = v.toLowerCase()
-            const textColor = status === "declined"? "error" : status === "pending"? "warning" : "success"
-            return(
-                // <div className={textColor}>{v}</div>
+            const textColor = status === "declined" ? "error" : status === "pending" ? "warning" : "success"
+
+            return (
                 <Badge className={textColor} variant="outlined">
                     {v}
                 </Badge>
@@ -63,7 +63,7 @@ export const insights = [
         icon: <Icon name="shopping_cart" variant="contained" />,
         label: "Total Sales",
         value: 25.024,
-        percent: 81 
+        percent: 81
     },
     {
         icon: <Icon name="local_mall" bgColor="error" variant="contained" />,

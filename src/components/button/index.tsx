@@ -21,9 +21,9 @@ export default React.forwardRef<HTMLButtonElement, Props>((props, ref) => {
             className={`button ${variant} ${hasChild} ${rest.className}`}
             disabled={isLoading}
         >
-            {right}
-            {isLoading ? <Spinner /> : children}
             {left}
+            {isLoading ? <Spinner /> : children}
+            {right}
         </button>
     )
 })
