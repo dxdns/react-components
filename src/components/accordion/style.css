@@ -16,7 +16,7 @@
     }
 
     &:after {
-        content: '\002B';
+        content: '\25BC';
         color: #777;
         font-weight: bold;
         float: right;
@@ -24,7 +24,8 @@
     }
 
     &.active:after {
-        content: "\2212";
+        transform: rotate(-180deg);
+        transition: transform .6s;
     }
 }
 
