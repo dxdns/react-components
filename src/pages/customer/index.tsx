@@ -6,6 +6,7 @@ import Card from "../../components/card"
 import Button from "../../components/button"
 import Icon from "../../components/icon"
 import { columns } from "./data"
+import Accordion from "../../components/accordion"
 
 export default function Customer() {
     const [currentPage, setCurrentPage] = React.useState(1)
@@ -27,6 +28,12 @@ export default function Customer() {
                     New Customer
                 </Button>
             </div>
+            <Accordion>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                    eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    Ut enim ad minim veniam, quis nostrud exercitation
+                    ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </Accordion>
             <Card>
                 <DataTable
                     data={result}
