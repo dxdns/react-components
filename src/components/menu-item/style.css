@@ -1,10 +1,10 @@
 .menu-item {
     width: 100%;
-    /* border-bottom: 1px solid var(--color-light); */
     color: var(--color-dark);
     cursor: pointer;
-    padding: .75rem 1rem;
-    text-align: -webkit-center;
+    padding: .25rem 1rem;
+    display: list-item;
+    text-align: left;
 
     &:hover {
         background: var(--color-light);
@@ -17,8 +17,4 @@
             font-size: 16px;
         }
     }
-
-    /* &:last-child {
-        border: none;
-    } */
 }
