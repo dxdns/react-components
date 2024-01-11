@@ -90,6 +90,7 @@ table th {
     cursor: pointer;
     padding: 10px;
     background: none;
+    display: table;
 
     &:after {
         content: '\25BC';
@@ -103,12 +104,4 @@ table th {
         transform: rotate(-180deg);
         transition: transform .6s;
     }
-}
-
-.expand-content {
-    padding: 0 18px;
-    background-color: var(--color-white);
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.2s ease-out;
 }

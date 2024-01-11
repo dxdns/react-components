@@ -29,7 +29,7 @@ export const columns = [
             }
 
             return (
-                <div>
+                <div style={{ display: "-webkit-inline-box" }}>
                     <IconButton
                         name="more_vert"
                         onClick={handleClick}

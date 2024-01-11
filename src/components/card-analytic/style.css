@@ -9,15 +9,15 @@
         align-items: baseline;
         margin: 0;
         width: 100%;
-        flex-direction: column;
+        /* flex-direction: column; */
         gap: 5px;
     }
 }
 
-@media screen and (max-width: 1200px) {
+/* @media screen and (max-width: 1200px) {
     .card-analytic {
         .right {
             flex-direction: row;
         }
     }
-}
+} */

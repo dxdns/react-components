@@ -35,6 +35,13 @@
     color: var(--color-primary);
 }
 
+@media screen and (max-width: 1280px) {
+    .insights {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 1rem !important;
+    }
+}
+
 @media screen and (max-width: 1200px) {
     .insights {
         grid-template-columns: 1fr !important;
