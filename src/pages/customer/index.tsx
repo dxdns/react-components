@@ -38,6 +38,12 @@ export default function Customer() {
                 <DataTable
                     data={result}
                     columns={columns}
+                    renderExpandableRow={(row) => (
+                        <div>
+                            <p>Additional Info:</p>
+                            <p>Custom content for {row.name}</p>
+                        </div>
+                    )}
                 />
                 <TablePagination rowsPerPageOptions={[5, 10, 25, { label: "All", value: -1 }]} />
             </Card>

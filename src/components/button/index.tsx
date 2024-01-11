@@ -6,8 +6,8 @@ import { VariantType } from "../../types"
 type Props = React.ButtonHTMLAttributes<HTMLButtonElement> & React.PropsWithChildren & {
     isLoading?: boolean
     variant?: VariantType
-    right?: React.ReactNode
-    left?: React.ReactNode
+    right?: JSX.Element
+    left?: JSX.Element
 }
 
 export default React.forwardRef<HTMLButtonElement, Props>((props, ref) => {

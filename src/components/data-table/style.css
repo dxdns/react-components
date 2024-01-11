@@ -84,3 +84,31 @@ table th {
         border-bottom: 0;
     }
 }
+
+.expand-btn {
+    color: var(--color-dark);
+    cursor: pointer;
+    padding: 10px;
+    background: none;
+
+    &:after {
+        content: '\25BC';
+        color: #777;
+        font-weight: bold;
+        float: right;
+        margin-left: 5px;
+    }
+
+    &.active:after {
+        transform: rotate(-180deg);
+        transition: transform .6s;
+    }
+}
+
+.expand-content {
+    padding: 0 18px;
+    background-color: var(--color-white);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
