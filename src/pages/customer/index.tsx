@@ -10,7 +10,7 @@ export default function Customer() {
     const [currentPage, setCurrentPage] = React.useState(1)
     const [rowsPerPage, setRowsPerPage] = React.useState(10)
 
-    const data = Array.from({ length: 50 }, (_, i) => ({ id: i + 1, name: `test${i + 1}` }))
+    const data = Array.from({ length: 50 }, (_, i) => ({ id: i + 1, name: `test${i + 1}`, age: i * 2 }))
     const lastIndex = currentPage * rowsPerPage
     const firstIndex = lastIndex - rowsPerPage
     const result = data.slice(firstIndex, lastIndex)

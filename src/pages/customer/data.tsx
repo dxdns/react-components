@@ -4,19 +4,34 @@ import Menu from "../../components/menu"
 import Button from "../../components/button"
 import Icon from "../../components/icon"
 import MenuItem from "../../components/menu-item"
+import ProgressBar from "../../components/progress-bar"
 
 export const columns = [
     {
-        label: "id",
-        name: "id"
+        label: "Id",
+        name: "id",
     },
     {
-        label: "name",
+        label: "Name",
         name: "name"
     },
     {
-        label: "aaaaa",
-        name: "opa",
+        label: "Age",
+        name: "age",
+        customBodyRender: (v: number) => {
+            const color = v >= 50 ? "success" : v <= 10 ? "error" : "warning"
+
+            return (
+                <React.Fragment>
+                    <ProgressBar value={v} color={color} />
+                    {v}
+                </React.Fragment>
+            )
+        }
+    },
+    {
+        label: "action",
+        name: "Action",
         customBodyRender: () => {
             const [open, setOpen] = React.useState(false)
 

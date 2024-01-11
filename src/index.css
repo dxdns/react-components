@@ -3,7 +3,7 @@
 :root {
   --color-primary: #7380ec;
   --color-error: #ff7782;
-  --color-error-variant: #b71d18;
+  --color-error-variant: rgba(255, 86, 48, 0.24);
   --color-success: #41f1b6;
   --color-success-variant: #2e7d3280;
   --color-warning: #ffbb55;
@@ -119,7 +119,6 @@ b {
 
 .primary {
   color: var(--color-primary) !important;
-  ;
 }
 
 .secondary {
@@ -128,10 +127,12 @@ b {
 
 .error {
   color: var(--color-error) !important;
+  /* background: var(--color-error-variant) !important; */
 }
 
 .success {
   color: var(--color-success) !important;
+  /* background: var(--color-success-variant) !important; */
 }
 
 .warning {
@@ -144,7 +145,6 @@ b {
 
 .text-muted {
   color: var(--color-info-dark) !important;
-  ;
 }
 
 .profile-photo {

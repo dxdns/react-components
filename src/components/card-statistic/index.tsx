@@ -1,5 +1,5 @@
 import Card from "../card"
-import Progress from "../progress"
+import ProgressCircle from "../progress-circle"
 
 type Props = {
     icon: JSX.Element
@@ -17,7 +17,7 @@ export function CardStatistic({ icon, label, value, percent }: Props) {
                     <h3>{label}</h3>
                     <h1>${value.toFixed(2).replace(".", ",")}</h1>
                 </div>
-                <Progress percent={percent} />
+                <ProgressCircle percent={percent} />
             </div>
             <small className="text-muted">
                 Last 24 Hours

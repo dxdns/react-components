@@ -5,7 +5,7 @@ type Props = {
     percent: number
 }
 
-export default function Progress({ percent }: Props) {
+export default function ProgressCircle({ percent }: Props) {
     const [style, setStyle] = React.useState({
         strokeDasharray: '0'
     })
@@ -23,7 +23,7 @@ export default function Progress({ percent }: Props) {
     }, [])
 
     return (
-        <div className="progress">
+        <div className="progress-circle">
             <svg ref={refSvg} style={style} data-percent={percent} width="92" height="92" viewBox="-11.5 -11.5 115 115">
                 <circle r="36" cx="46" cy="46" fill="transparent" stroke="#e0e0e0" strokeDasharray={"0"}></circle>
                 <circle r="36" cx="46" cy="46" stroke={getColor(percent)} strokeWidth="10px" fill="transparent"></circle>
