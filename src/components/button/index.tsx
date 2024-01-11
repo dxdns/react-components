@@ -19,7 +19,7 @@ export default React.forwardRef<HTMLButtonElement, Props>((props, ref) => {
             ref={ref}
             {...rest}
             className={`button ${variant} ${hasChild} ${rest.className}`}
-            disabled={isLoading}
+            disabled={isLoading || rest.disabled}
         >
             {left}
             {isLoading ? <Spinner /> : children}
