@@ -1,0 +1,12 @@
+.header-customer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@media screen and (max-width: 425px) {
+    .header-customer {
+        flex-direction: column;
+        align-items: normal;
+    }
+}

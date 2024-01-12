@@ -5,6 +5,7 @@ import Card from "../../components/card"
 import Button from "../../components/button"
 import Icon from "../../components/icon"
 import { columns } from "./data"
+import "./style.css"
 
 export default function Customer() {
     const [currentPage, setCurrentPage] = React.useState(1)
@@ -17,7 +18,7 @@ export default function Customer() {
 
     return (
         <>
-            <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+            <div className="header-customer">
                 <h1>Page Customer</h1>
                 <Button
                     right={<Icon name="add" />}

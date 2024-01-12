@@ -3,7 +3,7 @@
     width: 96%;
     margin: 0 auto;
     gap: 1.8rem;
-    grid-template-columns: 13rem auto 1fr;
+    grid-template-columns: 13rem auto 23rem;
     grid-template-areas:
         "sidebar main right"
     ;
@@ -19,11 +19,11 @@
         display: block !important;
 
         &.show {
-            left: 0 !important;
+            left: 0;
         }
 
         &.hide {
-            left: -100% !important;
+            left: -100%;
         }
 
         .top {
@@ -195,13 +195,7 @@
             box-shadow: 1rem 3rem 4rem var(--color-light);
             height: 100vh;
             padding-right: var(--card-padding);
-            animation: showMenu 400ms ease forwards;
-
-            @keyframes showMenu {
-                to {
-                    left: 0;
-                }
-            }
+            transition: left .5s cubic-bezier(0.820, 0.085, 0.395, 0.895);
 
             .top {
                 .logo {

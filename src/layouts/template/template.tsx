@@ -15,20 +15,43 @@ import React from "react"
 export default function Template() {
     const [showMenu, setshowMenu] = React.useState(false)
 
-    function handleSidebar() {
-        setshowMenu(prev => !prev)
+    const menuRef = React.useRef<HTMLDivElement | null>(null)
+
+    function openMenu() {
+        setshowMenu(true)
+    }
+
+    function closeMenu() {
+        setshowMenu(false)
     }
 
     function toggleTheme() {
         document.body.classList.toggle("dark-theme-variables")
     }
 
+    React.useEffect(() => {
+        function handler(e: MouseEvent) {
+            const menu = menuRef.current
+            const a = menu?.getElementsByClassName("active").item(0)
+
+            if (!menu?.contains(e.target as Node) || menu?.contains(a as Node)) {
+                closeMenu()
+            }
+        }
+
+        document.addEventListener("mousedown", handler)
+
+        return () => {
+            document.removeEventListener("mousedown", handler)
+        }
+    }, [])
+
     return (
         <div className="template">
-            <aside className={showMenu ? "show" : "hide"}>
+            <aside ref={menuRef} className={showMenu ? "show" : "hide"}>
                 <div className="top">
                     <Logo />
-                    <div className="close" onClick={handleSidebar}>
+                    <div className="close" onClick={closeMenu}>
                         <span className="material-icons-sharp">close</span>
                     </div>
                 </div>
@@ -57,7 +80,7 @@ export default function Template() {
                     <IconButton
                         id="menu-btn"
                         name="menu"
-                        onClick={handleSidebar}
+                        onClick={openMenu}
                     />
                     <Switch
                         onClick={toggleTheme}
