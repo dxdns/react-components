@@ -2,107 +2,103 @@ aside {
     height: 100vh;
     grid-area: sidebar;
     display: block !important;
-}
 
-aside .top {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-top: 1.4rem;
-}
-
-aside .close {
-    display: none;
-}
-
-aside .sidebar {
-    display: flex;
-    flex-direction: column;
-    height: 86vh;
-    position: relative;
-    top: 3rem;
-}
-
-aside h3 {
-    font-weight: 500;
-}
-
-aside .sidebar a {
-    display: flex;
-    color: var(--color-info-dark);
-    margin-left: 2rem;
-    gap: 1rem;
-    align-items: center;
-    position: relative;
-    height: 3.7rem;
-    transition: all 300ms ease;
-}
-
-aside .sidebar a span {
-    font-size: 1.6rem;
-    transition: all 300ms ease;
-}
-
-aside .sidebar a:last-child {
-    position: absolute;
-    bottom: 2rem;
-    width: 100%;
-}
-
-aside .sidebar a.active {
-    background: var(--color-light);
-    color: var(--color-primary);
-    margin-left: 0;
-}
-
-aside .sidebar a.active::before {
-    content: '';
-    width: 6px;
-    height: 100%;
-    background: var(--color-primary);
-}
-
-aside .sidebar a.active span {
-    color: var(--color-primary);
-    margin-left: calc(1rem - 3px);
-}
-
-aside .sidebar a:hover {
-    color: var(--color-primary);
-}
-
-aside .sidebar a:hover span {
-    margin-left: 1rem;
-}
-
-aside .sidebar .message-count {
-    background: var(--color-error);
-    color: var(--color-white);
-    padding: 2px 10px;
-    font-size: 11px;
-    border-radius: var(--border-radius-1);
-}
-
-@media screen and (max-width: 1200px) {
-    aside .top {
-        margin-left: 1.7rem;
+    .top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 1.4rem;
     }
 
-    aside .logo h2 {
+    .close {
         display: none;
     }
 
-    aside .sidebar h3 {
-        display: none;
-    }
-
-    aside .sidebar a {
-        width: 5.6rem;
-    }
-
-    aside .sidebar a:last-child {
+    .sidebar {
+        display: flex;
+        flex-direction: column;
+        height: 86vh;
         position: relative;
-        margin-top: 1.8rem;
+        top: 3rem;
+
+        >a {
+            display: flex;
+            color: var(--color-info-dark);
+            margin-left: 2rem;
+            gap: 1rem;
+            align-items: center;
+            position: relative;
+            height: 3.7rem;
+            transition: all 300ms ease;
+
+            &:hover {
+                color: var(--color-primary);
+
+                >span {
+                    margin-left: 1rem;
+                }
+            }
+
+            >h3 {
+                font-weight: 500;
+            }
+
+            >span {
+                font-size: 1.6rem;
+                transition: all 300ms ease;
+            }
+
+            &:last-child {
+                position: absolute;
+                bottom: 2rem;
+                width: 100%;
+            }
+
+            &.active {
+                background: var(--color-light);
+                color: var(--color-primary);
+                margin-left: 0;
+
+                &::before {
+                    content: '';
+                    width: 6px;
+                    height: 100%;
+                    background: var(--color-primary);
+                }
+
+                >span {
+                    color: var(--color-primary);
+                    margin-left: calc(1rem - 3px);
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    aside {
+        .top {
+            margin-left: 1.7rem;
+
+            .logo h2 {
+                display: none;
+            }
+        }
+
+        .sidebar {
+            >a {
+                width: 5.6rem;
+
+                >h3 {
+                    display: none;
+                }
+
+                &:last-child {
+                    position: relative;
+                    margin-top: 1.8rem;
+                }
+            }
+        }
     }
 }
 
@@ -118,42 +114,42 @@ aside .sidebar .message-count {
         padding-right: var(--card-padding);
         display: none !important;
         animation: showMenu 400ms ease forwards;
+
+        .top {
+            .logo {
+                margin-left: 1rem;
+
+                >h2 {
+                    display: inline;
+                }
+            }
+
+            .close {
+                display: inline-block;
+                cursor: pointer;
+            }
+        }
+
+        .sidebar {
+            >a {
+                width: 100%;
+                height: 3.4rem;
+
+                >h3 {
+                    display: inline;
+                }
+
+                &:last-child {
+                    position: absolute;
+                    bottom: 5rem;
+                }
+            }
+        }
     }
 
     @keyframes showMenu {
         to {
             left: 0;
         }
-    }
-
-    aside .logo {
-        margin-left: 1rem;
-    }
-
-    aside .logo h2 {
-        display: inline;
-    }
-
-    aside .sidebar h3 {
-        display: inline;
-    }
-
-    aside .sidebar a {
-        width: 100%;
-        height: 3.4rem;
-    }
-
-    aside .sidebar a:last-child {
-        position: absolute;
-        bottom: 5rem;
-    }
-
-    aside .close {
-        display: inline-block;
-        cursor: pointer;
-    }
-
-    #close-btn {
-        display: inline-block;
     }
 }

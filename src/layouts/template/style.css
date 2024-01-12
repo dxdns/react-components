@@ -3,21 +3,21 @@
     width: 96%;
     margin: 0 auto;
     gap: 1.8rem;
-    grid-template-columns: 13rem auto 23rem;
+    grid-template-columns: 13rem auto 1fr;
     grid-template-areas:
         "sidebar main right"
     ;
+
+    >main {
+        margin-top: 1.4rem;
+        grid-area: main;
+    }
 }
 
-main {
-    margin-top: 1.4rem;
-    grid-area: main;
-}
-
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1024px) {
     .template {
         width: 94%;
-        grid-template-columns: 7rem auto 23rem;
+        grid-template-columns: 7rem auto 20rem;
     }
 }
 
@@ -28,10 +28,10 @@ main {
         grid-template-areas:
             "main"
             "right";
-    }
 
-    main {
-        margin-top: 8rem !important;
-        padding: 0 2rem;
+        >main {
+            margin-top: 8rem !important;
+            padding: 0 2rem;
+        }
     }
 }

@@ -15,7 +15,7 @@ export default function Sidebar() {
         <aside>
             <div className="top">
                 <Logo />
-                <div className="close" id="close-btn" onClick={closeSidebar}>
+                <div className="close" onClick={closeSidebar}>
                     <span className="material-icons-sharp">close</span>
                 </div>
             </div>
