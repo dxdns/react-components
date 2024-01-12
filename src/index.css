@@ -18,6 +18,8 @@
   --color-secondary: #111e88;
   --color-dark-variant: #677483;
   --color-background: #f6f6f9;
+  --color-border: rgba(25, 118, 210, 0.5);
+  --color-border-hover: #1976d2;
 
   --card-border-radius: 2rem;
   --border-radius-1: 0.4rem;
@@ -37,6 +39,7 @@
   --color-dark-variant: #a3bdcc;
   --color-light: rgba(0, 0, 0, 0.4);
   --box-shadow: 0 2rem 3rem var(--color-light);
+  --color-border: rgba(144, 202, 249, 0.5);
 }
 
 * {
@@ -127,12 +130,10 @@ b {
 
 .error {
   color: var(--color-error) !important;
-  /* background: var(--color-error-variant) !important; */
 }
 
 .success {
   color: var(--color-success) !important;
-  /* background: var(--color-success-variant) !important; */
 }
 
 .warning {

@@ -3,6 +3,8 @@ import Dashboard from "./pages/dashboard"
 import Home from "./pages/home"
 import Customer from "./pages/customer"
 import Template from "./layouts/template/template"
+import AuthLayout from "./layouts/auth"
+import SignIn from "./pages/sign-in"
 
 export const router = createBrowserRouter([
     {
@@ -23,4 +25,18 @@ export const router = createBrowserRouter([
             }
         ]
     },
+    {
+        path: "auth",
+        element: <AuthLayout />,
+        children: [
+            {
+                index: true,
+                element: <SignIn />
+            }
+        ]
+    },
+    {
+        path: "*",
+        element: <>Not Found</>
+    }
 ])

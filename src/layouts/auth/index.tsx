@@ -1,21 +1,18 @@
+import { Outlet } from "react-router-dom"
 import Button from "../../components/button"
-import Input from "../../components/input"
 import "./style.css"
 
 export default function AuthLayout() {
     return (
         <div className="auth-layout">
-            <div className="left">
+            <div className="auth-left">
                 <h1>Welcome</h1>
                 <h2>Enter your personal details and start journey with us</h2>
                 <Button variant="outlined">Sign Up</Button>
             </div>
-            <div className="right">
+            <div className="auth-right">
                 <form>
-                    <Input type="email" label="Email" />
-                    <Input type="password" label="Password" />
-                    <Button>Sign In</Button>
-                    <a href="#">Forgot password?</a>
+                    <Outlet />
                 </form>
             </div>
         </div>
