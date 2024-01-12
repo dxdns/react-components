@@ -1,25 +1,35 @@
 import React from "react"
 import "./style.css"
 import Spinner from "../spinner"
-import { ColorType, VariantType } from "../../types"
+import { ColorType, SizeType, VariantType } from "../../types"
 
 type Props = React.ButtonHTMLAttributes<HTMLButtonElement> & React.PropsWithChildren & {
     isLoading?: boolean
     variant?: VariantType
     color?: ColorType
+    size?: SizeType
     right?: JSX.Element
     left?: JSX.Element
 }
 
 export default React.forwardRef<HTMLButtonElement, Props>((props, ref) => {
-    const { children, isLoading, variant = "contained", color = "inherit", right, left, ...rest } = props
+    const {
+        children,
+        isLoading,
+        variant = "contained",
+        color = "inherit",
+        size = "md",
+        right,
+        left,
+        ...rest
+    } = props
     const hasChild = right || left ? "has-child" : ""
 
     return (
         <button
             ref={ref}
             {...rest}
-            className={`button ${variant} ${color} ${hasChild} ${rest.className}`}
+            className={`button ${variant} ${color} ${size} ${hasChild} ${rest.className}`}
             disabled={isLoading || rest.disabled}
         >
             {left}

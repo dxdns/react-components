@@ -1,5 +1,5 @@
 import "./style.css"
-import { NavLink, Outlet } from "react-router-dom"
+import { Link, NavLink, Outlet } from "react-router-dom"
 import IconButton from "../../components/icon-button"
 import Switch from "../../components/switch"
 import Icon from "../../components/icon"
@@ -50,7 +50,9 @@ export default function Template() {
         <div className="template">
             <aside ref={menuRef} className={showMenu ? "show" : "hide"}>
                 <div className="top">
-                    <Logo />
+                    <Link to={""}>
+                        <Logo />
+                    </Link>
                     <div className="close" onClick={closeMenu}>
                         <span className="material-icons-sharp">close</span>
                     </div>

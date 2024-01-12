@@ -8,23 +8,34 @@
     margin: 0.5rem 0;
     padding: 0.5rem 1rem;
     transition: all 200ms ease-in-out;
-    /* width: 100%; */
 
     &:hover {
         background: var(--color-light) !important;
         color: var(--color-dark) !important;
     }
 
+    &:disabled {
+        color: var(--color-dark-variant) !important;
+        cursor: not-allowed;
+    }
+
+    &.lg {
+        font-size: large;
+        padding: 1rem 3rem;
+    }
+
+    &.md {
+        font-size: medium;
+        padding: 1rem 2rem;
+    }
+
+    &.sm {
+        font-size: small;
+        padding: .5rem 1rem;
+    }
+
     &.contained {
         background: var(--color-primary);
-
-        /* &.inherit {
-            color: var(--color-white) !important;
-
-            &:hover {
-                background: var(--color-primary-variant) !important;
-            }
-        } */
     }
 
     &.outlined {
