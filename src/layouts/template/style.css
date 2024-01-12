@@ -12,12 +12,164 @@
         margin-top: 1.4rem;
         grid-area: main;
     }
+
+    >aside {
+        height: 100vh;
+        grid-area: sidebar;
+        display: block !important;
+
+        &.show {
+            left: 0 !important;
+        }
+
+        &.hide {
+            left: -100% !important;
+        }
+
+        .top {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 1.4rem;
+        }
+
+        .close {
+            display: none;
+        }
+
+        .sidebar {
+            display: flex;
+            flex-direction: column;
+            height: 86vh;
+            position: relative;
+            top: 3rem;
+
+            >a {
+                display: flex;
+                color: var(--color-info-dark);
+                margin-left: 2rem;
+                gap: 1rem;
+                align-items: center;
+                position: relative;
+                height: 3.7rem;
+                transition: all 300ms ease;
+
+                &:hover {
+                    color: var(--color-primary);
+
+                    >span {
+                        margin-left: 1rem;
+                    }
+                }
+
+                >h3 {
+                    font-weight: 500;
+                }
+
+                >span {
+                    font-size: 1.6rem;
+                    transition: all 300ms ease;
+                }
+
+                &:last-child {
+                    position: absolute;
+                    bottom: 2rem;
+                    width: 100%;
+                }
+
+                &.active {
+                    background: var(--color-light);
+                    color: var(--color-primary);
+                    margin-left: 0;
+
+                    &::before {
+                        content: '';
+                        width: 6px;
+                        height: 100%;
+                        background: var(--color-primary);
+                    }
+
+                    >span {
+                        color: var(--color-primary);
+                        margin-left: calc(1rem - 3px);
+                    }
+                }
+            }
+        }
+    }
+
+    .right {
+        margin-top: 1.4rem;
+        grid-area: right;
+
+        &>:last-child button {
+            width: 100%;
+        }
+
+        .top {
+            display: flex;
+            justify-content: end;
+            gap: 2rem;
+            align-items: center;
+
+            >button {
+                display: none;
+            }
+
+            .profile {
+                display: flex;
+                gap: 2rem;
+                text-align: right;
+                align-items: center;
+            }
+        }
+
+        .recent-updates,
+        .sales-analytics {
+            margin-top: 2rem;
+
+            >h2 {
+                margin-bottom: 0.8rem;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1440px) {
+    .template {
+        width: 94%;
+        grid-template-columns: 13rem auto 18rem;
+    }
 }
 
 @media screen and (max-width: 1024px) {
     .template {
-        width: 94%;
         grid-template-columns: 7rem auto 20rem;
+
+        >aside {
+            .top {
+                margin-left: 1.7rem;
+
+                .logo h2 {
+                    display: none;
+                }
+            }
+
+            .sidebar {
+                >a {
+                    width: 5.6rem;
+
+                    >h3 {
+                        display: none;
+                    }
+
+                    &:last-child {
+                        position: relative;
+                        margin-top: 1.8rem;
+                    }
+                }
+            }
+        }
     }
 }
 
@@ -32,6 +184,100 @@
         >main {
             margin-top: 8rem !important;
             padding: 0 2rem;
+        }
+
+        >aside {
+            position: fixed;
+            left: -100%;
+            background: var(--color-white);
+            width: 18rem;
+            z-index: 3;
+            box-shadow: 1rem 3rem 4rem var(--color-light);
+            height: 100vh;
+            padding-right: var(--card-padding);
+            animation: showMenu 400ms ease forwards;
+
+            @keyframes showMenu {
+                to {
+                    left: 0;
+                }
+            }
+
+            .top {
+                .logo {
+                    margin-left: 1rem;
+
+                    >h2 {
+                        display: inline;
+                    }
+                }
+
+                .close {
+                    display: inline-block;
+                    cursor: pointer;
+                }
+            }
+
+            .sidebar {
+                >a {
+                    width: 100%;
+                    height: 3.4rem;
+
+                    >h3 {
+                        display: inline;
+                    }
+
+                    &:last-child {
+                        position: absolute;
+                        bottom: 5rem;
+                    }
+                }
+            }
+        }
+
+        .right {
+            width: 94%;
+            margin: 0 auto 4rem;
+            padding: 0 1rem;
+
+            .top {
+                position: fixed;
+                top: 0;
+                left: 0;
+                align-items: center;
+                padding: 0 0.8rem;
+                height: 4.6rem;
+                background: var(--color-white);
+                width: 100%;
+                margin: 0;
+                z-index: 2;
+                box-shadow: 0 1rem 1rem var(--color-light);
+
+                >button {
+                    display: inline-block;
+                    background: transparent;
+                    cursor: pointer;
+                    color: var(--color-dark);
+                    position: absolute;
+                    left: 1rem;
+
+                    >span {
+                        font-size: 2rem;
+                    }
+                }
+
+                >#menu-btn {
+                    display: inline-block;
+
+                    &:hover {
+                        background: none !important;
+                    }
+                }
+            }
+
+            .profile .info {
+                display: none;
+            }
         }
     }
 }

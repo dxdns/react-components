@@ -1,6 +1,24 @@
-import Icon from "../icon"
 import profile1 from "../../assets/profile-1.jpg"
 import profile2 from "../../assets/profile-2.jpg"
+import Icon from "../../components/icon"
+
+export const menuItems = [
+    {
+        label: "Dashboard",
+        icon: "grid_view",
+        path: "/",
+    },
+    {
+        label: "Customers",
+        icon: "person_outline",
+        path: "customer",
+    },
+    {
+        label: "Logout",
+        icon: "logout",
+        path: "login",
+    }
+]
 
 export const sales = [
     {
