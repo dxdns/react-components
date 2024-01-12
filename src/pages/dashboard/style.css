@@ -35,6 +35,13 @@
     }
 }
 
+@media screen and (max-width: 1440px) {
+    .insights {
+        grid-template-columns: repeat(3, 250px) !important;
+        gap: 1rem !important;
+    }
+}
+
 @media screen and (max-width: 1024px) {
     .insights {
         grid-template-columns: repeat(2, 1fr) !important;
