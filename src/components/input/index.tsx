@@ -12,7 +12,6 @@ export default React.forwardRef<HTMLInputElement, Props>(({ label, ...rest }, re
                 ref={ref}
                 {...rest}
                 className="form-field"
-                placeholder="default"
                 autoComplete="off"
             />
             {label && <label className="form-label">

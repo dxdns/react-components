@@ -18,13 +18,14 @@
     padding: 1.25rem;
     background: none;
     transition: all 160ms ease-in;
+    z-index: 2;
 
     &:hover {
-        border-color: red;
+        border-color: var(--color-primary);
     }
 
     &:focus {
-        border-color: yellow;
+        border-color: var(--color-primary);
     }
 
     &::-webkit-input-placeholder {
@@ -35,7 +36,7 @@
 .form-label {
     position: absolute;
     left: 1rem;
-    top: .8rem;
+    top: 1rem;
     padding: 0 .5rem;
     color: var(--color-dark);
     cursor: text;
@@ -49,4 +50,5 @@
     top: -0.5rem;
     font-size: .8rem;
     left: .8rem;
+    z-index: 3;
 }
