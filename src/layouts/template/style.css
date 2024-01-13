@@ -139,6 +139,10 @@
     .template {
         width: 94%;
         grid-template-columns: 13rem auto 18rem;
+
+        .right {
+            margin-bottom: 5rem;
+        }
     }
 }
 

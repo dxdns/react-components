@@ -42,9 +42,9 @@ table th {
     background-color: var(--color-light);
 } */
 
-/* tbody tr:hover{
+tbody tr:hover{
     background-color: var(--color-light);
-} */
+}
 
 @media screen and (max-width: 600px) {
     table {

@@ -39,6 +39,18 @@
     .insights {
         grid-template-columns: repeat(3, 250px) !important;
         gap: 1rem !important;
+
+        >div .middle {
+            .left {
+                h1 {
+                    font-size: 2rem;
+                }
+
+                h3 {
+                    font-size: .9rem;
+                }
+            }
+        }
     }
 }
 

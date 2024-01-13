@@ -123,6 +123,7 @@ export default function Template() {
 
                     <Button
                         right={<Icon name="add" />}
+                        size="sm"
                     >
                         Add Product
                     </Button>

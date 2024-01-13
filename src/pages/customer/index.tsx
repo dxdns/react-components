@@ -22,6 +22,7 @@ export default function Customer() {
                 <h1>Page Customer</h1>
                 <Button
                     right={<Icon name="add" />}
+                    size="sm"
                 >
                     New Customer
                 </Button>
