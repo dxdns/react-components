@@ -4,7 +4,7 @@
     height: 92px;
     border-radius: 50%;
 
-    svg {
+    >svg {
         width: 7rem;
         height: 7rem;
         stroke-width: 10;
@@ -13,15 +13,15 @@
             font-size: 21px;
             font-weight: bold;
         }
-    }
 
-    & svg circle {
-        fill: none;
-        /* stroke: var(--color-primary); */
-        stroke-linecap: round;
-        /* transform: translate(5px, 5px); */
-        animation: draw 1s linear forwards;
-        stroke-dashoffset: 100;
+        &circle {
+            fill: none;
+            /* stroke: var(--color-primary); */
+            stroke-linecap: round;
+            /* transform: translate(5px, 5px); */
+            animation: draw 1s linear forwards;
+            stroke-dashoffset: 100;
+        }
     }
 }
 
@@ -33,7 +33,7 @@
 
 @media screen and (max-width: 1440px) {
     .progress-circle {
-        svg {
+        >svg {
             >text {
                 font-size: 18px;
             }
