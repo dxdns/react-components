@@ -8,6 +8,7 @@
     margin: 0.5rem 0;
     padding: 0.5rem 1rem;
     transition: all 200ms ease-in-out;
+    /* width: 100%; */
 
     &:hover {
         background: var(--color-light) !important;

@@ -77,7 +77,6 @@ export default function Template() {
                             <h3>{item.label}</h3>
                         </NavLink>
                     ))}
-
                 </div>
             </aside>
 

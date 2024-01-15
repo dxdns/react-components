@@ -5,6 +5,7 @@ import Customer from "./pages/customer"
 import Template from "./layouts/template/template"
 import AuthLayout from "./layouts/auth"
 import SignIn from "./pages/sign-in"
+import SignUp from "./pages/sign-up"
 
 export const router = createBrowserRouter([
     {
@@ -32,6 +33,10 @@ export const router = createBrowserRouter([
             {
                 index: true,
                 element: <SignIn />
+            },
+            {
+                path: "sign-up",
+                element: <SignUp />
             }
         ]
     },

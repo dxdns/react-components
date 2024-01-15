@@ -1,15 +1,25 @@
+import { Link } from "react-router-dom"
 import Button from "../../components/button"
 import Input from "../../components/input"
+import "./style.css"
 
 export default function SignIn() {
     return (
-        <>
-            <h1>Sign In</h1>
-            <Input type="email" label="Email" required />
-            <Input type="password" label="Password" required />
-            <Button>Sign In</Button>
-            <Button variant="outlined">Sign Up</Button>
-            <a href="#">Forgot password?</a>
-        </>
+        <div className="sign-in">
+            <div className="header">
+                <h1>Sign In</h1>
+                <p>New user?
+                    <Link to={"sign-up"}>
+                        <strong> Create an account</strong>
+                    </Link>
+                </p>
+            </div>
+            <div className="content">
+                <Input type="email" label="Email" required />
+                <Input type="password" label="Password" required />
+                <Link to={"forgot-password"}>Forgot password?</Link>
+                <Button>Sign In</Button>
+            </div>
+        </div>
     )
 }
