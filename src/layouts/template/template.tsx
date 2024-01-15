@@ -26,7 +26,15 @@ export default function Template() {
     }
 
     function toggleTheme() {
-        document.body.classList.toggle("dark-theme-variables")
+        const isDark = document.documentElement.getAttribute("data-theme") === "light"
+
+        if (isDark) {
+            document.documentElement.style.colorScheme = "dark"
+            document.documentElement.setAttribute("data-theme", "dark")
+        } else {
+            document.documentElement.style.colorScheme = "light"
+            document.documentElement.setAttribute("data-theme", "light")
+        }
     }
 
     React.useEffect(() => {

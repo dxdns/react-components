@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
 
 :root {
+  color-scheme: light dark;
   --color-primary: #7380ec;
   --color-error: #ff7782;
   --color-error-variant: rgba(255, 86, 48, 0.24);
@@ -32,7 +33,7 @@
   --box-shadow: 0 2rem 3rem var(--color-light);
 }
 
-.dark-theme-variables {
+[data-theme="dark"] {
   --color-background: #181a1e;
   --color-white: #202528;
   --color-dark: #edeffd;
