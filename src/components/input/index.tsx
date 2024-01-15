@@ -7,7 +7,7 @@ type Props = React.InputHTMLAttributes<HTMLInputElement> & {
 
 export default React.forwardRef<HTMLInputElement, Props>(({ label, ...rest }, ref) => {
     return (
-        <div className="form-group">
+        <div className={`form-group ${rest.required ? "required" : ""}`}>
             <input
                 ref={ref}
                 {...rest}
