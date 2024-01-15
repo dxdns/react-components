@@ -18,7 +18,7 @@ export default function SignIn() {
                 <Input type="email" label="Email" required />
                 <Input type="password" label="Password" required />
                 <Link to={"forgot-password"}>Forgot password?</Link>
-                <Button>Sign In</Button>
+                <Button type="submit">Sign In</Button>
             </div>
         </div>
     )
