@@ -20,5 +20,9 @@
                 width: 100%;
             }
         }
+
+        &:last-child a {
+            text-decoration: underline;
+        }
     }
 }

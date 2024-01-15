@@ -9,7 +9,13 @@ type Props = React.ButtonHTMLAttributes<HTMLButtonElement> & {
 
 export default React.forwardRef<HTMLButtonElement, Props>(({ name, ...rest }, ref) => {
     return (
-        <Button className="icon-button" ref={ref} {...rest} variant="text">
+        <Button
+            className="icon-button"
+            ref={ref}
+            {...rest}
+            variant="text"
+            color={"inherit" || rest.color}
+        >
             <Icon name={name} variant="text" />
         </Button>
     )

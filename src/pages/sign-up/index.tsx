@@ -8,7 +8,11 @@ export default function SignUp() {
         <div className="sign-up">
             <div className="header">
                 <h1>Get started absolutely free</h1>
-                <p>Already have an account? <Link to={"/auth"}>Sign in</Link></p>
+                <p>Already have an account?
+                    <Link to={"/auth"}>
+                        <strong> Sign in</strong>
+                    </Link>
+                </p>
             </div>
             <div className="content">
                 <div className="input-group">
@@ -18,8 +22,7 @@ export default function SignUp() {
                 <Input type="email" label="Email address" required />
                 <Input type="password" label="Password" required />
                 <Button>Create account</Button>
-                <p>By signing up, I agree to
-                    <Link to="#"> Terms of Service </Link>
+                <p>By signing up, I agree to <Link to="#">Terms of Service </Link>
                     and <Link to="#">Privacy Policy.</Link>
                 </p>
             </div>
