@@ -43,10 +43,8 @@
             color: transparent !important;
         }
 
-        &:focus-visible {
-            &:invalid {
-                border-color: var(--color-error);
-            }
+        &:not(:placeholder-shown):not(:focus):invalid {
+            border-color: var(--color-error);
         }
 
         &:disabled,
@@ -57,7 +55,6 @@
         }
 
         &:focus~label,
-        /* &:valid~label, */
         &:not(:placeholder-shown):not(:focus)~label {
             top: 0;
             font-size: 12px;
@@ -68,7 +65,7 @@
 
     >.icon-button {
         position: absolute;
-        top: 0.9375rem;
-        right: 0.875rem;
+        top: .9rem;
+        right: .8rem;
     }
 }
