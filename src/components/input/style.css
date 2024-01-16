@@ -2,7 +2,7 @@
     position: relative;
 
     &.required {
-        .form-label::after {
+        >label::after {
             content: " *";
             color: var(--color-error);
         }
@@ -34,11 +34,11 @@
         &:hover {
             border-color: var(--color-primary);
         }
-    
+
         &:focus {
             border-color: var(--color-primary);
         }
-    
+
         &::-webkit-input-placeholder {
             color: transparent !important;
         }
