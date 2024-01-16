@@ -51,4 +51,10 @@
             color: var(--color-primary);
         }
     }
+
+    >.icon-button {
+        position: absolute;
+        top: 0.9375rem;
+        right: 0.875rem;
+    }
 }
