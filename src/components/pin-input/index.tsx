@@ -1,10 +1,11 @@
+import React from "react"
 import "./style.css"
 
-type Props = {
+type Props = React.InputHTMLAttributes<HTMLInputElement> & {
     mask?: boolean
 }
 
-export default function PinInput({ mask }: Props) {
+export default React.forwardRef<HTMLInputElement, Props>(({ mask, ...rest }, ref) => {
     function handleInput({ currentTarget }: React.FormEvent<HTMLInputElement>) {
         const value = currentTarget.value
         const max = currentTarget.maxLength
@@ -13,18 +14,15 @@ export default function PinInput({ mask }: Props) {
     }
 
     return (
-        <div className="pin-input">
-            {[...Array(4)].map((_, index) => (
-                <input
-                    key={index}
-                    type={!mask ? "number" : "password"}
-                    inputMode="numeric"
-                    placeholder="○"
-                    maxLength={1}
-                    onInput={handleInput}
-                />
-            ))}
-
-        </div>
+        <input
+            ref={ref}
+            className="pin-input"
+            {...rest}
+            type={!mask ? "number" : "password"}
+            inputMode="numeric"
+            placeholder="○"
+            maxLength={1}
+            onInput={handleInput}
+        />
     )
-}
+})

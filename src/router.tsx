@@ -7,6 +7,7 @@ import AuthLayout from "./layouts/auth"
 import SignIn from "./pages/sign-in"
 import SignUp from "./pages/sign-up"
 import ForgotPassword from "./pages/forgot-password"
+import CheckPin from "./pages/check-pin"
 
 export const router = createBrowserRouter([
     {
@@ -42,6 +43,10 @@ export const router = createBrowserRouter([
             {
                 path: "forgot-password",
                 element: <ForgotPassword />
+            },
+            {
+                path: "check-pin",
+                element: <CheckPin />
             }
         ]
     },

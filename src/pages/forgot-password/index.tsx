@@ -1,15 +1,18 @@
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 import Button from "../../components/button"
 import Input from "../../components/input"
 import "./style.css"
 
 export default function ForgotPassword() {
+    const navigate = useNavigate()
+
     const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault()
         const data = new FormData(event.currentTarget)
         console.log({
             email: data.get("email"),
         })
+        navigate("/auth/check-pin")
     }
 
     return (
