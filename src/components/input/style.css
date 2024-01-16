@@ -14,7 +14,7 @@
         left: 5px;
         transform: translateY(-50%);
         font-size: 16px;
-        color: var(--color-info-dark);
+        color: var(--color-dark-variant);
         padding: 0 5px;
         pointer-events: none;
         transition: .5s;
@@ -27,7 +27,7 @@
         color: var(--color-dark);
         padding: 0 10px;
         background: transparent;
-        border: 1.2px solid var(--color-light);
+        border: 1.2px solid var(--color-dark-variant);
         outline: none;
         border-radius: 5px;
 
@@ -47,6 +47,13 @@
             &:invalid {
                 border-color: var(--color-error);
             }
+        }
+
+        &:disabled,
+        &:disabled~label {
+            color: var(--color-info-dark);
+            cursor: not-allowed;
+            border-color: var(--color-light);
         }
 
         &:focus~label,
