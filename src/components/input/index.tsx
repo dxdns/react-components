@@ -22,14 +22,15 @@ export default React.forwardRef<HTMLInputElement, Props>(({ label, ...rest }, re
                 {...rest}
                 type={passwordVisible ? "text" : rest.type}
                 autoComplete="off"
+                placeholder=" "
             />
-            {label && <label htmlFor="">
+            {label && <label htmlFor={label}>
                 {label}
             </label>}
             {rest.type === "password" &&
                 <IconButton
                     type="button"
-                    name={passwordVisible ? "visibility_off" : "visibility"}
+                    name={passwordVisible ? "visibility" : "visibility_off"}
                     onClick={handleInputPassword}
                 />}
         </div>

@@ -43,8 +43,15 @@
             color: transparent !important;
         }
 
+        &:focus-visible {
+            &:invalid {
+                border-color: var(--color-error);
+            }
+        }
+
         &:focus~label,
-        &:valid~label {
+        /* &:valid~label, */
+        &:not(:placeholder-shown):not(:focus)~label {
             top: 0;
             font-size: 12px;
             background: var(--color-white);
