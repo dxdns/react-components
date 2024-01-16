@@ -8,6 +8,7 @@ import SignIn from "./pages/sign-in"
 import SignUp from "./pages/sign-up"
 import ForgotPassword from "./pages/forgot-password"
 import CheckPin from "./pages/check-pin"
+import NewPassword from "./pages/new-password"
 
 export const router = createBrowserRouter([
     {
@@ -47,6 +48,10 @@ export const router = createBrowserRouter([
             {
                 path: "check-pin",
                 element: <CheckPin />
+            },
+            {
+                path: "new-password",
+                element: <NewPassword />
             }
         ]
     },

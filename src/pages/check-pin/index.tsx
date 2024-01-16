@@ -1,14 +1,17 @@
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 import Button from "../../components/button"
 import PinInput from "../../components/pin-input"
 import "./style.css"
 
 export default function CheckPin() {
+    const navigate = useNavigate()
+
     const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault()
         const data = new FormData(event.currentTarget)
         const values = [...data.values()].map(v => v)
         console.log(values.toString().replaceAll(",", ""))
+        navigate("/auth/new-password")
     }
 
     return (
