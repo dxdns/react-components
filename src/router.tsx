@@ -6,6 +6,7 @@ import Template from "./layouts/template/template"
 import AuthLayout from "./layouts/auth"
 import SignIn from "./pages/sign-in"
 import SignUp from "./pages/sign-up"
+import ForgotPassword from "./pages/forgot-password"
 
 export const router = createBrowserRouter([
     {
@@ -37,6 +38,10 @@ export const router = createBrowserRouter([
             {
                 path: "sign-up",
                 element: <SignUp />
+            },
+            {
+                path: "forgot-password",
+                element: <ForgotPassword />
             }
         ]
     },
