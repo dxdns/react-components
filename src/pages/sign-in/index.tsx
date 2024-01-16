@@ -4,8 +4,17 @@ import Input from "../../components/input"
 import "./style.css"
 
 export default function SignIn() {
+    const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+        event.preventDefault()
+        const data = new FormData(event.currentTarget)
+        console.log({
+            email: data.get("email"),
+            password: data.get("password"),
+        })
+    }
+
     return (
-        <div className="sign-in">
+        <form className="sign-in" onSubmit={handleSubmit}>
             <div className="header">
                 <h1>Sign In</h1>
                 <p>New user?
@@ -15,11 +24,21 @@ export default function SignIn() {
                 </p>
             </div>
             <div className="content">
-                <Input type="email" label="Email" required />
-                <Input type="password" label="Password" required />
+                <Input
+                    type="email"
+                    name="email"
+                    label="Email"
+                    required
+                />
+                <Input
+                    type="password"
+                    name="password"
+                    label="Password"
+                    required
+                />
                 <Link to={"forgot-password"}>Forgot password?</Link>
                 <Button type="submit">Sign In</Button>
             </div>
-        </div>
+        </form>
     )
 }

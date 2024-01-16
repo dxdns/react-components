@@ -18,9 +18,7 @@ export default function AuthLayout() {
                 </div>
             </div>
             <div className="right">
-                <form>
-                    <Outlet />
-                </form>
+                <Outlet />
             </div>
         </div>
     )
