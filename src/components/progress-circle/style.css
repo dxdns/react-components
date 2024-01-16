@@ -14,7 +14,7 @@
             font-weight: bold;
         }
 
-        &circle {
+        &>circle {
             fill: none;
             /* stroke: var(--color-primary); */
             stroke-linecap: round;

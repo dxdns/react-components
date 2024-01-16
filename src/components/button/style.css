@@ -26,7 +26,7 @@
     }
 
     &.md {
-        font-size: medium;
+        font-size: 1rem;
         padding: 1rem 2rem;
     }
 
@@ -36,11 +36,16 @@
     }
 
     &.contained {
+        color: var(--color-white) !important;
         background: var(--color-primary);
+
+        &:hover {
+            background: var(--color-secondary) !important;
+        }
     }
 
     &.outlined {
-        background: none;
+        background: transparent;
         border: 1px solid var(--color-border);
         color: var(--color-primary);
 
@@ -50,7 +55,7 @@
     }
 
     &.text {
-        background: none;
+        background: transparent;
         padding: 0 !important;
         margin: 0 !important;
         color: var(--color-dark);
@@ -60,8 +65,8 @@
         }
     }
 
-    &.has-child {
-        padding: 0 1rem;
+    &.has-more-childs {
+        padding: .2rem 1rem;
         margin: 0;
         display: flex;
         align-items: center;

@@ -3,21 +3,26 @@
 :root {
   color-scheme: light dark;
   --color-primary: #7380ec;
+  --color-primary-variant: #111e88;
+  --color-secondary: #737fecd3;
+  --color-secondary-variant: #5c6ae4d3;
   --color-error: #ff7782;
   --color-error-variant: rgba(255, 86, 48, 0.24);
   --color-success: #41f1b6;
   --color-success-variant: #2e7d3280;
   --color-warning: #ffbb55;
   --color-warning-variant: #ffab0029;
+
   --color-white: #fff;
+
   --color-info-dark: #7d8da1;
   --color-info-light: #dce1eb;
+
   --color-dark: #363049;
-  --color-light: #848bc82e;
-  --color-primary-variant: #111e88;
-  --color-action: #757575;
-  --color-secondary: #111e88;
   --color-dark-variant: #677483;
+  --color-light: #848bc82e;
+  --color-action: #757575;
+
   --color-background: #f6f6f9;
   --color-border: rgba(25, 118, 210, 0.5);
   --color-border-hover: #1976d2;
@@ -39,6 +44,7 @@
   --color-dark: #edeffd;
   --color-dark-variant: #a3bdcc;
   --color-light: rgba(0, 0, 0, 0.4);
+
   --box-shadow: 0 2rem 3rem var(--color-light);
   --color-border: rgba(144, 202, 249, 0.5);
 }
@@ -73,6 +79,7 @@ a {
   font-weight: 500;
   color: var(--color-primary);
   text-decoration: inherit;
+  transition: all .5s;
 }
 
 a:hover {

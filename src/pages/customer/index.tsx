@@ -21,8 +21,7 @@ export default function Customer() {
             <div className="header-customer">
                 <h1>Page Customer</h1>
                 <Button
-                    right={<Icon name="add" />}
-                    size="sm"
+                    left={<Icon name="add" />}
                 >
                     New Customer
                 </Button>

@@ -23,7 +23,7 @@ export default React.forwardRef<HTMLButtonElement, Props>((props, ref) => {
         left,
         ...rest
     } = props
-    const hasChild = right || left ? "has-child" : ""
+    const hasChild = right || left ? "has-more-childs" : ""
 
     return (
         <button

@@ -129,8 +129,7 @@ export default function Template() {
                     ))}
 
                     <Button
-                        right={<Icon name="add" />}
-                        size="sm"
+                        left={<Icon name="add" />}
                     >
                         Add Product
                     </Button>
