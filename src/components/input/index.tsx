@@ -1,6 +1,7 @@
 import React from "react"
 import "./style.css"
 import IconButton from "../icon-button"
+import Icon from "../icon"
 
 type Props = React.InputHTMLAttributes<HTMLInputElement> & {
     label?: string
@@ -17,12 +18,13 @@ export default React.forwardRef<HTMLInputElement, Props>(({ label, ...rest }, re
 
     return (
         <div className={`input-group ${rest.required ? "required" : ""}`}>
+            {rest.type === "search" && <Icon name="search" />}
             <input
                 ref={ref || inputRef}
                 {...rest}
                 type={passwordVisible ? "text" : rest.type}
                 autoComplete="off"
-                placeholder=" "
+                placeholder={rest.type === "search" ? rest.placeholder : " "}
             />
             {label && <label htmlFor={label}>
                 {label}

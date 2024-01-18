@@ -63,9 +63,49 @@
         }
     }
 
-    >.icon-button {
+    &:first-child {
+        .icon {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            translate: 0 -50%;
+            color: var(--color-info-dark) !important;
+        }
+    }
+
+    .icon-button {
         position: absolute;
-        top: .9rem;
+        top: 50%;
         right: .8rem;
+        translate: 0 -50%;
+    }
+
+    >input[type="search"] {
+        padding-inline-start: 3rem;
+
+        &::-webkit-input-placeholder {
+            color: var(--color-info-dark) !important;
+        }
+
+        &+label {
+            display: none;
+        }
+
+        &::-webkit-search-cancel-button {
+            -webkit-appearance: none;
+            height: 1em;
+            width: 1em;
+            border-radius: 50em;
+            background: url(https://pro.fontawesome.com/releases/v5.10.0/svgs/solid/times-circle.svg) no-repeat 50% 50%;
+            background-size: contain;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity .5s;
+        }
+
+        &:focus::-webkit-search-cancel-button {
+            opacity: .3;
+            pointer-events: all;
+        }
     }
 }
