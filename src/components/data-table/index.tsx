@@ -27,7 +27,7 @@ export default function DataTable({ columns, data, renderExpandableRow }: Props)
     }
 
     return (
-        <table>
+        <table className="table">
             <thead>
                 <tr>
                     {renderExpandableRow ? <th style={{ width: "5px" }}></th> : null}

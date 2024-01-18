@@ -25,11 +25,6 @@ export default function SignIn() {
             </div>
             <div className="content">
                 <Input
-                    type="search"
-                    name="fragment"
-                    placeholder="Search..."
-                />
-                <Input
                     type="email"
                     name="email"
                     label="Email"

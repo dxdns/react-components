@@ -5,6 +5,8 @@ import Card from "../../components/card"
 import Button from "../../components/button"
 import Icon from "../../components/icon"
 import { columns } from "./data"
+import Input from "../../components/input"
+import Select from "../../components/select"
 import "./style.css"
 
 export default function Customer() {
@@ -17,8 +19,8 @@ export default function Customer() {
     const result = data.slice(firstIndex, lastIndex)
 
     return (
-        <>
-            <div className="header-customer">
+        <div className="customer">
+            <div className="header">
                 <h1>Page Customer</h1>
                 <Button
                     left={<Icon name="add" />}
@@ -26,6 +28,30 @@ export default function Customer() {
                     New Customer
                 </Button>
             </div>
+            <Card>
+                <div className="header">
+                    <Input
+                        type="search"
+                        name="fragment"
+                        placeholder="Search..."
+                    />
+                    <Select
+                        onChange={(e) => console.log(e.target.value)}
+                        defaultValue={rowsPerPage}
+                    >
+                        {[...Array(4)].map((_, i) => {
+                            return (
+                                <option
+                                    key={i}
+                                    value={i}
+                                >
+                                    {i}
+                                </option>
+                            )
+                        })}
+                    </Select>
+                </div>
+            </Card>
             <Card>
                 <DataTable
                     data={result}
@@ -46,6 +72,6 @@ export default function Customer() {
                     onRowsPerPageChange={(value) => setRowsPerPage(value === "All" ? data.length : +value)}
                 />
             </Card>
-        </>
+        </div>
     )
 }
