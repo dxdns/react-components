@@ -1,16 +1,16 @@
+import React from "react"
+import Input from "../input"
 import "./style.css"
 
-type Props = {
-    onChange?: (value: string) => void
-}
+type Props = React.InputHTMLAttributes<HTMLInputElement> & {}
 
-export default function DatePicker({ onChange }: Props) {
+export default React.forwardRef<HTMLInputElement, Props>(({ ...rest }, ref) => {
     return (
-        <div className="date">
-            <input
-                type="date"
-                onChange={(e) => onChange ? onChange(e.target.value) : null}
-            />
-        </div>
+        <Input
+            ref={ref}
+            {...rest}
+            className="date-picker"
+            type="date"
+        />
     )
-}
+})

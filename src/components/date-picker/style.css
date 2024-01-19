@@ -1,31 +1,15 @@
-.date {
-    display: inline-block;
+.date-picker {
     background: var(--color-light);
-    border-radius: var(--border-radius-1);
-    margin-top: 1rem;
-    padding: 0.5rem 1.6rem;
+    color: var(--color-dark);
+    color-scheme: dark;
 
-    >input[type='date'] {
-        background: transparent;
-        color: var(--color-dark);
-        color-scheme: dark;
+    &::-webkit-calendar-picker-indicator {
+        opacity: 0.6;
+        filter: invert(0.5);
+        cursor: pointer;
+    }
 
-        &::-webkit-calendar-picker-indicator {
-            opacity: 0.6;
-            filter: invert(0.5);
-            cursor: pointer;
-        }
-
-        &::-webkit-calendar-picker-indicator:hover {
-            opacity: 1;
-        }
+    &::-webkit-calendar-picker-indicator:hover {
+        opacity: 1;
     }
 }
-
-/* @media (prefers-color-scheme: dark) {
-    .date {
-        >input[type='date'] {
-            color-scheme: dark;
-        }
-    }
-} */

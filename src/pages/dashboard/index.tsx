@@ -9,7 +9,9 @@ export default function Dashboard() {
     return (
         <>
             <h1>Dashboard</h1>
-            <DatePicker />
+            <DatePicker
+                onChange={(e) => console.log(e.target.value)}
+            />
 
             <div className="insights">
                 {insights.map((item, index) => (
