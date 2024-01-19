@@ -97,6 +97,7 @@
 
     >input[type="search"] {
         padding-inline-start: 3rem;
+        transition: width .5s;
 
         &::-webkit-input-placeholder {
             color: var(--color-info-dark) !important;
@@ -118,9 +119,13 @@
             transition: opacity .5s;
         }
 
-        &:focus::-webkit-search-cancel-button {
-            opacity: .3;
-            pointer-events: all;
+        &:focus {
+            width: calc(100% + 10px);
+
+            &::-webkit-search-cancel-button {
+                opacity: .3;
+                pointer-events: all;
+            }
         }
     }
 }
