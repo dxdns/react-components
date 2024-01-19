@@ -2,14 +2,15 @@ import "./style.css"
 import Card from "../../components/card"
 import { CardStatistic } from "../../components/card-statistic"
 import DataTable from "../../components/data-table"
-import DatePicker from "../../components/date-picker"
 import { columns, insights, rows } from "./data"
+import Input from "../../components/input"
 
 export default function Dashboard() {
     return (
-        <>
+        <div className="dashboard">
             <h1>Dashboard</h1>
-            <DatePicker
+            <Input
+                type="date"
                 onChange={(e) => console.log(e.target.value)}
             />
 
@@ -32,6 +33,6 @@ export default function Dashboard() {
                     <a href="">Show All</a>
                 </div>
             </Card>
-        </>
+        </div>
     )
 }

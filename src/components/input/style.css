@@ -80,6 +80,21 @@
         translate: 0 -50%;
     }
 
+    >input[type="date"] {
+        color: var(--color-dark);
+        color-scheme: dark;
+
+        &::-webkit-calendar-picker-indicator {
+            opacity: 0.6;
+            filter: invert(0.5);
+            cursor: pointer;
+        }
+
+        &::-webkit-calendar-picker-indicator:hover {
+            opacity: 1;
+        }
+    }
+
     >input[type="search"] {
         padding-inline-start: 3rem;
 
