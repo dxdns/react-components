@@ -1,24 +1,24 @@
-import React from "react"
 import "./style.css"
+import React from "react"
+import Icon from "../icon"
 
-type Props = {
-    onClick: () => void
-    left?: JSX.Element
-    right?: JSX.Element
+type Props = React.InputHTMLAttributes<HTMLInputElement> & {
+    label?: string
+    icon?: string
 }
 
-export default function Switch({ onClick, left, right }: Props) {
-    const [checked, setChecked] = React.useState(false)
-
-    function handleClick() {
-        setChecked(old => !old)
-        onClick()
-    }
-
+export default React.forwardRef<HTMLInputElement, Props>(({ label, icon, ...rest }, ref) => {
     return (
-        <div className="switch" onClick={handleClick}>
-            <span className={`${!checked ? "active" : ""}`}>{left}</span>
-            <span className={`${checked ? "active" : ""}`}>{right}</span>
+        <div className="switch">
+            <div className="wrapper">
+                <input
+                    ref={ref}
+                    {...rest}
+                    type="checkbox"
+                />
+                {icon && <Icon name={icon} variant="text" />}
+            </div>
+            <label>{label}</label>
         </div>
     )
-}
+})

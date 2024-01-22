@@ -13,21 +13,21 @@ import Logo from "../../components/logo"
 import React from "react"
 
 export default function Template() {
-    const [showMenu, setshowMenu] = React.useState(false)
+    const [open, setOpen] = React.useState(false)
+    const [checked, setChecked] = React.useState(false)
 
     const menuRef = React.useRef<HTMLDivElement | null>(null)
 
     function openMenu() {
-        setshowMenu(true)
+        setOpen(true)
     }
 
     function closeMenu() {
-        setshowMenu(false)
+        setOpen(false)
     }
 
-    function toggleTheme() {
-        const isDark = document.documentElement.getAttribute("data-theme") === "light"
-
+    function toggleTheme(isDark: boolean) {
+        setChecked(isDark)
         if (isDark) {
             document.documentElement.style.colorScheme = "dark"
             document.documentElement.setAttribute("data-theme", "dark")
@@ -36,6 +36,11 @@ export default function Template() {
             document.documentElement.setAttribute("data-theme", "light")
         }
     }
+
+    React.useEffect(() => {
+        const isDark = document.documentElement.getAttribute("data-theme") === "light"
+        toggleTheme(isDark)
+    }, [])
 
     React.useEffect(() => {
         function handler(e: MouseEvent) {
@@ -56,7 +61,7 @@ export default function Template() {
 
     return (
         <div className="template">
-            <aside ref={menuRef} className={showMenu ? "show" : "hide"}>
+            <aside ref={menuRef} className={open ? "show" : "hide"}>
                 <div className="top">
                     <Link to={""}>
                         <Logo />
@@ -92,9 +97,8 @@ export default function Template() {
                         onClick={openMenu}
                     />
                     <Switch
-                        onClick={toggleTheme}
-                        left={<Icon name="light_mode" variant="text" />}
-                        right={<Icon name="dark_mode" variant="text" />}
+                        onChange={(e) => toggleTheme(e.target.checked)}
+                        icon={checked ? "light_mode" : "dark_mode"}
                     />
                     <div className="profile">
                         <div className="info">

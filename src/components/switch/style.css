@@ -1,26 +1,57 @@
 .switch {
-    background: var(--color-light);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 1.6rem;
-    width: 4.2rem;
-    cursor: pointer;
-    border-radius: var(--border-radius-1);
-}
-
-.switch span {
-    font-size: 1.2rem;
-    width: 50%;
-    height: 100%;
     display: flex;
     align-items: center;
-    justify-content: center;
-}
+    position: relative;
+    gap: .5rem;
 
-.switch span.active {
-    background: var(--color-primary);
-    /* color: var(--color-white); */
-    color: white;
-    border-radius: var(--border-radius-1);
+    .wrapper {
+        position: relative;
+
+        >input[type=checkbox] {
+            cursor: pointer;
+            margin: 1rem auto;
+            position: relative;
+            width: 50px;
+            height: 30px;
+            border-radius: 25px;
+            outline: none;
+            background: var(--color-light) !important;
+            border: none;
+
+            &::after {
+                content: "";
+                position: absolute;
+                top: 50%;
+                left: 30%;
+                transform: translate(-50%, -50%);
+                border-radius: 50%;
+                height: 1.5rem;
+                width: 1.5rem;
+                background: var(--color-primary);
+                transition: left .3s;
+            }
+
+            &:checked {
+                background: var(--color-light-variant);
+
+                &::after {
+                    left: 70%;
+                }
+            }
+
+            &:checked+span {
+                left: 40%;
+                transform: rotate(-180deg);
+            }
+        }
+
+        >span {
+            position: absolute;
+            top: 15px;
+            font-size: 15px;
+            pointer-events: none;
+            left: 0;
+            transition: .3s;
+        }
+    }
 }
