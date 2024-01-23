@@ -1,5 +1,5 @@
-import React from "react"
 import "./style.css"
+import React from "react"
 import Spinner from "../spinner"
 import { ColorType, SizeType, VariantType } from "../../types"
 
@@ -23,13 +23,12 @@ export default React.forwardRef<HTMLButtonElement, Props>((props, ref) => {
         left,
         ...rest
     } = props
-    const hasChild = right || left ? "has-more-childs" : ""
 
     return (
         <button
             ref={ref}
             {...rest}
-            className={`button ${variant} ${color} ${size} ${hasChild} ${rest.className}`}
+            className={`button ${variant} ${color} ${size} ${rest.className}`}
             disabled={isLoading || rest.disabled}
         >
             {left}

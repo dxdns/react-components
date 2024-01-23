@@ -44,6 +44,7 @@
   --color-dark: #edeffd;
   --color-dark-variant: #a3bdcc;
   --color-light: rgba(0, 0, 0, 0.4);
+  --color-light-variant: #5263fa27;
 
   --box-shadow: 0 2rem 3rem var(--color-light);
   --color-border: rgba(144, 202, 249, 0.5);

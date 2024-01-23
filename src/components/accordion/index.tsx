@@ -1,16 +1,17 @@
-import React from "react"
 import "./style.css"
+import { VariantType } from "../../types"
+import React from "react"
 
-type Props = React.PropsWithChildren & {}
+type Props = React.PropsWithChildren & {
+    label: string | JSX.Element
+    open: boolean
+    variant?: VariantType
+}
 
-export default function Accordion({ children }: Props) {
-    const [open, setOpen] = React.useState(false)
+export default function Accordion({ label, open, variant = "contained", children }: Props) {
     const contentRef = React.useRef<HTMLDivElement | null>(null)
 
-    const isOpen = open ? "active" : ""
-
-    function handleClick() {
-        setOpen(old => !old)
+    function handleOpen() {
         const content = contentRef.current
         if (content?.style.maxHeight) {
             content.style.maxHeight = ""
@@ -19,12 +20,18 @@ export default function Accordion({ children }: Props) {
         }
     }
 
+    React.useEffect(() => {
+        handleOpen()
+    }, [open])
+
     return (
-        <>
-            <button onClick={handleClick} className={`accordion ${isOpen}`}>Section 1</button>
-            <div ref={contentRef} className="accordion-content">
+        <div className="accordion">
+            <button className={`${open ? "active" : ""} ${variant}`}>
+                {label}
+            </button>
+            <div ref={contentRef} className="content">
                 {children}
             </div>
-        </>
+        </div>
     )
 }

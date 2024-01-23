@@ -32,7 +32,7 @@
             }
 
             &:checked {
-                background: var(--color-light-variant);
+                background: var(--color-light-variant) !important;
 
                 &::after {
                     left: 70%;
