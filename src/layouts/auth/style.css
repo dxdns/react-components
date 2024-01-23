@@ -37,6 +37,10 @@
 
             >button {
                 border-color: var(--color-white);
+
+                &:hover {
+                    background: var(--color-light);
+                }
             }
         }
     }
