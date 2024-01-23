@@ -9,12 +9,4 @@
     &:hover {
         background: var(--color-light);
     }
-
-    & button {
-        font-size: 11px;
-
-        &>.icon {
-            font-size: 16px;
-        }
-    }
 }

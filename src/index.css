@@ -157,6 +157,18 @@ b {
   color: var(--color-info-dark) !important;
 }
 
+.lg {
+  font-size: 1.125rem;
+}
+
+.md {
+  font-size: 1rem;
+}
+
+.sm {
+  font-size: 0.875rem;
+}
+
 .profile-photo {
   width: 2.8rem;
   height: 2.8rem;
