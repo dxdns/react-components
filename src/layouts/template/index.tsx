@@ -11,6 +11,7 @@ import Button from "../../components/button"
 import { menuItems, messages, sales } from "./data"
 import Logo from "../../components/logo"
 import React from "react"
+import { getTheme, setTheme } from "../../utils/theme"
 
 export default function Template() {
     const [open, setOpen] = React.useState(false)
@@ -26,20 +27,19 @@ export default function Template() {
         setOpen(false)
     }
 
-    function toggleTheme(isDark: boolean) {
-        setChecked(isDark)
-        if (isDark) {
-            document.documentElement.style.colorScheme = "dark"
-            document.documentElement.setAttribute("data-theme", "dark")
+    function toggleTheme() {
+        const isLight = getTheme() === "light"
+        setChecked(isLight)
+
+        if (isLight) {
+            setTheme("dark")
         } else {
-            document.documentElement.style.colorScheme = "light"
-            document.documentElement.setAttribute("data-theme", "light")
+            setTheme("light")
         }
     }
 
     React.useEffect(() => {
-        const isDark = document.documentElement.getAttribute("data-theme") === "light"
-        toggleTheme(isDark)
+        toggleTheme()
     }, [])
 
     React.useEffect(() => {
@@ -97,8 +97,10 @@ export default function Template() {
                         onClick={openMenu}
                     />
                     <Switch
-                        onChange={(e) => toggleTheme(e.target.checked)}
+                        checked={checked}
+                        name={"theme"}
                         icon={checked ? "light_mode" : "dark_mode"}
+                        onChange={toggleTheme}
                     />
                     <div className="profile">
                         <div className="info">
