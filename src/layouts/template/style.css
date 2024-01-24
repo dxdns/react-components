@@ -11,6 +11,10 @@
     >main {
         margin-top: 1.4rem;
         grid-area: main;
+        
+        >div {
+            animation: opacityFadeIn 1s;
+        }
     }
 
     >aside {

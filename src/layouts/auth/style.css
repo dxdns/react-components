@@ -54,9 +54,9 @@
         justify-content: center;
         grid-area: right;
 
-        &>form {
+        >form {
             width: 50%;
-            animation: fadeIn 1s;
+            animation: opacityFadeIn 1s;
         }
     }
 }
@@ -71,15 +71,5 @@
         .left {
             display: none;
         }
-    }
-}
-
-@keyframes fadeIn {
-    0% {
-        opacity: 0;
-    }
-
-    100% {
-        opacity: 1;
     }
 }

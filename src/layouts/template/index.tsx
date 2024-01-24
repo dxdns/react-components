@@ -1,4 +1,5 @@
 import "./style.css"
+import React from "react"
 import { Link, NavLink, Outlet } from "react-router-dom"
 import IconButton from "../../components/icon-button"
 import Switch from "../../components/switch"
@@ -10,8 +11,8 @@ import CardAnalytic from "../../components/card-analytic"
 import Button from "../../components/button"
 import { menuItems, messages, sales } from "./data"
 import Logo from "../../components/logo"
-import React from "react"
 import { getTheme, setTheme } from "../../utils/theme"
+import Avatar from "../../components/avatar"
 
 export default function Template() {
     const [open, setOpen] = React.useState(false)
@@ -107,9 +108,7 @@ export default function Template() {
                             <p>Hey, <b>Test</b></p>
                             <small className="text-muted">Admin</small>
                         </div>
-                        <div className="profile-photo">
-                            <img src={profile1} alt="" />
-                        </div>
+                        <Avatar image={profile1} />
                     </div>
                 </div>
 
