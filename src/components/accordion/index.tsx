@@ -9,27 +9,14 @@ type Props = React.PropsWithChildren & {
 }
 
 export default function Accordion({ label, open, variant = "contained", children }: Props) {
-    const contentRef = React.useRef<HTMLDivElement | null>(null)
-
-    function handleOpen() {
-        const content = contentRef.current
-        if (content?.style.maxHeight) {
-            content.style.maxHeight = ""
-        } else {
-            content!.style.maxHeight = `${content?.scrollHeight}px`
-        }
-    }
-
-    React.useEffect(() => {
-        handleOpen()
-    }, [open])
+    const isActive = open ? "active" : ""
 
     return (
         <div className="accordion">
-            <button className={`${open ? "active" : ""} ${variant}`}>
+            <button className={`${isActive} ${variant}`}>
                 {label}
             </button>
-            <div ref={contentRef} className="content">
+            <div className={`content ${isActive}`}>
                 {children}
             </div>
         </div>

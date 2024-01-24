@@ -31,10 +31,6 @@
             }
         }
 
-        &.active+.content {
-            margin-bottom: 1rem;
-        }
-
         &.text {
             all: unset;
 
@@ -55,7 +51,15 @@
         transition: max-height .2s ease-out;
 
         >:first-child {
-            margin-top: 1rem;
+            transition: margin-top .2s ease-out;
+        }
+
+        &.active {
+            max-height: 400px;
+
+            >:first-child {
+                margin-top: 1rem;
+            }
         }
     }
 }
