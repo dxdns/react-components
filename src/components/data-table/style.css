@@ -5,8 +5,15 @@
     width: 100%;
     table-layout: fixed;
 
+    & th,
+    td {
+        padding: .625em;
+        text-align: -webkit-center;
+        height: 2.8rem;
+        color: var(--color-dark);
+    }
+
     >thead {
-        /* background: var(--color-light); */
         height: 50px;
 
         & tr th {
@@ -23,29 +30,50 @@
 
     >tbody {
         >tr {
-            border-bottom: 1px solid var(--color-light);
             padding: .35em;
+
+            &:not(.colappse) {
+                border-bottom: 1px solid var(--color-light);
+
+                &:hover {
+                    background-color: var(--color-light);
+                }
+            }
 
             &:last-child {
                 border: none;
             }
+        }
 
-            &:hover {
-                background-color: var(--color-light);
+        .colappse {
+            >td {
+                height: 0;
+                padding-bottom: 0;
+                padding-top: 0;
+                line-height: 1.43;
+                letter-spacing: 0.01071em;
             }
 
-            /* &:nth-child(even){
-                background-color: var(--color-light);
-            } */
-        }
-    }
+            &,
+            .content {
+                max-height: 0px;
+                overflow: hidden;
+                transition: max-height, padding .2s ease-out;
+            }
 
-    & th,
-    td {
-        padding: .625em;
-        text-align: -webkit-center;
-        height: 2.8rem;
-        color: var(--color-dark);
+            &.active {
+                >td {
+                    height: 100%;
+                    border-bottom: 1px solid var(--color-light);
+                }
+
+                &,
+                .content {
+                    max-height: 400px;
+                    padding: 16px;
+                }
+            }
+        }
     }
 
     .expand-btn {
