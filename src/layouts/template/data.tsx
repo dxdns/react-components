@@ -1,5 +1,5 @@
-import profile1 from "../../assets/profile-1.jpg"
-import profile2 from "../../assets/profile-2.jpg"
+// import profile1 from "../../assets/profile-1.jpg"
+// import profile2 from "../../assets/profile-2.jpg"
 import Icon from "../../components/icon"
 
 export const menuItems = [
@@ -43,13 +43,13 @@ export const sales = [
 
 export const messages = [
     {
-        image: profile1,
+        // image: profile1,
         yourname: "Mike Tyson",
         text: "received his order of Night lion tech GPS drone."
     },
     {
-        image: profile2,
-        yourname: "Mike Tyson",
+        // image: profile2,
+        yourname: "New Tyson",
         text: "received his order of Night lion tech GPS drone."
     }
 ]

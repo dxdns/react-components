@@ -2,7 +2,7 @@ import "./style.css"
 import Avatar from "../avatar"
 
 type Props = {
-    image: string
+    image?: string
     yourname: string
     text: string
 }
@@ -10,7 +10,9 @@ type Props = {
 export default function Message({ image, yourname, text }: Props) {
     return (
         <div className="update">
-            <Avatar image={image} />
+            <Avatar src={image}>
+                {yourname}
+            </Avatar>
             <div className="message">
                 <p><b>{yourname}</b> {text}</p>
                 <small className="text-muted">2 Minutes Ago</small>

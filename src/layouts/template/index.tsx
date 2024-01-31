@@ -108,7 +108,7 @@ export default function Template() {
                             <p>Hey, <b>Test</b></p>
                             <small className="text-muted">Admin</small>
                         </div>
-                        <Avatar image={profile1} />
+                        <Avatar src={profile1} />
                     </div>
                 </div>
 
