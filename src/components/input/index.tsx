@@ -2,12 +2,14 @@ import React from "react"
 import "./style.css"
 import IconButton from "../icon-button"
 import Icon from "../icon"
+import { VariantType } from "../../types"
 
 type Props = React.InputHTMLAttributes<HTMLInputElement> & {
     label?: string
+    variant?: VariantType
 }
 
-export default React.forwardRef<HTMLInputElement, Props>(({ label, ...rest }, ref) => {
+export default React.forwardRef<HTMLInputElement, Props>(({ label, variant = "outlined", ...rest }, ref) => {
     const [passwordVisible, setPasswordVisible] = React.useState(false)
     const inputRef = React.useRef<HTMLInputElement | null>(null)
 
@@ -17,7 +19,7 @@ export default React.forwardRef<HTMLInputElement, Props>(({ label, ...rest }, re
     }
 
     return (
-        <div className={`input-group ${rest.required ? "required" : ""}`}>
+        <div className={`input-group ${rest.required ? "required" : ""} ${variant}`}>
             {rest.type === "search" && <Icon name="search" />}
             <input
                 ref={ref || inputRef}
