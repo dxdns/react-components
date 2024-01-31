@@ -1,5 +1,5 @@
-import React from "react"
 import "./style.css"
+import React from "react"
 import IconButton from "../icon-button"
 import Icon from "../icon"
 import { VariantType } from "../../types"

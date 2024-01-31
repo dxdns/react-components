@@ -34,6 +34,7 @@ export default function Customer() {
                         type="search"
                         name="fragment"
                         placeholder="Search..."
+                        variant="contained"
                     />
                     <Select
                         onChange={(e) => console.log(e.target.value)}

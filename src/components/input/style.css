@@ -63,12 +63,19 @@
         }
     }
 
-    &.contained {
+    &.contained,
+    &.text {
         >input {
             background: var(--color-light);
             border: none;
             border-bottom-left-radius: 0;
             border-bottom-right-radius: 0;
+
+            &:focus~label,
+            &:not(:placeholder-shown):not(:focus)~label {
+                top: 12px !important;
+                background: transparent !important;
+            }
         }
 
         &::before {
@@ -96,6 +103,18 @@
 
         &:focus-within::after {
             transform: scaleX(1);
+        }
+    }
+
+    &.text {
+        >input {
+            padding: 25px 12px 8px 12px;
+            background: transparent !important;
+        }
+
+        .icon {
+            font-size: 18px;
+            top: 65% !important;
         }
     }
 
