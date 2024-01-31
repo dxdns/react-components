@@ -20,7 +20,7 @@ export default React.forwardRef<HTMLImageElement, Props>((props, ref) => {
                 {...rest}
             />
             <span>
-                {typeof (children) === "string" ? Array.from(children)[0] : children}
+                {typeof (children) === "string" ? children.substring(0, 1) : children}
             </span>
         </div>
     )
