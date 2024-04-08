@@ -23,18 +23,18 @@
     width: 2.6rem;
     height: 2.6rem;
     border-radius: 0.4rem;
+}
 
-    &:hover {
-        color: var(--color-primary);
-    }
+.pagination li:hover {
+    color: var(--color-primary);
+}
 
-    &.active {
-        color: #fff;
-        background: var(--color-primary-variant);
-        font-weight: 600;
-    }
+.pagination li.active {
+    color: #fff;
+    background: var(--color-primary-variant);
+    font-weight: 600;
+}
 
-    &.dots {
-        cursor: default;
-    }
+.pagination li.dots {
+    cursor: default;
 }

@@ -8,15 +8,15 @@
     margin-right: 5px;
     color: var(--color-dark);
     border-radius: 5px;
+}
 
-    &:focus {
-        border: 1px solid #573D8B;
-        outline: none;
-    }
+.pin-input:focus {
+    border: 1px solid #573d8b;
+    outline: none;
+}
 
-    &::-webkit-outer-spin-button,
-    &::-webkit-inner-spin-button {
-        -webkit-appearance: none;
-        margin: 0;
-    }
+.pin-input::-webkit-outer-spin-button,
+.pin-input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
 }

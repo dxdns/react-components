@@ -1,20 +1,18 @@
-.sign-in {
-    .header {
-        display: flex;
-        flex-direction: column;
-        gap: 16px;
-        margin-bottom: 40px;
-    }
+.sign-in .header {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 40px;
+}
 
-    .content {
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
+.sign-in .content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
 
-        &:last-child a {
-            line-height: 1.57143;
-            text-decoration: underline;
-            align-self: flex-end;
-        }
-    }
+.sign-in .content:last-child a {
+    line-height: 1.57143;
+    text-decoration: underline;
+    align-self: flex-end;
 }

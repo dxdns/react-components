@@ -1,32 +1,30 @@
-.check-pin {
-    .header {
-        display: flex;
-        flex-direction: column;
-        gap: 16px;
-        margin-bottom: 40px;
-    }
+.check-pin .header {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 40px;
+}
 
-    .content {
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
+.check-pin .content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
 
-        .pin-input-wrapper {
-            padding: 0;
-            margin: 0 auto;
-            display: flex;
-            justify-content: center;
-        }
+.check-pin .content .pin-input-wrapper {
+    padding: 0;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
 
-        &:last-child>a {
-            line-height: 1.57143;
-            font-weight: bold;
-            align-self: center;
+.check-pin .content:last-child>a {
+    line-height: 1.57143;
+    font-weight: bold;
+    align-self: center;
+}
 
-            &::before {
-                content: "\2039  ";
-                font-size: 16px;
-            }
-        }
-    }
+.check-pin .content:last-child>a::before {
+    content: "\2039 ";
+    font-size: 16px;
 }

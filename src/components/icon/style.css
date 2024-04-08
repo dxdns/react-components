@@ -2,20 +2,21 @@
     padding: 0.5rem;
     border-radius: 50%;
     font-size: 2rem;
+}
 
-    &.contained {
-        background: var(--color-primary);
-        padding: 0.5rem;
-        border-radius: 50%;
-        /* color: var(--color-white) !important; */
-    }
+.icon.contained {
+    background: var(--color-primary);
+    padding: 0.5rem;
+    border-radius: 50%;
+    /* color: var(--color-white) !important;
+    */
+}
 
-    &.outlined {
-        background: transparent !important;
-        border: 1px solid var(--color-light);
-    }
+.icon.outlined {
+    background: transparent !important;
+    border: 1px solid var(--color-light);
+}
 
-    &.text {
-        background: transparent !important;
-    }
+.icon.text {
+    background: transparent !important;
 }

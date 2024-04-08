@@ -8,38 +8,38 @@
     margin-bottom: 8px;
     height: 6px;
     max-width: 80px;
+}
 
-    &>div {
-        animation: load 3s normal forwards;
-        width: 100%;
-        position: absolute;
-        left: 0px;
-        bottom: 0px;
-        top: 0px;
-        background: rgb(255, 86, 48);
+.progress-bar>div {
+    animation: load 3s normal forwards;
+    width: 100%;
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    top: 0px;
+    background: #ff5630;
+}
 
-        &.success {
-            background: var(--color-success) !important;
-        }
+.progress-bar>div.success {
+    background: var(--color-success) !important;
+}
 
-        &.error {
-            background: var(--color-error) !important;
-        }
+.progress-bar>div.error {
+    background: var(--color-error) !important;
+}
 
-        &.warning {
-            background: var(--color-warning) !important;
-        }
-    }
+.progress-bar>div.warning {
+    background: var(--color-warning) !important;
+}
 
-    &.success {
-        background: var(--color-success-variant) !important;
-    }
+.progress-bar.success {
+    background: var(--color-success-variant) !important;
+}
 
-    &.error {
-        background: var(--color-error-variant) !important;
-    }
+.progress-bar.error {
+    background: var(--color-error-variant) !important;
+}
 
-    &.warning {
-        background: var(--color-warning-variant) !important;
-    }
+.progress-bar.warning {
+    background: var(--color-warning-variant) !important;
 }

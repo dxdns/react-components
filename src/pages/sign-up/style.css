@@ -1,28 +1,26 @@
-.sign-up {
-    .header {
-        display: flex;
-        flex-direction: column;
-        gap: 16px;
-        margin-bottom: 40px;
-    }
+.sign-up .header {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 40px;
+}
 
-    .content {
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
+.sign-up .content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
 
-        .input-group {
-            display: flex;
-            flex-direction: row;
-            gap: 16px;
+.sign-up .content .input-group {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+}
 
-            .form-group {
-                width: 100%;
-            }
-        }
+.sign-up .content .input-group .form-group {
+    width: 100%;
+}
 
-        &:last-child a {
-            text-decoration: underline;
-        }
-    }
+.sign-up .content:last-child a {
+    text-decoration: underline;
 }

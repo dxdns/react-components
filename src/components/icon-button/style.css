@@ -4,20 +4,20 @@
     display: flex;
     align-items: center;
     border-radius: 50%;
+}
 
-    &:disabled {
-        color: var(--color-dark-variant);
+.icon-button:disabled {
+    color: var(--color-dark-variant);
+}
 
-        &:hover {
-            color: var(--color-dark-variant) !important;
-        }
-    }
+.icon-button:disabled:hover {
+    color: var(--color-dark-variant) !important;
+}
 
-    &:hover {
-        color: var(--color-primary) !important;
-    }
+.icon-button:hover {
+    color: var(--color-primary) !important;
+}
 
-    .icon {
-        padding: 3px;
-    }
+.icon-button .icon {
+    padding: 3px;
 }

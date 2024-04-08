@@ -1,23 +1,25 @@
 .table-pagination {
     padding-top: 2rem;
+}
 
-    &,
-    >div {
-        display: flex;
-        align-items: center;
-        gap: 1rem;
-        /* word-break: break-all; */
-        justify-content: flex-end;
-    }
+.table-pagination,
+.table-pagination>div {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    /* word-break: break-all;
+    */
+    justify-content: flex-end;
+}
 
-    >div>span.options-text {
-        /* min-width: 80px; */
-        font-size: 9px;
-        font-weight: 400;
-        color: var(--color-info-dark);
-    }
+.table-pagination>div>span.options-text {
+    /* min-width: 80px;
+    */
+    font-size: 9px;
+    font-weight: 400;
+    color: var(--color-info-dark);
+}
 
-    .button {
-        border-radius: 50%;
-    }
+.table-pagination .button {
+    border-radius: 50%;
 }

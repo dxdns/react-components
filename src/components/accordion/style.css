@@ -1,65 +1,61 @@
-.accordion {
-    >button {
-        background-color: var(--color-light);
-        color: var(--color-dark);
-        cursor: pointer;
-        padding: 18px;
-        width: 100%;
-        text-align: left;
-        outline: none;
-        font-size: 15px;
-        transition: 0.4s;
-        border-radius: 5px;
+.accordion>button {
+    background-color: var(--color-light);
+    color: var(--color-dark);
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    transition: 0.4s;
+    border-radius: 5px;
+}
 
-        &:hover {
-            background: var(--color-light) !important;
-            color: var(--color-dark) !important;
-        }
+.accordion>button:hover {
+    background: var(--color-light) !important;
+    color: var(--color-dark) !important;
+}
 
-        &:after {
-            content: '\25BC';
-            color: #777;
-            font-weight: bold;
-            float: right;
-            margin-left: 5px;
-        }
+.accordion>button:after {
+    content: '\25BC';
+    color: #777;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+}
 
-        &.active {
-            &::after {
-                transform: rotate(-180deg);
-                transition: transform .6s;
-            }
-        }
+.accordion>button.active::after {
+    transform: rotate(-180deg);
+    transition: transform 0.6s;
+}
 
-        &.text {
-            all: unset;
+.accordion>button.text {
+    all: unset;
+}
 
-            &::after {
-                display: none;
-            }
+.accordion>button.text::after {
+    display: none;
+}
 
-            &:hover {
-                background: none !important;
-            }
-        }
-    }
+.accordion>button.text:hover {
+    background: none !important;
+}
 
-    .content {
-        padding: 0 18px;
-        max-height: 0;
-        overflow: hidden;
-        transition: max-height .2s ease-out;
+.accordion .content {
+    padding: 0 18px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
 
-        >:first-child {
-            transition: margin-top .2s ease-out;
-        }
+.accordion .content> :first-child {
+    transition: margin-top 0.2s ease-out;
+}
 
-        &.active {
-            max-height: 400px;
+.accordion .content.active {
+    max-height: 400px;
+}
 
-            >:first-child {
-                margin-top: 1rem;
-            }
-        }
-    }
+.accordion .content.active> :first-child {
+    margin-top: 1rem;
 }

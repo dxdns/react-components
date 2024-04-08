@@ -4,180 +4,175 @@
     margin: 0 auto;
     gap: 1.8rem;
     grid-template-columns: 13rem auto 23rem;
-    grid-template-areas:
-        "sidebar main right"
-    ;
+    grid-template-areas: "sidebar main right";
+}
 
-    >main {
-        margin-top: 1.4rem;
-        grid-area: main;
-        
-        >div {
-            animation: opacityFadeIn 1s;
-        }
-    }
+.template>main {
+    margin-top: 1.4rem;
+    grid-area: main;
+}
 
-    >aside {
-        height: 100vh;
-        grid-area: sidebar;
-        display: block !important;
+.template>main>div {
+    animation: opacityFadeIn 1s;
+}
 
-        &.show {
-            left: 0;
-        }
+.template>aside {
+    height: 100vh;
+    grid-area: sidebar;
+    display: block !important;
+}
 
-        &.hide {
-            left: -100%;
-        }
+.template>aside.show {
+    left: 0;
+}
 
-        .top {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            margin-top: 1.4rem;
-        }
+.template>aside.hide {
+    left: -100%;
+}
 
-        .close {
-            display: none;
-        }
+.template>aside .top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 1.4rem;
+}
 
-        .sidebar {
-            display: flex;
-            flex-direction: column;
-            height: 86vh;
-            position: relative;
-            top: 3rem;
+.template>aside .close {
+    display: none;
+}
 
-            >a {
-                display: flex;
-                color: var(--color-info-dark);
-                margin-left: 2rem;
-                gap: 1rem;
-                align-items: center;
-                position: relative;
-                height: 3.7rem;
-                transition: all 300ms ease;
+.template>aside .sidebar {
+    display: flex;
+    flex-direction: column;
+    height: 86vh;
+    position: relative;
+    top: 3rem;
+}
 
-                &:hover {
-                    color: var(--color-primary);
+.template>aside .sidebar>a {
+    display: flex;
+    color: var(--color-info-dark);
+    margin-left: 2rem;
+    gap: 1rem;
+    align-items: center;
+    position: relative;
+    height: 3.7rem;
+    transition: all 300ms ease;
+}
 
-                    >span {
-                        margin-left: 1rem;
-                    }
-                }
+.template>aside .sidebar>a:hover {
+    color: var(--color-primary);
+}
 
-                >h3 {
-                    font-weight: 500;
-                }
+.template>aside .sidebar>a:hover>span {
+    margin-left: 1rem;
+}
 
-                >span {
-                    font-size: 1.6rem;
-                    transition: all 300ms ease;
-                }
+.template>aside .sidebar>a>h3 {
+    font-weight: 500;
+}
 
-                &:last-child {
-                    position: absolute;
-                    bottom: 2rem;
-                    width: 100%;
-                }
+.template>aside .sidebar>a>span {
+    font-size: 1.6rem;
+    transition: all 300ms ease;
+}
 
-                &.active {
-                    background: var(--color-light);
-                    color: var(--color-primary);
-                    margin-left: 0;
+.template>aside .sidebar>a:last-child {
+    position: absolute;
+    bottom: 2rem;
+    width: 100%;
+}
 
-                    &::before {
-                        content: '';
-                        width: 6px;
-                        height: 100%;
-                        background: var(--color-primary);
-                    }
+.template>aside .sidebar>a.active {
+    background: var(--color-light);
+    color: var(--color-primary);
+    margin-left: 0;
+}
 
-                    >span {
-                        color: var(--color-primary);
-                        margin-left: calc(1rem - 3px);
-                    }
-                }
-            }
-        }
-    }
+.template>aside .sidebar>a.active::before {
+    content: '';
+    width: 6px;
+    height: 100%;
+    background: var(--color-primary);
+}
 
-    .right {
-        margin-top: 1.4rem;
-        grid-area: right;
+.template>aside .sidebar>a.active>span {
+    color: var(--color-primary);
+    margin-left: calc(1rem - 3px);
+}
 
-        &>:last-child button {
-            width: 100%;
-        }
+.template .right {
+    margin-top: 1.4rem;
+    grid-area: right;
+}
 
-        .top {
-            display: flex;
-            justify-content: end;
-            gap: 2rem;
-            align-items: center;
+.template .right> :last-child button {
+    width: 100%;
+}
 
-            >button {
-                display: none;
-            }
+.template .right .top {
+    display: flex;
+    justify-content: end;
+    gap: 2rem;
+    align-items: center;
+}
 
-            .profile {
-                display: flex;
-                gap: 2rem;
-                text-align: right;
-                align-items: center;
-            }
-        }
+.template .right .top>button {
+    display: none;
+}
 
-        .recent-updates,
-        .sales-analytics {
-            margin-top: 2rem;
+.template .right .top .profile {
+    display: flex;
+    gap: 2rem;
+    text-align: right;
+    align-items: center;
+}
 
-            >h2 {
-                margin-bottom: 0.8rem;
-            }
-        }
-    }
+.template .right .recent-updates,
+.template .right .sales-analytics {
+    margin-top: 2rem;
+}
+
+.template .right .recent-updates>h2,
+.template .right .sales-analytics>h2 {
+    margin-bottom: 0.8rem;
 }
 
 @media screen and (max-width: 1440px) {
     .template {
         width: 94%;
         grid-template-columns: 13rem auto 18rem;
+    }
 
-        .right {
-            margin-bottom: 5rem;
-        }
+    .template .right {
+        margin-bottom: 5rem;
     }
 }
 
 @media screen and (max-width: 1024px) {
     .template {
         grid-template-columns: 7rem auto 20rem;
+    }
 
-        >aside {
-            .top {
-                margin-left: 1.7rem;
+    .template>aside .top {
+        margin-left: 1.7rem;
+    }
 
-                .logo h2 {
-                    display: none;
-                }
-            }
+    .template>aside .top .logo h2 {
+        display: none;
+    }
 
-            .sidebar {
-                >a {
-                    width: 5.6rem;
+    .template>aside .sidebar>a {
+        width: 5.6rem;
+    }
 
-                    >h3 {
-                        display: none;
-                    }
+    .template>aside .sidebar>a>h3 {
+        display: none;
+    }
 
-                    &:last-child {
-                        position: relative;
-                        margin-top: 1.8rem;
-                    }
-                }
-            }
-        }
+    .template>aside .sidebar>a:last-child {
+        position: relative;
+        margin-top: 1.8rem;
     }
 }
 
@@ -185,101 +180,95 @@
     .template {
         width: 100%;
         grid-template-columns: 1fr;
-        grid-template-areas:
-            "main"
-            "right";
+        grid-template-areas: "main" "right";
+    }
 
-        >main {
-            margin-top: 8rem !important;
-            padding: 0 2rem;
-        }
+    .template>main {
+        margin-top: 8rem !important;
+        padding: 0 2rem;
+    }
 
-        >aside {
-            position: fixed;
-            left: -100%;
-            background: var(--color-white);
-            width: 18rem;
-            z-index: 3;
-            box-shadow: 1rem 3rem 4rem var(--color-light);
-            height: 100vh;
-            padding-right: var(--card-padding);
-            transition: left .5s cubic-bezier(0.820, 0.085, 0.395, 0.895);
+    .template>aside {
+        position: fixed;
+        left: -100%;
+        background: var(--color-white);
+        width: 18rem;
+        z-index: 3;
+        box-shadow: 1rem 3rem 4rem var(--color-light);
+        height: 100vh;
+        padding-right: var(--card-padding);
+        transition: left 0.5s cubic-bezier(0.82, 0.085, 0.395, 0.895);
+    }
 
-            .top {
-                .logo {
-                    margin-left: 1rem;
+    .template>aside .top .logo {
+        margin-left: 1rem;
+    }
 
-                    >h2 {
-                        display: inline;
-                    }
-                }
+    .template>aside .top .logo>h2 {
+        display: inline;
+    }
 
-                .close {
-                    display: inline-block;
-                    cursor: pointer;
-                }
-            }
+    .template>aside .top .close {
+        display: inline-block;
+        cursor: pointer;
+    }
 
-            .sidebar {
-                >a {
-                    width: 100%;
-                    height: 3.4rem;
+    .template>aside .sidebar>a {
+        width: 100%;
+        height: 3.4rem;
+    }
 
-                    >h3 {
-                        display: inline;
-                    }
+    .template>aside .sidebar>a>h3 {
+        display: inline;
+    }
 
-                    &:last-child {
-                        position: absolute;
-                        bottom: 5rem;
-                    }
-                }
-            }
-        }
+    .template>aside .sidebar>a:last-child {
+        position: absolute;
+        bottom: 5rem;
+    }
 
-        .right {
-            width: 94%;
-            margin: 0 auto 4rem;
-            padding: 0 1rem;
+    .template .right {
+        width: 94%;
+        margin: 0 auto 4rem;
+        padding: 0 1rem;
+    }
 
-            .top {
-                position: fixed;
-                top: 0;
-                left: 0;
-                align-items: center;
-                padding: 0 0.8rem;
-                height: 4.6rem;
-                background: var(--color-white);
-                width: 100%;
-                margin: 0;
-                z-index: 2;
-                box-shadow: 0 1rem 1rem var(--color-light);
+    .template .right .top {
+        position: fixed;
+        top: 0;
+        left: 0;
+        align-items: center;
+        padding: 0 0.8rem;
+        height: 4.6rem;
+        background: var(--color-white);
+        width: 100%;
+        margin: 0;
+        z-index: 2;
+        box-shadow: 0 1rem 1rem var(--color-light);
+    }
 
-                >button {
-                    display: inline-block;
-                    background: transparent;
-                    cursor: pointer;
-                    color: var(--color-dark);
-                    position: absolute;
-                    left: 1rem;
+    .template .right .top>button {
+        display: inline-block;
+        background: transparent;
+        cursor: pointer;
+        color: var(--color-dark);
+        position: absolute;
+        left: 1rem;
+    }
 
-                    >span {
-                        font-size: 2rem;
-                    }
-                }
+    .template .right .top>button>span {
+        font-size: 2rem;
+    }
 
-                >#menu-btn {
-                    display: inline-block;
+    .template .right .top>#menu-btn {
+        display: inline-block;
+    }
 
-                    &:hover {
-                        background: none !important;
-                    }
-                }
-            }
+    .template .right .top>#menu-btn:hover {
+        background: none !important;
+    }
 
-            .profile .info {
-                display: none;
-            }
-        }
+    .template .right .profile .info {
+        display: none;
     }
 }

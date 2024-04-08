@@ -6,8 +6,8 @@
     box-shadow: var(--box-shadow);
     transition: all 300ms ease;
     margin-bottom: 1rem;
+}
 
-    &:hover {
-        box-shadow: none;
-    }
+.card:hover {
+    box-shadow: none;
 }
