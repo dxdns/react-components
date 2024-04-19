@@ -2,6 +2,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 1rem;
 }
 
 .customer .header>.select {
@@ -12,6 +13,5 @@
     .customer .header {
         flex-direction: column;
         align-items: normal;
-        gap: 1rem;
     }
 }
