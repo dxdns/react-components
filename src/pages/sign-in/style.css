@@ -16,3 +16,9 @@
     text-decoration: underline;
     align-self: flex-end;
 }
+
+@media screen and (max-width: 425px) {
+    .sign-in .header h1 {
+        font-size: 30px;
+    }
+}

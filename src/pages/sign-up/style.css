@@ -24,3 +24,13 @@
 .sign-up .content:last-child a {
     text-decoration: underline;
 }
+
+@media screen and (max-width: 425px) {
+    .sign-up .header h1 {
+        font-size: 30px;
+    }
+
+    .sign-up .content .input-group {
+        flex-direction: column;
+    }
+}
