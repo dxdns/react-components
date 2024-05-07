@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom"
-import Button from "../../components/button"
-import Input from "../../components/input"
+import Button from "@/components/button"
+import Input from "@/components/input"
 import "./style.css"
 
 export default function NewPassword() {

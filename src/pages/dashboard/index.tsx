@@ -1,9 +1,9 @@
 import "./style.css"
-import Card from "../../components/card"
-import { CardStatistic } from "../../components/card-statistic"
-import DataTable from "../../components/data-table"
+import Card from "@/components/card"
+import { CardStatistic } from "@/components/card-statistic"
+import DataTable from "@/components/data-table"
 import { columns, insights, rows } from "./data"
-import Input from "../../components/input"
+import Input from "@/components/input"
 
 export default function Dashboard() {
     return (

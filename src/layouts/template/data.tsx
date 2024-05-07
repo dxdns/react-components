@@ -1,6 +1,6 @@
 // import profile1 from "../../assets/profile-1.jpg"
 // import profile2 from "../../assets/profile-2.jpg"
-import Icon from "../../components/icon"
+import Icon from "@/components/icon"
 
 export const menuItems = [
     {

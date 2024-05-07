@@ -1,6 +1,6 @@
 import { Link, useNavigate } from "react-router-dom"
-import Button from "../../components/button"
-import PinInput from "../../components/pin-input"
+import Button from "@/components/button"
+import PinInput from "@/components/pin-input"
 import "./style.css"
 
 export default function CheckPin() {

@@ -1,5 +1,5 @@
-import Card from "../../components/card"
-import Skeleton from "../../components/skeleton"
+import Card from "@/components/card"
+import Skeleton from "@/components/skeleton"
 
 export default function Home() {
     return (

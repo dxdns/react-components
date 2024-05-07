@@ -1,5 +1,5 @@
 import { Outlet } from "react-router-dom"
-import Button from "../../components/button"
+import Button from "@/components/button"
 import "./style.css"
 
 export default function AuthLayout() {
