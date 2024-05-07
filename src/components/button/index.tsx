@@ -1,4 +1,4 @@
-import "./style.css"
+import style from "./style.module.css"
 import React from "react"
 import Spinner from "../spinner"
 import { ColorType, SizeType, VariantType } from "../../types"
@@ -28,7 +28,7 @@ export default React.forwardRef<HTMLButtonElement, Props>((props, ref) => {
         <button
             ref={ref}
             {...rest}
-            className={`button ${variant} ${color} ${size} ${rest.className}`}
+            className={`${style.button} ${style[variant]} ${color} ${size} ${rest.className || ""}`}
             disabled={isLoading || rest.disabled}
         >
             {left}
