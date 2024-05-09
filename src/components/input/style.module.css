@@ -25,8 +25,6 @@
     font-size: 16px;
     color: var(--color-dark);
     padding: 0 10px;
-    background: transparent;
-    border: 1.2px solid var(--color-dark-variant);
     outline: none;
     border-radius: 5px;
 }
@@ -68,6 +66,11 @@
     border: none;
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
+}
+
+.input-group.outlined>input {
+    background: transparent;
+    border: 1.2px solid var(--color-dark-variant);
 }
 
 .input-group.contained>input:focus~label,

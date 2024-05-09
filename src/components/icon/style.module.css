@@ -8,8 +8,7 @@
     background: var(--color-primary);
     padding: 0.5rem;
     border-radius: 50%;
-    /* color: var(--color-white) !important;
-    */
+    /* color: var(--color-white) !important; */
 }
 
 .icon.outlined {

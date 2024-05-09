@@ -7,6 +7,11 @@
     margin: 0.25em 0.1em;
 }
 
+.badge.text {
+    background: none;
+    color: var(--color-primary);
+}
+
 .badge.contained {
     background: var(--color-primary);
     color: var(--color-white);
@@ -34,6 +39,10 @@
     display: inline-block;
     letter-spacing: 0.15ch;
     font-weight: 400;
+}
+
+.badge.md {
+    font-size: 13px;
 }
 
 .badge.lg {

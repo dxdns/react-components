@@ -13,25 +13,25 @@
     transform: scale(1);
 }
 
-#modal-container.show .modal-background {
+#modal-container.show .modal-background :global {
     background: rgba(0, 0, 0, .0);
     animation: bgFadeIn 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
 }
 
-#modal-container.show .modal-background .modal-content {
+#modal-container.show .modal-background .modal-content :global {
     opacity: 0;
     animation: scaleUp 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
 }
 
-#modal-container.show.out {
+#modal-container.show.out :global {
     animation: quickScaleDown 0s 0.5s linear forwards;
 }
 
-#modal-container.show.out .modal-background {
+#modal-container.show.out .modal-background :global {
     animation: bgFadeOut 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
 }
 
-#modal-container.show.out .modal-background .modal-content {
+#modal-container.show.out .modal-background .modal-content :global {
     animation: scaleDown 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
 }
 

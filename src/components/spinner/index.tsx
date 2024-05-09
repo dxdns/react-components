@@ -1,5 +1,5 @@
-import { SizeType } from "../../types"
-import "./style.css"
+import { SizeType } from "@/types"
+import style from "./style.module.css"
 
 type Props = {
     size?: SizeType
@@ -7,6 +7,6 @@ type Props = {
 
 export default function Spinner({ size = "sm" }: Props) {
     return (
-        <span className={`spinner ${size}`}></span>
+        <span className={`${style.spinner} ${style[size]}`}></span>
     )
 }

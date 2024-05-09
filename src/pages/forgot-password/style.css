@@ -20,4 +20,5 @@
 .forgot-password .content:last-child a::before {
     content: "\2039 ";
     font-size: 16px;
+    padding: 0 0.5rem;
 }

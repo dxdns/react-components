@@ -1,5 +1,5 @@
 import React from "react"
-import "./style.css"
+import style from "./style.module.css"
 
 type Props = React.HTMLAttributes<HTMLDivElement> & React.PropsWithChildren & {}
 
@@ -8,7 +8,7 @@ export default React.forwardRef<HTMLDivElement, Props>(({ children, ...rest }, r
         <div
             ref={ref}
             {...rest}
-            className={`card ${rest.className}`}
+            className={`${style.card} ${rest.className || ""}`}
         >
             {children}
         </div>

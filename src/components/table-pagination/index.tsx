@@ -1,6 +1,6 @@
 import IconButton from "../icon-button"
 import Select from "../select"
-import "./style.css"
+import style from "./style.module.css"
 
 type Props = {
     rowsPerPageOptions: (number | { label: string, value: number })[]
@@ -30,9 +30,9 @@ export default function TablePagination(props: Props) {
     }
 
     return (
-        <div className="table-pagination">
+        <div className={style["table-pagination"]}>
             <div>
-                <span className="options-text">Linhas por página</span>
+                <span className={style["options-text"]}>Linhas por página</span>
                 <Select onChange={(e) => onRowsPerPageChange(e.target.value)} defaultValue={rowsPerPage}>
                     {rowsPerPageOptions.map((item) => {
                         const value = typeof (item) == "number" ? item : item.label

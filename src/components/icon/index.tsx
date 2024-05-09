@@ -1,7 +1,8 @@
-import { ColorType, SizeType, VariantType } from "../../types"
-import "./style.css"
+import { ColorType, SizeType, VariantType } from "@/types"
+import style from "./style.module.css"
+import React from "react"
 
-type Props = {
+type Props = React.HTMLAttributes<HTMLDivElement> & React.PropsWithChildren & {
     name: string
     variant?: VariantType
     color?: ColorType
@@ -9,18 +10,22 @@ type Props = {
     size?: SizeType
 }
 
-export default function Icon(props: Props) {
+export default React.forwardRef<HTMLDivElement, Props>((props, ref) => {
     const {
         name,
         color = "inherit",
         bgColor,
         variant = "text",
-        size = "md"
+        size = "md",
+        children,
+        ...rest
     } = props
 
     return (
         <span
-            className={`icon material-icons-sharp ${variant} ${color} ${size}`}
+            ref={ref}
+            {...rest}
+            className={`${style.icon} material-icons-sharp ${style[variant]} ${color} ${size} ${rest.className || ""}`}
             style={{
                 backgroundColor: bgColor ? `var(--color-${bgColor ?? ""})` : ""
             }}
@@ -28,4 +33,4 @@ export default function Icon(props: Props) {
             {name}
         </span>
     )
-}
+})

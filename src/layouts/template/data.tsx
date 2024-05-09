@@ -16,7 +16,7 @@ export const menuItems = [
     {
         label: "Logout",
         icon: "logout",
-        path: "login",
+        path: "auth",
     }
 ]
 

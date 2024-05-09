@@ -18,13 +18,12 @@
 
 .progress-circle>svg>circle {
     fill: none;
-    /* stroke: var(--color-primary);
-    */
     stroke-linecap: round;
-    /* transform: translate(5px, 5px);
-    */
-    animation: draw 1s linear forwards;
     stroke-dashoffset: 100;
+}
+
+.progress-circle>svg>circle :global {
+    animation: draw 1s linear forwards;
 }
 
 @media screen and (max-width: 1440px) {

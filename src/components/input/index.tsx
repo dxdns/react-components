@@ -1,8 +1,8 @@
-import "./style.css"
+import style from "./style.module.css"
 import React from "react"
 import IconButton from "../icon-button"
 import Icon from "../icon"
-import { VariantType } from "../../types"
+import { VariantType } from "@/types"
 
 type Props = React.InputHTMLAttributes<HTMLInputElement> & {
     label?: string
@@ -19,8 +19,10 @@ export default React.forwardRef<HTMLInputElement, Props>(({ label, variant = "ou
     }
 
     return (
-        <div className={`input-group ${rest.required ? "required" : ""} ${variant}`}>
-            {rest.type === "search" && <Icon name="search" />}
+        <div className={`${style["input-group"]} ${rest.required ? style.required : ""} ${style[variant]}`}>
+            {
+                rest.type === "search" && <Icon className={style.icon} name="search" />
+            }
             <input
                 ref={ref || inputRef}
                 {...rest}
@@ -28,15 +30,20 @@ export default React.forwardRef<HTMLInputElement, Props>(({ label, variant = "ou
                 autoComplete="off"
                 placeholder={rest.type === "search" ? rest.placeholder : " "}
             />
-            {label && <label htmlFor={label}>
-                {label}
-            </label>}
-            {rest.type === "password" &&
+            {
+                label && <label htmlFor={label}>
+                    {label}
+                </label>
+            }
+            {
+                rest.type === "password" &&
                 <IconButton
+                    className={style["icon-button"]}
                     type="button"
                     name={passwordVisible ? "visibility" : "visibility_off"}
                     onClick={handleInputPassword}
-                />}
+                />
+            }
         </div>
     )
 })

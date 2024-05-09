@@ -11,13 +11,31 @@
 }
 
 .progress-bar>div {
-    animation: load 3s normal forwards;
     width: 100%;
     position: absolute;
     left: 0px;
     bottom: 0px;
     top: 0px;
-    background: #ff5630;
+}
+
+.progress-bar>div :global {
+    animation: load 3s normal forwards;
+}
+
+.progress-bar>div.inherit {
+    background: inherit;
+}
+
+.progress-bar>div.primary {
+    background: var(--color-primary-variant);
+}
+
+.progress-bar>div.secondary {
+    background: var(--color-secondary-variant);
+}
+
+.progress-bar>div.info {
+    background: var(--color-info-light);
 }
 
 .progress-bar>div.success {
