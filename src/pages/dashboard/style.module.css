@@ -8,17 +8,6 @@
     gap: 1.6rem;
 }
 
-.dashboard .insights>div .middle {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.dashboard .insights>div .middle .left h3 {
-    margin: 1rem 0 0.6rem;
-    font-size: 1rem;
-}
-
 .dashboard .insights>* small {
     margin-top: 1.3rem;
     display: block;
@@ -43,14 +32,6 @@
     .dashboard .insights {
         grid-template-columns: repeat(3, 250px) !important;
         gap: 1rem !important;
-    }
-
-    .dashboard .insights>div .middle .left h1 {
-        font-size: 2rem;
-    }
-
-    .dashboard .insights>div .middle .left h3 {
-        font-size: 0.9rem;
     }
 }
 

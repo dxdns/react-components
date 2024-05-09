@@ -136,6 +136,10 @@
     translate: 0 -50%;
 }
 
+.input-group .icon-button .icon {
+    font-size: 20px;
+}
+
 .input-group>input[type="date"] {
     color: var(--color-dark);
     color-scheme: dark;

@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom"
 import Button from "@/components/button"
 import Input from "@/components/input"
-import "./style.css"
+import style from "./style.module.css"
 
 export default function NewPassword() {
     const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
@@ -14,12 +14,12 @@ export default function NewPassword() {
     }
 
     return (
-        <form className="new-password" onSubmit={handleSubmit}>
-            <div className="header">
+        <form className={style["new-password"]} onSubmit={handleSubmit}>
+            <div className={style.header}>
                 <h1>Request sent successfully!</h1>
                 <p>Please enter the new password.</p>
             </div>
-            <div className="content">
+            <div className={style.content}>
                 <Input
                     type="password"
                     name="password_old"

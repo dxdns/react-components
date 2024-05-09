@@ -16,7 +16,7 @@ export default React.forwardRef<HTMLButtonElement, Props>(({ name, ...rest }, re
             variant="text"
             color={"inherit" || rest.color}
         >
-            <Icon name={name} variant="text" />
+            <Icon className={`${style.icon} ${rest.className || ""}`} name={name} variant="text" />
         </Button>
     )
 })

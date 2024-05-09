@@ -38,7 +38,7 @@ export default React.forwardRef<HTMLInputElement, Props>(({ label, variant = "ou
             {
                 rest.type === "password" &&
                 <IconButton
-                    className={style["icon-button"]}
+                    className={`${style["icon-button"]} ${style.icon}`}
                     type="button"
                     name={passwordVisible ? "visibility" : "visibility_off"}
                     onClick={handleInputPassword}

@@ -5,7 +5,7 @@ type Props = React.SelectHTMLAttributes<HTMLSelectElement> & React.PropsWithChil
 
 export default React.forwardRef<HTMLSelectElement, Props>(({ children, ...rest }, ref) => {
     return (
-        <div className={style.select}>
+        <div className={`${style.select} ${rest.className || ""}`}>
             <select ref={ref} {...rest}>
                 {children}
             </select>
