@@ -10,6 +10,7 @@ export default function Dashboard() {
         <div className="dashboard">
             <h1>Dashboard</h1>
             <Input
+                className="input-group"
                 type="date"
                 onChange={(e) => console.log(e.target.value)}
             />
