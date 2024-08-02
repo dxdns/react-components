@@ -1,11 +1,14 @@
+import React from "react"
 import logo from "../../assets/react.svg"
-import "./style.css"
+import style from "./style.module.css"
 
-export default function Logo() {
+type Props = React.HTMLAttributes<HTMLDivElement>
+
+export default React.forwardRef<HTMLDivElement, Props>(({ ...rest }, ref) => {
     return (
-        <div className="logo">
+        <div ref={ref} {...rest} className={`${style.logo} ${rest.className || ""}`}>
             <img src={logo} alt="" />
             <h2>TE<span className="error">ST</span></h2>
         </div>
     )
-}
+})

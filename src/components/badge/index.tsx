@@ -1,6 +1,6 @@
-import "./style.css"
+import style from "./style.module.css"
 import React from "react"
-import { SizeType, VariantType } from "../../types"
+import { SizeType, VariantType } from "@/types"
 
 type Props = React.HTMLAttributes<HTMLSpanElement> & React.PropsWithChildren<{
     size?: SizeType
@@ -19,7 +19,7 @@ export default React.forwardRef<HTMLSpanElement, Props>((props, ref) => {
         <span
             ref={ref}
             {...rest}
-            className={`badge ${variant} ${size} ${rest.className}`}
+            className={`${style.badge} ${style[variant]} ${style[size]} ${rest.className || ""}`}
         >
             {children}
         </span>

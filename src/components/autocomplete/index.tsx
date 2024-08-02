@@ -1,6 +1,6 @@
 import React from "react"
 import Input from "../input"
-import "./style.css"
+import style from "./style.module.css"
 
 type Props = {
     data: Record<string, any>[]
@@ -51,7 +51,7 @@ export default function AutoComplete({ data }: Props) {
     }, [text])
 
     return (
-        <div className="autocomplete">
+        <div className={style.autocomplete}>
             <Input
                 type="search"
                 label="Pesquisar..."
@@ -60,17 +60,20 @@ export default function AutoComplete({ data }: Props) {
                 onKeyDown={handleKeyDown}
             />
 
-            {filtered.length !== 0 &&
-                <div className="items">
-                    {filtered.map((item, index) => (
-                        <div
-                            key={item.id}
-                            className={focused === index ? "focused" : ""}
-                            onClick={() => handleClick(item.title)}
-                        >
-                            <p>{item.title}</p>
-                        </div>
-                    ))}
+            {
+                filtered.length !== 0 &&
+                <div className={style.items}>
+                    {
+                        filtered.map((item, index) => (
+                            <div
+                                key={item.id}
+                                className={focused === index ? style.focused : ""}
+                                onClick={() => handleClick(item.title)}
+                            >
+                                <p>{item.title}</p>
+                            </div>
+                        ))
+                    }
                 </div>
             }
         </div>

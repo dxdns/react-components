@@ -1,0 +1,17 @@
+.customer .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+
+.customer .header>.select {
+    width: 10rem;
+}
+
+@media screen and (max-width: 425px) {
+    .customer .header {
+        flex-direction: column;
+        align-items: normal;
+    }
+}

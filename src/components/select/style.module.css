@@ -1,0 +1,40 @@
+.select {
+    position: relative;
+    display: flex;
+    width: 100%;
+    min-width: 5em;
+    min-height: 2em;
+    border-radius: 0.25em;
+    overflow: hidden;
+}
+
+.select>select {
+    appearance: none;
+    border: 0;
+    box-shadow: none;
+    flex: 1;
+    padding: 0 1em;
+    color: var(--color-dark);
+    background-color: var(--color-light);
+    background-image: none;
+    cursor: pointer;
+}
+
+.select>select::-ms-expand {
+    display: none;
+}
+
+.select::after {
+    content: '\25BC';
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 5px 5px;
+    background-color: var(--color-light);
+    transition: 0.25s all ease;
+    pointer-events: none;
+}
+
+.select:hover::after {
+    color: var(--color-primary);
+}

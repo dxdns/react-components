@@ -1,5 +1,5 @@
 import React from "react"
-import "./style.css"
+import style from "./style.module.css"
 
 type Props = React.ImgHTMLAttributes<HTMLImageElement> & React.PropsWithChildren & {}
 
@@ -10,7 +10,7 @@ export default React.forwardRef<HTMLImageElement, Props>((props, ref) => {
 
     return (
         <div
-            className="avatar"
+            className={style.avatar}
             style={{
                 background: bgColor
             }}

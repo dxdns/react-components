@@ -1,5 +1,5 @@
 import Icon from "../icon"
-import "./style.css"
+import style from "./style.module.css"
 
 type Props = {
     rowsPerPage: number
@@ -25,7 +25,7 @@ export default function Pagination({ rowsPerPage, count, currentPage, onPageChan
     }
 
     return (
-        <ul className="pagination">
+        <ul className={style.pagination}>
             <li onClick={prePage}>
                 <Icon
                     name="chevron_left"
@@ -36,7 +36,7 @@ export default function Pagination({ rowsPerPage, count, currentPage, onPageChan
             {numbers.map((n, i) => (
                 <li
                     key={i}
-                    className={`${n === currentPage ? "active" : ""}`}
+                    className={`${n === currentPage ? style.active : ""}`}
                     onClick={() => onPageChange(n)}
                 >
                     {n}

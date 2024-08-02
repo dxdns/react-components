@@ -1,0 +1,61 @@
+.dashboard .input-group {
+    width: 150px;
+}
+
+.dashboard .insights {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.6rem;
+}
+
+.dashboard .insights>* small {
+    margin-top: 1.3rem;
+    display: block;
+}
+
+.dashboard .recent-orders {
+    margin-top: 2rem;
+}
+
+.dashboard .recent-orders>h2 {
+    margin-bottom: 2rem;
+}
+
+.dashboard .recent-orders:last-child>a {
+    text-align: center;
+    display: block;
+    margin-top: 2rem;
+    color: var(--color-primary);
+}
+
+@media screen and (max-width: 1440px) {
+    .dashboard .insights {
+        grid-template-columns: repeat(3, 250px) !important;
+        gap: 1rem !important;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .dashboard .insights {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 1rem !important;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .dashboard .insights {
+        grid-template-columns: 1fr !important;
+        gap: 0 !important;
+    }
+
+    .dashboard .recent-orders {
+        position: relative;
+        margin: 3rem 0 0 0;
+        width: 100%;
+    }
+
+    .dashboard .recent-orders>table {
+        width: 100%;
+        margin: 0;
+    }
+}

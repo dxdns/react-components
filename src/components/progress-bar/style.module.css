@@ -1,0 +1,63 @@
+.progress-bar {
+    position: relative;
+    overflow: hidden;
+    display: block;
+    z-index: 0;
+    border-radius: 4px;
+    background: rgba(255, 86, 48, 0.24);
+    margin-bottom: 8px;
+    height: 6px;
+    max-width: 80px;
+}
+
+.progress-bar>div {
+    width: 100%;
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    top: 0px;
+}
+
+.progress-bar>div :global {
+    animation: load 3s normal forwards;
+}
+
+.progress-bar>div.inherit {
+    background: inherit;
+}
+
+.progress-bar>div.primary {
+    background: var(--color-primary-variant);
+}
+
+.progress-bar>div.secondary {
+    background: var(--color-secondary-variant);
+}
+
+.progress-bar>div.info {
+    background: var(--color-info-light);
+}
+
+.progress-bar>div.success {
+    background: var(--color-success) !important;
+}
+
+.progress-bar>div.error {
+    background: var(--color-error) !important;
+}
+
+.progress-bar>div.warning {
+    background: var(--color-warning) !important;
+}
+
+.progress-bar.success {
+    background: var(--color-success-variant) !important;
+}
+
+.progress-bar.error {
+    background: var(--color-error-variant) !important;
+}
+
+.progress-bar.warning {
+    background: var(--color-warning-variant) !important;
+}

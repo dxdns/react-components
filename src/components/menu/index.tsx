@@ -1,6 +1,6 @@
 import React from "react"
 import Card from "../card"
-import "./style.css"
+import style from "./style.module.css"
 
 type Props = React.PropsWithChildren & {
     open: boolean
@@ -11,7 +11,7 @@ type Props = React.PropsWithChildren & {
 export default function Menu({ open, onClick, onClose, children }: Props) {
     const menuRef = React.useRef<HTMLDivElement>(null)
 
-    const isOpen = open ? "show" : "hide"
+    const isOpen = open ? style.show : style.hide
 
     React.useEffect(() => {
         function handler(e: MouseEvent) {
@@ -28,8 +28,8 @@ export default function Menu({ open, onClick, onClose, children }: Props) {
     }, [])
 
     return (
-        <div ref={menuRef} className={"menu"} onClick={onClick}>
-            <Card className={`menu-content ${isOpen}`}>
+        <div ref={menuRef} className={style.menu} onClick={onClick}>
+            <Card className={`${style["menu-content"]} ${isOpen}`}>
                 {children}
             </Card>
         </div>

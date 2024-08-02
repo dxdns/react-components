@@ -1,0 +1,22 @@
+.pin-input {
+    border: none;
+    text-align: center;
+    width: 48px;
+    height: 48px;
+    font-size: 36px;
+    background-color: var(--color-light);
+    margin-right: 5px;
+    color: var(--color-dark);
+    border-radius: 5px;
+}
+
+.pin-input:focus {
+    border: 1px solid #573d8b;
+    outline: none;
+}
+
+.pin-input::-webkit-outer-spin-button,
+.pin-input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}

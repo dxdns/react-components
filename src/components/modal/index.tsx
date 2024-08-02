@@ -1,4 +1,4 @@
-import "./style.css"
+import style from "./style.module.css"
 import React from "react"
 
 type Props = React.PropsWithChildren & {
@@ -9,14 +9,14 @@ type Props = React.PropsWithChildren & {
 
 export default function Modal({ title, children, open, onClose }: Props) {
     return (
-        <div id="modal-container" className={`${open && "show"}`}>
-            <div className="modal-background">
-                <div className="modal-content">
-                    <div className="modal-header">
+        <div id={style["modal-container"]} className={`${open ? style.show : ""}`}>
+            <div className={style["modal-background"]}>
+                <div className={style["modal-content"]}>
+                    <div className={style["modal-header"]}>
                         <h2>{title}</h2>
-                        <span className="btn-close" onClick={onClose}>&times;</span>
+                        <span className={style["btn-close"]} onClick={onClose}>&times;</span>
                     </div>
-                    <div className="modal-body">
+                    <div className={style["modal-body"]}>
                         {children}
                     </div>
                     {/* <div className="modal-footer">

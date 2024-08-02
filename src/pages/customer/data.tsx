@@ -1,10 +1,10 @@
 import React from "react"
-import IconButton from "../../components/icon-button"
-import Menu from "../../components/menu"
-import Button from "../../components/button"
-import Icon from "../../components/icon"
-import MenuItem from "../../components/menu-item"
-import ProgressBar from "../../components/progress-bar"
+import IconButton from "@/components/icon-button"
+import Menu from "@/components/menu"
+import Button from "@/components/button"
+import Icon from "@/components/icon"
+import MenuItem from "@/components/menu-item"
+import ProgressBar from "@/components/progress-bar"
 
 export const columns = [
     {

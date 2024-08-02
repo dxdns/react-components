@@ -1,18 +1,18 @@
-import "./style.css"
+import style from "./style.module.css"
 import React from "react"
 import { Link, NavLink, Outlet } from "react-router-dom"
-import IconButton from "../../components/icon-button"
-import Switch from "../../components/switch"
-import Icon from "../../components/icon"
+import IconButton from "@/components/icon-button"
+import Switch from "@/components/switch"
+import Icon from "@/components/icon"
 import profile1 from "../../assets/profile-1.jpg"
-import Card from "../../components/card"
-import Message from "../../components/message"
-import CardAnalytic from "../../components/card-analytic"
-import Button from "../../components/button"
+import Card from "@/components/card"
+import Message from "@/components/message"
+import CardAnalytic from "@/components/card-analytic"
+import Button from "@/components/button"
 import { menuItems, messages, sales } from "./data"
-import Logo from "../../components/logo"
+import Logo from "@/components/logo"
 import { getTheme, setTheme } from "../../utils/theme"
-import Avatar from "../../components/avatar"
+import Avatar from "@/components/avatar"
 
 export default function Template() {
     const [open, setOpen] = React.useState(false)
@@ -61,22 +61,22 @@ export default function Template() {
     }, [])
 
     return (
-        <div className="template">
-            <aside ref={menuRef} className={open ? "show" : "hide"}>
-                <div className="top">
+        <div className={style.template}>
+            <aside ref={menuRef} className={open ? style.show : style.hide}>
+                <div className={style.top}>
                     <Link to={""}>
-                        <Logo />
+                        <Logo className={style.logo} />
                     </Link>
-                    <div className="close" onClick={closeMenu}>
+                    <div className={style.close} onClick={closeMenu}>
                         <span className="material-icons-sharp">close</span>
                     </div>
                 </div>
 
-                <div className="sidebar">
+                <div className={style.sidebar}>
                     {menuItems.map((item) => (
                         <NavLink
                             key={item.label}
-                            className={({ isActive }) => isActive ? "active" : ""}
+                            className={({ isActive }) => isActive ? style.active : ""}
                             to={item.path}
                         >
                             <span className="material-icons-sharp">{item.icon}</span>
@@ -90,10 +90,10 @@ export default function Template() {
                 <Outlet />
             </main>
 
-            <div className="right">
-                <div className="top">
+            <div className={style.right}>
+                <div className={style.top}>
                     <IconButton
-                        id="menu-btn"
+                        id={style["menu-btn"]}
                         name="menu"
                         onClick={openMenu}
                     />
@@ -103,8 +103,8 @@ export default function Template() {
                         icon={checked ? "light_mode" : "dark_mode"}
                         onChange={toggleTheme}
                     />
-                    <div className="profile">
-                        <div className="info">
+                    <div className={style.profile}>
+                        <div className={style.info}>
                             <p>Hey, <b>Test</b></p>
                             <small className="text-muted">Admin</small>
                         </div>
@@ -112,7 +112,7 @@ export default function Template() {
                     </div>
                 </div>
 
-                <div className="recent-updates">
+                <div className={style["recent-updates"]}>
                     <h2>Recent Updates</h2>
                     <Card>
                         {messages.map((item, index) => (
@@ -124,7 +124,7 @@ export default function Template() {
                     </Card>
                 </div>
 
-                <div className="sales-analytics">
+                <div className={style["sales-analytics"]}>
                     <h2>Sales Analytics</h2>
                     {sales.map((item, index) => (
                         <CardAnalytic

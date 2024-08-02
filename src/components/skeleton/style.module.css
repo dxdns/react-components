@@ -1,0 +1,52 @@
+.skeleton {
+    /* background: linear-gradient(-45deg, #dddddd, #f0f0f0, #dddddd, #f0f0f0); */
+    background: linear-gradient(-45deg, var(--color-light), var(--color-white), var(--color-light), var(--color-white));
+    background-size: 400% 400%;
+    border-radius: 15px;
+}
+
+.skeleton.default {
+    -webkit-animation: Gradient 2.25s ease infinite;
+    -moz-animation: Gradient 2.25s ease infinite;
+    animation: Gradient 2.25s ease infinite;
+}
+
+.skeleton.scale {
+    animation: ScaleOpacity 1s ease-in-out forwards infinite alternate;
+}
+
+.skeleton.square {
+    border-radius: 100%;
+    height: 80px;
+    width: 80px;
+}
+
+.skeleton.line {
+    height: 12px;
+    border-radius: 2px;
+}
+
+@keyframes Gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@keyframes ScaleOpacity {
+    0% {
+        opacity: 0.2;
+        transform: translateY(6px) scale(0.98);
+    }
+
+    85%,
+    100% {
+        opacity: 1;
+        transform: translateY(0px) scale(1);
+    }
+}

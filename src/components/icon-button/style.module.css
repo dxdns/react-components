@@ -1,0 +1,23 @@
+.icon-button {
+    background: none;
+    color: var(--color-dark);
+    display: flex;
+    align-items: center;
+    border-radius: 50%;
+}
+
+.icon-button:disabled {
+    color: var(--color-dark-variant);
+}
+
+.icon-button:disabled:hover {
+    color: var(--color-dark-variant) !important;
+}
+
+.icon-button:hover {
+    color: var(--color-primary) !important;
+}
+
+.icon-button .icon {
+    padding: 3px;
+}

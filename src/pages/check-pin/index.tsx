@@ -1,7 +1,7 @@
 import { Link, useNavigate } from "react-router-dom"
-import Button from "../../components/button"
-import PinInput from "../../components/pin-input"
-import "./style.css"
+import Button from "@/components/button"
+import PinInput from "@/components/pin-input"
+import style from "./style.module.css"
 
 export default function CheckPin() {
     const navigate = useNavigate()
@@ -15,14 +15,14 @@ export default function CheckPin() {
     }
 
     return (
-        <form className="check-pin" onSubmit={handleSubmit}>
-            <div className="header">
+        <form className={style["check-pin"]} onSubmit={handleSubmit}>
+            <div className={style.header}>
                 <h1>Please check your email!</h1>
                 <p>We have emailed a 6-digit confirmation code to acb@domain,
                     please enter the code in below box to verify your email.</p>
             </div>
-            <div className="content">
-                <div className="pin-input-wrapper">
+            <div className={style.content}>
+                <div className={style["pin-input-wrapper"]}>
                     {[...Array(4)].map((_, index) => (
                         <PinInput key={index} name={String(index)} />
                     ))}

@@ -1,4 +1,4 @@
-import "./style.css"
+import style from "./style.module.css"
 import Card from "../card"
 
 type Props = {
@@ -14,9 +14,9 @@ export default function CardAnalytic({ icon, title, percent, value }: Props) {
 
     return (
         <Card>
-            <div className="card-analytic">
+            <div className={style["card-analytic"]}>
                 {icon}
-                <div className="right">
+                <div className={style.right}>
                     <div className="inherit">
                         <h3>{title}</h3>
                         <small className="text-muted">Last 24 hours</small>

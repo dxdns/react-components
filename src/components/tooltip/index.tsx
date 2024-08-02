@@ -1,6 +1,6 @@
 import "./style.css"
 import React from "react"
-import { PositionType } from "../../types"
+import { PositionType } from "@/types"
 
 type Props = React.PropsWithChildren & {
     label: string
