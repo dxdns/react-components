@@ -1,0 +1,46 @@
+.toast {
+    min-width: 200px;
+    transform: translateX(-50%);
+    background-color: var(--color-secondary);
+    border-radius: 5px;
+    padding: .5rem 1rem;
+    position: fixed;
+    z-index: 1;
+    left: 50%;
+    bottom: 80px;
+    animation: fadeIn 0.5s, fadeOut 0.5s 2.5s;
+}
+
+.content {
+    display: grid;
+    grid-template-columns: 1fr minmax(200px, 1fr);
+    align-items: center;
+    gap: .5rem;
+    font-size: 14px;
+    color: var(--color-white);
+    text-align: left;
+}
+
+@keyframes fadeIn {
+    from {
+        bottom: 0;
+        opacity: 0;
+    }
+
+    to {
+        bottom: 80px;
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        bottom: 80px;
+        opacity: 1;
+    }
+
+    to {
+        bottom: 0;
+        opacity: 0;
+    }
+}

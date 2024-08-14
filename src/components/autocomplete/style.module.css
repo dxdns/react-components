@@ -1,23 +1,21 @@
-.autocomplete>div {
-    width: 400px;
+.autocomplete {
+    width: 100%;
+    position: relative;
 }
 
 .autocomplete .items {
     border-radius: 5px;
     background: var(--color-white);
-    max-height: 300px;
-    overflow: hidden;
+    max-height: 150px;
     overflow-y: auto;
     position: absolute;
     z-index: 99;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    width: 100%;
 }
 
 .autocomplete .items>div {
-    padding: 24px 32px;
-    display: flex;
-    align-items: center;
-    gap: 16px;
+    padding: 15px 15px;
     cursor: pointer;
     border-bottom: 1px solid var(--color-light);
     font-size: 14px;

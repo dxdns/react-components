@@ -1,3 +1,4 @@
+import { FaChevronLeft, FaChevronRight } from "react-icons/fa"
 import IconButton from "../icon-button"
 import Select from "../select"
 import style from "./style.module.css"
@@ -52,12 +53,12 @@ export default function TablePagination(props: Props) {
             <div>
                 <IconButton
                     disabled={start === 1}
-                    name="chevron_left"
+                    Icon={FaChevronLeft}
                     onClick={prePage}
                 />
                 <IconButton
                     disabled={end === count}
-                    name="chevron_right"
+                    Icon={FaChevronRight}
                     onClick={nextPage}
                 />
             </div>

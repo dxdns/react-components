@@ -8,6 +8,8 @@
     margin-bottom: 1rem;
 }
 
-.card:hover {
-    box-shadow: none;
+@media not all and (pointer: coarse) {
+    .card:hover {
+        box-shadow: none;
+    }
 }

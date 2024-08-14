@@ -1,24 +1,22 @@
-import style from "./style.module.css"
-import React from "react"
-import Icon from "../icon"
+import { IconType } from "react-icons";
+import style from "./style.module.css";
+import React from "react";
 
 type Props = React.InputHTMLAttributes<HTMLInputElement> & {
-    label?: string
-    icon?: string
-}
+  label?: string;
+  Icon?: IconType;
+};
 
-export default React.forwardRef<HTMLInputElement, Props>(({ label, icon, ...rest }, ref) => {
+export default React.forwardRef<HTMLInputElement, Props>(
+  ({ label, Icon, ...rest }, ref) => {
     return (
-        <div className={style.switch}>
-            <div className={style.wrapper}>
-                <input
-                    ref={ref}
-                    {...rest}
-                    type="checkbox"
-                />
-                {icon && <Icon name={icon} variant="text" />}
-            </div>
-            <label>{label}</label>
+      <div className={`${style.switch} ${rest.className || ""}`}>
+        <div className={style.wrapper}>
+          <input ref={ref} {...rest} type="checkbox" />
+          {Icon && <Icon className={style.icon} />}
         </div>
-    )
-})
+        <label>{label}</label>
+      </div>
+    );
+  }
+);

@@ -30,6 +30,7 @@ export default React.forwardRef<HTMLButtonElement, Props>((props, ref) => {
             {...rest}
             className={`${style.button} ${style[variant]} ${color} ${size} ${rest.className || ""}`}
             disabled={isLoading || rest.disabled}
+            type={rest.type || "button"}
         >
             {left}
             {isLoading ? <Spinner /> : children}

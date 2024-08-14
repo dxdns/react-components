@@ -1,55 +1,55 @@
-// import profile1 from "../../assets/profile-1.jpg"
-// import profile2 from "../../assets/profile-2.jpg"
-import Icon from "@/components/icon"
+import { FaShoppingCart } from "react-icons/fa";
+import { FaPerson } from "react-icons/fa6";
+import { MdLocalMall } from "react-icons/md";
 
 export const menuItems = [
-    {
-        label: "Dashboard",
-        icon: "grid_view",
-        path: "/",
-    },
-    {
-        label: "Customers",
-        icon: "person_outline",
-        path: "customer",
-    },
-    {
-        label: "Logout",
-        icon: "logout",
-        path: "auth",
-    }
-]
+  {
+    label: "Dashboard",
+    icon: "grid_view",
+    path: "/",
+  },
+  {
+    label: "Customers",
+    icon: "person_outline",
+    path: "customer",
+  },
+  {
+    label: "Logout",
+    icon: "logout",
+    path: "auth",
+  },
+];
 
 export const sales = [
-    {
-        icon: <Icon name="shopping_cart" variant="contained" />,
-        title: "Online Orders",
-        percent: 39,
-        value: 3849,
-    },
-    {
-        icon: <Icon name="local_mall" variant="contained" bgColor="error" />,
-        title: "Offline Orders",
-        percent: 17,
-        value: 1100,
-    },
-    {
-        icon: <Icon name="person" variant="contained" bgColor="success" />,
-        title: "New Customers",
-        percent: 25,
-        value: 849,
-    }
-]
+  {
+    icon: <FaShoppingCart size={30} color="var(--color-error)" />,
+    title: "Online Orders",
+    percent: 39,
+    value: 3849,
+  },
+  {
+    icon: <MdLocalMall size={30} color="var(--color-error)" />,
+    title: "Offline Orders",
+    percent: 17,
+    value: 1100,
+  },
+  {
+    icon: <FaPerson size={30} color="var(--color-success)" />,
+    title: "New Customers",
+    percent: 25,
+    value: 849,
+  },
+];
 
 export const messages = [
-    {
-        // image: profile1,
-        yourname: "Mike Tyson",
-        text: "received his order of Night lion tech GPS drone."
-    },
-    {
-        // image: profile2,
-        yourname: "New Tyson",
-        text: "received his order of Night lion tech GPS drone."
-    }
-]
+  {
+    // image: profile1,
+    yourname: "Mike Tyson",
+    text: "received his order of Night lion tech GPS drone.",
+  },
+  {
+    // image: profile2,
+    yourname: "New Tyson",
+    text: "received his order of Night lion tech GPS drone.",
+  },
+];

@@ -14,10 +14,6 @@
     color: var(--color-dark);
 }
 
-.accordion>button.outlined {
-    border-color: var(--color-light);
-}
-
 .accordion>button:hover {
     background: var(--color-light) !important;
     color: var(--color-dark) !important;
@@ -36,11 +32,29 @@
     transition: transform 0.6s;
 }
 
+.accordion>button.outlined {
+    all: unset;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 16px;
+    padding: .5rem 0 .5rem 0;
+    border-color: var(--color-light);
+}
+
+.accordion>button.outlined:hover,
+.accordion>button.outlined:active {
+    background: none !important;
+    color: none !important;
+}
+
 .accordion>button.text {
     all: unset;
 }
 
-.accordion>button.text::after {
+.accordion>button.text::after,
+.accordion>button.outlined::after {
     display: none;
 }
 
@@ -52,7 +66,7 @@
     padding: 0 18px;
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.2s ease-out;
+    transition: max-height, padding 0.2s ease-out;
 }
 
 .accordion .content> :first-child {
@@ -61,6 +75,7 @@
 
 .accordion .content.active {
     max-height: 400px;
+    padding-bottom: 2rem;
 }
 
 .accordion .content.active> :first-child {

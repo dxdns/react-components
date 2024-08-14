@@ -1,0 +1,67 @@
+.range-slider {
+    position: relative;
+    width: 100%;
+    height: 50px;
+}
+
+.range-slider__input {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 10px;
+    background: var(--color-light);
+    outline: none;
+    opacity: 0.7;
+    transition: opacity 0.15s ease-in-out;
+}
+
+.range-slider__input:hover {
+    opacity: 1;
+}
+
+.range-slider__input::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background: var(--color-secondary);
+    cursor: pointer;
+    border-radius: 50%;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.4);
+}
+
+.range-slider__progress {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    height: 10px;
+    background: linear-gradient(to right, LightCyan, var(--color-secondary));
+    border-radius: 10px;
+    right: 0;
+}
+
+.range-slider__output {
+    position: absolute;
+    top: -30px;
+    /* transform: translateX(-50%); */
+    background-color: var(--color-secondary);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; 
+}
+
+.range-slider__ticks {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+.range-slider__tick {
+    width: 1px;
+    height: 10px;
+    background-color: var(--color-background);
+}

@@ -1,8 +1,9 @@
 import style from "./style.module.css"
 import React from "react"
 import IconButton from "../icon-button"
-import Icon from "../icon"
 import { VariantType } from "@/types"
+import { FaSearch } from "react-icons/fa"
+import { MdVisibility, MdVisibilityOff } from "react-icons/md"
 
 type Props = React.InputHTMLAttributes<HTMLInputElement> & {
     label?: string
@@ -19,9 +20,9 @@ export default React.forwardRef<HTMLInputElement, Props>(({ label, variant = "ou
     }
 
     return (
-        <div className={`${style["input-group"]} ${rest.required ? style.required : ""} ${style[variant]}`}>
+        <div className={`${style["input-group"]} ${rest.required ? style.required : ""} ${style[variant]} ${rest.className || ""}`}>
             {
-                rest.type === "search" && <Icon className={style.icon} name="search" />
+                rest.type === "search" && <FaSearch className={style.icon} size={20} />
             }
             <input
                 ref={ref || inputRef}
@@ -40,7 +41,7 @@ export default React.forwardRef<HTMLInputElement, Props>(({ label, variant = "ou
                 <IconButton
                     className={`${style["icon-button"]} ${style.icon}`}
                     type="button"
-                    name={passwordVisible ? "visibility" : "visibility_off"}
+                    Icon={passwordVisible ? MdVisibility : MdVisibilityOff}
                     onClick={handleInputPassword}
                 />
             }

@@ -9,7 +9,7 @@
 
 .input-group>label {
     position: absolute;
-    top: 50%;
+    top: 25px;
     left: 5px;
     transform: translateY(-50%);
     font-size: 16px;
@@ -121,10 +121,10 @@
     top: 65% !important;
 }
 
-.input-group:first-child .icon {
+.input-group >.icon {
     position: absolute;
     top: 50%;
-    left: 0;
+    left: 10px;
     translate: 0 -50%;
     color: var(--color-info-dark) !important;
 }
@@ -140,18 +140,21 @@
     font-size: 20px;
 }
 
-.input-group>input[type="date"] {
+.input-group>input[type="date"],
+.input-group>input[type="month"] {
     color: var(--color-dark);
     color-scheme: dark;
 }
 
-.input-group>input[type="date"]::-webkit-calendar-picker-indicator {
+.input-group>input[type="date"]::-webkit-calendar-picker-indicator,
+.input-group>input[type="month"]::-webkit-calendar-picker-indicator {
     opacity: 0.6;
     filter: invert(0.5);
     cursor: pointer;
 }
 
-.input-group>input[type="date"]::-webkit-calendar-picker-indicator:hover {
+.input-group>input[type="date"]::-webkit-calendar-picker-indicator:hover,
+.input-group>input[type="month"]::-webkit-calendar-picker-indicator:hover {
     opacity: 1;
 }
 

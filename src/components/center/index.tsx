@@ -6,10 +6,9 @@ type Props = React.HTMLAttributes<HTMLDivElement> & React.PropsWithChildren & {}
 export default React.forwardRef<HTMLDivElement, Props>(({ children, ...rest }, ref) => {
     return (
         <div
-            aria-disabled={rest["aria-disabled"] || true}
             ref={ref}
             {...rest}
-            className={`${style.card} ${rest.className || ""}`}
+            className={`${style.center} ${rest.className || ""}`}
         >
             {children}
         </div>

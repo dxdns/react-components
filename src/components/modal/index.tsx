@@ -1,27 +1,21 @@
-import style from "./style.module.css"
 import React from "react"
+import style from "./style.module.css"
 
 type Props = React.PropsWithChildren & {
-    title: string
     open: boolean
-    onClose: () => void
+    onClose?: () => void
 }
 
-export default function Modal({ title, children, open, onClose }: Props) {
+export default function ({ open, onClose, children }: Props) {
     return (
-        <div id={style["modal-container"]} className={`${open ? style.show : ""}`}>
-            <div className={style["modal-background"]}>
-                <div className={style["modal-content"]}>
-                    <div className={style["modal-header"]}>
-                        <h2>{title}</h2>
-                        <span className={style["btn-close"]} onClick={onClose}>&times;</span>
-                    </div>
-                    <div className={style["modal-body"]}>
+        <div className={`${style.container} ${open ? style.four : ""}`}>
+            {onClose && <div className={style.overlay} onClick={onClose}></div>}
+            <div className={style.bg}>
+                <div className={style.content}>
+                    {onClose && <span className={style.close} onClick={onClose}>x</span>}
+                    <div>
                         {children}
                     </div>
-                    {/* <div className="modal-footer">
-                        <h3>Modal Footer</h3>
-                    </div> */}
                 </div>
             </div>
         </div>

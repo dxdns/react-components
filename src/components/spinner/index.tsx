@@ -1,12 +1,13 @@
-import { SizeType } from "@/types"
+import { ColorType, SizeType } from "@/types"
 import style from "./style.module.css"
 
 type Props = {
     size?: SizeType
+    color?: ColorType
 }
 
-export default function Spinner({ size = "sm" }: Props) {
+export default function({ size = "sm", color = "primary" }: Props) {
     return (
-        <span className={`${style.spinner} ${style[size]}`}></span>
+        <span className={`${style.spinner} ${style[size]} ${style[color]}`}></span>
     )
 }

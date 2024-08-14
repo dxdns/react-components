@@ -1,57 +1,57 @@
 .switch {
-    display: flex;
-    align-items: center;
-    position: relative;
-    gap: 0.5rem;
+  display: flex;
+  align-items: center;
+  position: relative;
+  gap: 0.5rem;
 }
 
 .switch .wrapper {
-    position: relative;
+  position: relative;
 }
 
-.switch .wrapper>input[type=checkbox] {
-    cursor: pointer;
-    margin: 1rem auto;
-    position: relative;
-    width: 50px;
-    height: 30px;
-    border-radius: 25px;
-    outline: none;
-    background: var(--color-light) !important;
-    border: none;
+.switch .wrapper > input[type="checkbox"] {
+  cursor: pointer;
+  margin: 1rem auto;
+  position: relative;
+  width: 50px;
+  height: 30px;
+  border-radius: 25px;
+  outline: none;
+  background: var(--color-light) !important;
+  border: none;
 }
 
-.switch .wrapper>input[type=checkbox]::after {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 30%;
-    transform: translate(-50%, -50%);
-    border-radius: 50%;
-    height: 1.5rem;
-    width: 1.5rem;
-    background: var(--color-primary);
-    transition: left 0.3s;
+.switch .wrapper > input[type="checkbox"]::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 30%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  height: 1.5rem;
+  width: 1.5rem;
+  background: var(--color-primary);
+  transition: left 0.3s;
 }
 
-.switch .wrapper>input[type=checkbox]:checked {
-    background: var(--color-light-variant) !important;
+.switch .wrapper > input[type="checkbox"]:checked {
+  background: var(--color-light-variant) !important;
 }
 
-.switch .wrapper>input[type=checkbox]:checked::after {
-    left: 70%;
+.switch .wrapper > input[type="checkbox"]:checked::after {
+  left: 70%;
 }
 
-.switch .wrapper>input[type=checkbox]:checked+span {
-    left: 40%;
-    transform: rotate(-180deg);
+.switch .wrapper > input[type="checkbox"]:checked + .icon {
+  left: 55%;
+  transform: rotate(-180deg);
 }
 
-.switch .wrapper>span {
-    position: absolute;
-    top: 15px;
-    font-size: 15px;
-    pointer-events: none;
-    left: 0;
-    transition: 0.3s;
+.switch .wrapper > .icon {
+  position: absolute;
+  top: 21px;
+  pointer-events: none;
+  left: 7px;
+  transition: 0.3s;
+  font-size: 16px;
 }
