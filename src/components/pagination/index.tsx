@@ -1,3 +1,4 @@
+import { FaChevronLeft, FaChevronRight } from "react-icons/fa6"
 import Icon from "../icon"
 import style from "./style.module.css"
 
@@ -27,10 +28,7 @@ export default function Pagination({ rowsPerPage, count, currentPage, onPageChan
     return (
         <ul className={style.pagination}>
             <li onClick={prePage}>
-                <Icon
-                    name="chevron_left"
-                    variant="text"
-                />
+                <FaChevronLeft />
             </li>
 
             {numbers.map((n, i) => (
@@ -44,10 +42,7 @@ export default function Pagination({ rowsPerPage, count, currentPage, onPageChan
             ))}
 
             <li onClick={nextPage}>
-                <Icon
-                    name="chevron_right"
-                    variant="text"
-                />
+                <FaChevronRight />
             </li>
         </ul>
     )

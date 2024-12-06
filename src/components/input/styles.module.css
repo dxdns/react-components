@@ -9,7 +9,7 @@
 
 .input-group>label {
     position: absolute;
-    top: 50%;
+    top: 25px;
     left: 5px;
     transform: translateY(-50%);
     font-size: 16px;
@@ -41,7 +41,7 @@
     color: transparent !important;
 }
 
-.input-group>input:not(:placeholder-shown):not(:focus):invalid {
+.input-group>input:not(input[type="number"]):not(:placeholder-shown):not(:focus):invalid {
     border-color: var(--color-error);
 }
 
@@ -121,12 +121,15 @@
     top: 65% !important;
 }
 
-.input-group:first-child .icon {
+.input-group>.icon {
     position: absolute;
     top: 50%;
-    left: 0;
     translate: 0 -50%;
     color: var(--color-info-dark) !important;
+}
+
+.input-group>.icon.search {
+    left: 10px;
 }
 
 .input-group .icon-button {
@@ -140,18 +143,21 @@
     font-size: 20px;
 }
 
-.input-group>input[type="date"] {
+.input-group>input[type="date"],
+.input-group>input[type="month"] {
     color: var(--color-dark);
     color-scheme: dark;
 }
 
-.input-group>input[type="date"]::-webkit-calendar-picker-indicator {
+.input-group>input[type="date"]::-webkit-calendar-picker-indicator,
+.input-group>input[type="month"]::-webkit-calendar-picker-indicator {
     opacity: 0.6;
     filter: invert(0.5);
     cursor: pointer;
 }
 
-.input-group>input[type="date"]::-webkit-calendar-picker-indicator:hover {
+.input-group>input[type="date"]::-webkit-calendar-picker-indicator:hover,
+.input-group>input[type="month"]::-webkit-calendar-picker-indicator:hover {
     opacity: 1;
 }
 
@@ -183,4 +189,35 @@
 .input-group>input[type="search"]:focus::-webkit-search-cancel-button {
     opacity: 0.3;
     pointer-events: all;
+}
+
+.input-group>input[type="file"] {
+    border: none;
+    line-height: 2;
+}
+
+.input-group>input[type="file"]:nth-last-child(1) {
+    color: var(--color-dark-variant) !important;
+    font-size: 11px;
+}
+
+.input-group>input[type="file"]::file-selector-button {
+    border-radius: 5px;
+    cursor: pointer;
+    background: var(--color-primary);
+    border: 1px solid rgba(0, 0, 0, 0.16);
+    box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.05);
+    font-size: 16px;
+    padding: 0 16px;
+    height: 30px;
+    transition: background 200ms;
+    display: flex;
+}
+
+.input-group>input[type="file"]::file-selector-button:hover {
+    background-color: var(--color-secondary);
+}
+
+.input-group>input[type="file"]::file-selector-button:active {
+    background-color: var(--color-light);
 }

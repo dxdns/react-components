@@ -2,9 +2,9 @@ import React from "react"
 import IconButton from "@/components/icon-button"
 import Menu from "@/components/menu"
 import Button from "@/components/button"
-import Icon from "@/components/icon"
 import MenuItem from "@/components/menu-item"
 import ProgressBar from "@/components/progress-bar"
+import { MdEdit, MdMoreVert, MdPrint } from "react-icons/md"
 
 export const columns = [
     {
@@ -46,7 +46,7 @@ export const columns = [
             return (
                 <div style={{ display: "-webkit-inline-box" }}>
                     <IconButton
-                        name="more_vert"
+                        Icon={MdMoreVert}
                         onClick={handleClick}
                     />
                     <Menu
@@ -57,7 +57,7 @@ export const columns = [
                         <MenuItem onClick={() => null}>
                             <Button
                                 variant="text"
-                                left={<Icon name="edit" />}
+                                left={<MdEdit />}
                             >
                                 Editar
                             </Button>
@@ -65,7 +65,7 @@ export const columns = [
                         <MenuItem onClick={() => null}>
                             <Button
                                 variant="text"
-                                left={<Icon name="print" />}
+                                left={<MdPrint />}
                             >
                                 Imprimir
                             </Button>

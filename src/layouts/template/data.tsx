@@ -1,6 +1,6 @@
 // import profile1 from "../../assets/profile-1.jpg"
 // import profile2 from "../../assets/profile-2.jpg"
-import Icon from "@/components/icon"
+import { MdLocalMall, MdPerson, MdShoppingCart } from "react-icons/md"
 
 export const menuItems = [
     {
@@ -22,19 +22,19 @@ export const menuItems = [
 
 export const sales = [
     {
-        icon: <Icon name="shopping_cart" variant="contained" />,
+        icon: <MdShoppingCart size={20} />,
         title: "Online Orders",
         percent: 39,
         value: 3849,
     },
     {
-        icon: <Icon name="local_mall" variant="contained" bgColor="error" />,
+        icon: <MdLocalMall size={20} />,
         title: "Offline Orders",
         percent: 17,
         value: 1100,
     },
     {
-        icon: <Icon name="person" variant="contained" bgColor="success" />,
+        icon: <MdPerson size={20} />,
         title: "New Customers",
         percent: 25,
         value: 849,

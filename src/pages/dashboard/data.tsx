@@ -1,5 +1,5 @@
 import Badge from "@/components/badge"
-import Icon from "@/components/icon"
+import { MdLocalMall, MdPerson, MdShoppingCart } from "react-icons/md"
 
 export const columns = [
     {
@@ -60,19 +60,19 @@ export const rows = [
 
 export const insights = [
     {
-        icon: <Icon name="shopping_cart" variant="contained" />,
+        icon: <MdShoppingCart size={30} />,
         label: "Total Sales",
         value: 25.024,
         percent: 81
     },
     {
-        icon: <Icon name="local_mall" bgColor="error" variant="contained" />,
+        icon: <MdLocalMall size={30} />,
         label: "Total Orders",
         value: 15.024,
         percent: 70
     },
     {
-        icon: <Icon name="person" bgColor="success" variant="contained" />,
+        icon: <MdPerson size={30} />,
         label: "Total Customers",
         value: 10.024,
         percent: 19

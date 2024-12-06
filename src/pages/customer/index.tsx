@@ -3,11 +3,11 @@ import TablePagination from "@/components/table-pagination"
 import DataTable from "@/components/data-table"
 import Card from "@/components/card"
 import Button from "@/components/button"
-import Icon from "@/components/icon"
 import { columns } from "./data"
 import Input from "@/components/input"
 import Select from "@/components/select"
 import style from "./style.module.css"
+import { MdAdd } from "react-icons/md"
 
 export default function Customer() {
     const [currentPage, setCurrentPage] = React.useState(1)
@@ -22,9 +22,7 @@ export default function Customer() {
         <div className={style.customer}>
             <div className={style.header}>
                 <h1>Page Customer</h1>
-                <Button
-                    left={<Icon name="add" />}
-                >
+                <Button left={<MdAdd />}>
                     New Customer
                 </Button>
             </div>

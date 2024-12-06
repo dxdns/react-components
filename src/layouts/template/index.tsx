@@ -3,7 +3,6 @@ import React from "react"
 import { Link, NavLink, Outlet } from "react-router-dom"
 import IconButton from "@/components/icon-button"
 import Switch from "@/components/switch"
-import Icon from "@/components/icon"
 import profile1 from "../../assets/profile-1.jpg"
 import Card from "@/components/card"
 import Message from "@/components/message"
@@ -13,6 +12,7 @@ import { menuItems, messages, sales } from "./data"
 import Logo from "@/components/logo"
 import { getTheme, setTheme } from "../../utils/theme"
 import Avatar from "@/components/avatar"
+import { MdAdd, MdClose, MdDarkMode, MdLightMode, MdMenu } from "react-icons/md"
 
 export default function Template() {
     const [open, setOpen] = React.useState(false)
@@ -68,7 +68,7 @@ export default function Template() {
                         <Logo className={style.logo} />
                     </Link>
                     <div className={style.close} onClick={closeMenu}>
-                        <span className="material-icons-sharp">close</span>
+                        <MdClose size={20} />
                     </div>
                 </div>
 
@@ -94,13 +94,14 @@ export default function Template() {
                 <div className={style.top}>
                     <IconButton
                         id={style["menu-btn"]}
-                        name="menu"
+                        Icon={MdMenu}
                         onClick={openMenu}
+                        options={{ size: 30 }}
                     />
                     <Switch
                         checked={checked}
                         name={"theme"}
-                        icon={checked ? "light_mode" : "dark_mode"}
+                        Icon={checked ? MdLightMode : MdDarkMode}
                         onChange={toggleTheme}
                     />
                     <div className={style.profile}>
@@ -133,9 +134,7 @@ export default function Template() {
                         />
                     ))}
 
-                    <Button
-                        left={<Icon name="add" />}
-                    >
+                    <Button left={<MdAdd />}>
                         Add Product
                     </Button>
                 </div>
