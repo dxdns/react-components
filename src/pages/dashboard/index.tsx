@@ -1,4 +1,4 @@
-import style from "./style.module.css"
+import styles from "./styles.module.css"
 import Card from "@/components/card"
 import { CardStatistic } from "@/components/card-statistic"
 import DataTable from "@/components/data-table"
@@ -7,15 +7,15 @@ import Input from "@/components/input"
 
 export default function Dashboard() {
     return (
-        <div className={style.dashboard}>
+        <div className={styles.dashboard}>
             <h1>Dashboard</h1>
             <Input
-                className={style["input-group"]}
+                className={styles["input-group"]}
                 type="date"
                 onChange={(e) => console.log(e.target.value)}
             />
 
-            <div className={style.insights}>
+            <div className={styles.insights}>
                 {insights.map((item, index) => (
                     <CardStatistic
                         key={index}
@@ -25,7 +25,7 @@ export default function Dashboard() {
             </div>
 
             <Card>
-                <div className={style["recent-orders"]}>
+                <div className={styles["recent-orders"]}>
                     <h2>Recent Orders</h2>
                     <DataTable
                         columns={columns}

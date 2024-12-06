@@ -1,4 +1,4 @@
-import style from "./style.module.css"
+import styles from "./styles.module.css"
 import { VariantType } from "@/types"
 import React from "react"
 
@@ -9,11 +9,11 @@ type Props = React.PropsWithChildren & {
 }
 
 export default function Accordion({ label, open, variant = "contained", children }: Props) {
-    const isActive = open ? style.active : ""
+    const isActive = open ? styles.active : ""
 
     return (
-        <div className={style.accordion}>
-            <button className={`${isActive} ${style[variant]}`}>
+        <div className={styles.accordion}>
+            <button className={`${isActive} ${styles[variant]}`}>
                 {label}
             </button>
             <div className={`content ${isActive}`}>

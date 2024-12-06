@@ -1,7 +1,7 @@
 import { Link, useNavigate } from "react-router-dom"
 import Button from "@/components/button"
 import Input from "@/components/input"
-import style from "./style.module.css"
+import styles from "./styles.module.css"
 
 export default function ForgotPassword() {
     const navigate = useNavigate()
@@ -16,13 +16,13 @@ export default function ForgotPassword() {
     }
 
     return (
-        <form className={style["forgot-password"]} onSubmit={handleSubmit}>
-            <div className={style.header}>
+        <form className={styles["forgot-password"]} onSubmit={handleSubmit}>
+            <div className={styles.header}>
                 <h1>Forgot your password?</h1>
                 <p>Please enter the email address associated with your
                     account and We will email you a link to reset your password.</p>
             </div>
-            <div className={style.content}>
+            <div className={styles.content}>
                 <Input
                     type="email"
                     name="email"

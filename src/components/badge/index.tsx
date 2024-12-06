@@ -1,4 +1,4 @@
-import style from "./style.module.css"
+import styles from "./styles.module.css"
 import React from "react"
 import { SizeType, VariantType } from "@/types"
 
@@ -19,7 +19,7 @@ export default React.forwardRef<HTMLSpanElement, Props>((props, ref) => {
         <span
             ref={ref}
             {...rest}
-            className={`${style.badge} ${style[variant]} ${style[size]} ${rest.className || ""}`}
+            className={`${styles.badge} ${styles[variant]} ${styles[size]} ${rest.className || ""}`}
         >
             {children}
         </span>

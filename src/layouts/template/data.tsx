@@ -1,21 +1,21 @@
 // import profile1 from "../../assets/profile-1.jpg"
 // import profile2 from "../../assets/profile-2.jpg"
-import { MdLocalMall, MdPerson, MdShoppingCart } from "react-icons/md"
+import { MdGridView, MdLocalMall, MdLogout, MdPerson, MdPersonOutline, MdShoppingCart } from "react-icons/md"
 
 export const menuItems = [
     {
         label: "Dashboard",
-        icon: "grid_view",
+        icon: <MdGridView size={20} />,
         path: "/",
     },
     {
         label: "Customers",
-        icon: "person_outline",
+        icon: <MdPersonOutline size={20} />,
         path: "customer",
     },
     {
         label: "Logout",
-        icon: "logout",
+        icon: <MdLogout size={20} />,
         path: "auth",
     }
 ]

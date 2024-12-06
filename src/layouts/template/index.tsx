@@ -1,4 +1,4 @@
-import style from "./style.module.css"
+import styles from "./styles.module.css"
 import React from "react"
 import { Link, NavLink, Outlet } from "react-router-dom"
 import IconButton from "@/components/icon-button"
@@ -61,25 +61,25 @@ export default function Template() {
     }, [])
 
     return (
-        <div className={style.template}>
-            <aside ref={menuRef} className={open ? style.show : style.hide}>
-                <div className={style.top}>
+        <div className={styles.template}>
+            <aside ref={menuRef} className={open ? styles.show : styles.hide}>
+                <div className={styles.top}>
                     <Link to={""}>
-                        <Logo className={style.logo} />
+                        <Logo className={styles.logo} />
                     </Link>
-                    <div className={style.close} onClick={closeMenu}>
+                    <div className={styles.close} onClick={closeMenu}>
                         <MdClose size={20} />
                     </div>
                 </div>
 
-                <div className={style.sidebar}>
+                <div className={styles.sidebar}>
                     {menuItems.map((item) => (
                         <NavLink
                             key={item.label}
-                            className={({ isActive }) => isActive ? style.active : ""}
+                            className={({ isActive }) => isActive ? styles.active : ""}
                             to={item.path}
                         >
-                            <span className="material-icons-sharp">{item.icon}</span>
+                            <span>{item.icon}</span>
                             <h3>{item.label}</h3>
                         </NavLink>
                     ))}
@@ -90,10 +90,10 @@ export default function Template() {
                 <Outlet />
             </main>
 
-            <div className={style.right}>
-                <div className={style.top}>
+            <div className={styles.right}>
+                <div className={styles.top}>
                     <IconButton
-                        id={style["menu-btn"]}
+                        id={styles["menu-btn"]}
                         Icon={MdMenu}
                         onClick={openMenu}
                         options={{ size: 30 }}
@@ -104,8 +104,8 @@ export default function Template() {
                         Icon={checked ? MdLightMode : MdDarkMode}
                         onChange={toggleTheme}
                     />
-                    <div className={style.profile}>
-                        <div className={style.info}>
+                    <div className={styles.profile}>
+                        <div className={styles.info}>
                             <p>Hey, <b>Test</b></p>
                             <small className="text-muted">Admin</small>
                         </div>
@@ -113,7 +113,7 @@ export default function Template() {
                     </div>
                 </div>
 
-                <div className={style["recent-updates"]}>
+                <div className={styles["recent-updates"]}>
                     <h2>Recent Updates</h2>
                     <Card>
                         {messages.map((item, index) => (
@@ -125,7 +125,7 @@ export default function Template() {
                     </Card>
                 </div>
 
-                <div className={style["sales-analytics"]}>
+                <div className={styles["sales-analytics"]}>
                     <h2>Sales Analytics</h2>
                     {sales.map((item, index) => (
                         <CardAnalytic

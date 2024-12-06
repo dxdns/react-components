@@ -6,7 +6,7 @@ import Button from "@/components/button"
 import { columns } from "./data"
 import Input from "@/components/input"
 import Select from "@/components/select"
-import style from "./style.module.css"
+import styles from "./styles.module.css"
 import { MdAdd } from "react-icons/md"
 
 export default function Customer() {
@@ -19,15 +19,15 @@ export default function Customer() {
     const result = data.slice(firstIndex, lastIndex)
 
     return (
-        <div className={style.customer}>
-            <div className={style.header}>
+        <div className={styles.customer}>
+            <div className={styles.header}>
                 <h1>Page Customer</h1>
                 <Button left={<MdAdd />}>
                     New Customer
                 </Button>
             </div>
             <Card>
-                <div className={style.header}>
+                <div className={styles.header}>
                     <Input
                         type="search"
                         name="fragment"
@@ -35,7 +35,7 @@ export default function Customer() {
                         variant="contained"
                     />
                     <Select
-                        className={style.select}
+                        className={styles.select}
                         onChange={(e) => console.log(e.target.value)}
                         defaultValue={rowsPerPage}
                     >

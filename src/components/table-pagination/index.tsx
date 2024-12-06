@@ -1,7 +1,7 @@
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa"
 import IconButton from "../icon-button"
 import Select from "../select"
-import style from "./style.module.css"
+import styles from "./styles.module.css"
 
 type Props = {
     rowsPerPageOptions: (number | { label: string, value: number })[]
@@ -31,9 +31,9 @@ export default function TablePagination(props: Props) {
     }
 
     return (
-        <div className={style["table-pagination"]}>
+        <div className={styles["table-pagination"]}>
             <div>
-                <span className={style["options-text"]}>Linhas por página</span>
+                <span className={styles["options-text"]}>Linhas por página</span>
                 <Select onChange={(e) => onRowsPerPageChange(e.target.value)} defaultValue={rowsPerPage}>
                     {rowsPerPageOptions.map((item) => {
                         const value = typeof (item) == "number" ? item : item.label

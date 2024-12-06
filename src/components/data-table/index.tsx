@@ -1,5 +1,5 @@
 import React from "react"
-import style from "./style.module.css"
+import styles from "./styles.module.css"
 
 type Props = {
     columns?: {
@@ -28,11 +28,11 @@ export default function DataTable({ columns, data, renderExpandableRow }: Props)
     }
 
     function isActive(index:number) {
-        return currentIndex === index ? style.active : ""
+        return currentIndex === index ? styles.active : ""
     }
 
     return (
-        <table className={style.table}>
+        <table className={styles.table}>
             <thead>
                 <tr>
                     {
@@ -53,7 +53,7 @@ export default function DataTable({ columns, data, renderExpandableRow }: Props)
                                 renderExpandableRow &&
                                 <td>
                                     <button
-                                        className={`${style["expand-btn"]} ${isActive(index)}`}
+                                        className={`${styles["expand-btn"]} ${isActive(index)}`}
                                         onClick={() => handleClick(index)}
                                     />
                                 </td>
@@ -67,9 +67,9 @@ export default function DataTable({ columns, data, renderExpandableRow }: Props)
                         </tr>
                         {
                             renderExpandableRow &&
-                            <tr className={`${style.colappse} ${isActive(index)}`}>
+                            <tr className={`${styles.colappse} ${isActive(index)}`}>
                                 <td colSpan={colSpan}>
-                                    <div className={style.content}>
+                                    <div className={styles.content}>
                                         {renderExpandableRow(row)}
                                     </div>
                                 </td>

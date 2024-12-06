@@ -1,5 +1,5 @@
 import { ColorType, SizeType, VariantType } from "@/types"
-import style from "./style.module.css"
+import styles from "./styles.module.css"
 import React from "react"
 
 type Props = React.HTMLAttributes<HTMLDivElement> & React.PropsWithChildren & {
@@ -25,7 +25,7 @@ export default React.forwardRef<HTMLDivElement, Props>((props, ref) => {
         <span
             ref={ref}
             {...rest}
-            className={`${style.icon} material-icons-sharp ${style[variant]} ${color} ${size} ${rest.className || ""}`}
+            className={`${styles.icon} material-icons-sharp ${styles[variant]} ${color} ${size} ${rest.className || ""}`}
             style={{
                 backgroundColor: bgColor ? `var(--color-${bgColor ?? ""})` : ""
             }}

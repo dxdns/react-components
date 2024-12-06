@@ -1,4 +1,4 @@
-import "./style.css"
+import "./styles.css"
 import React from "react"
 import { PositionType } from "@/types"
 

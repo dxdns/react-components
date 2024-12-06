@@ -1,5 +1,5 @@
 import { ColorType } from "@/types"
-import style from "./style.module.css"
+import styles from "./styles.module.css"
 
 type Props = {
     value: number
@@ -8,8 +8,8 @@ type Props = {
 
 export default function ProgressBar({ value, color = "inherit" }: Props) {
     return (
-        <div className={`${style["progress-bar"]} ${style[color]}`}>
-            <div className={style[color]} style={{ width: `${value}%` }}></div>
+        <div className={`${styles["progress-bar"]} ${styles[color]}`}>
+            <div className={styles[color]} style={{ width: `${value}%` }}></div>
         </div>
     )
 }

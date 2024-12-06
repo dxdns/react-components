@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom"
 import Button from "@/components/button"
 import Input from "@/components/input"
-import style from "./style.module.css"
+import styles from "./styles.module.css"
 
 export default function SignIn() {
     const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
@@ -14,8 +14,8 @@ export default function SignIn() {
     }
 
     return (
-        <form className={style["sign-in"]} onSubmit={handleSubmit}>
-            <div className={style.header}>
+        <form className={styles["sign-in"]} onSubmit={handleSubmit}>
+            <div className={styles.header}>
                 <h1>Sign In</h1>
                 <p>New user?
                     <Link to={"sign-up"}>
@@ -23,7 +23,7 @@ export default function SignIn() {
                     </Link>
                 </p>
             </div>
-            <div className={style.content}>
+            <div className={styles.content}>
                 <Input
                     type="email"
                     name="email"

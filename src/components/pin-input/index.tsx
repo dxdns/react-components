@@ -1,5 +1,5 @@
 import React from "react"
-import style from "./style.module.css"
+import styles from "./styles.module.css"
 
 type Props = React.InputHTMLAttributes<HTMLInputElement> & {
     mask?: boolean
@@ -16,7 +16,7 @@ export default React.forwardRef<HTMLInputElement, Props>(({ mask, ...rest }, ref
     return (
         <input
             ref={ref}
-            className={style["pin-input"]}
+            className={styles["pin-input"]}
             {...rest}
             type={!mask ? "number" : "password"}
             inputMode="numeric"

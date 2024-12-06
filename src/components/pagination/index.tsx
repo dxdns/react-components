@@ -1,6 +1,5 @@
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa6"
-import Icon from "../icon"
-import style from "./style.module.css"
+import styles from "./styles.module.css"
 
 type Props = {
     rowsPerPage: number
@@ -26,7 +25,7 @@ export default function Pagination({ rowsPerPage, count, currentPage, onPageChan
     }
 
     return (
-        <ul className={style.pagination}>
+        <ul className={styles.pagination}>
             <li onClick={prePage}>
                 <FaChevronLeft />
             </li>
@@ -34,7 +33,7 @@ export default function Pagination({ rowsPerPage, count, currentPage, onPageChan
             {numbers.map((n, i) => (
                 <li
                     key={i}
-                    className={`${n === currentPage ? style.active : ""}`}
+                    className={`${n === currentPage ? styles.active : ""}`}
                     onClick={() => onPageChange(n)}
                 >
                     {n}

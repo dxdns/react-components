@@ -1,5 +1,5 @@
 import React from "react"
-import style from "./style.module.css"
+import styles from "./styles.module.css"
 
 type Props = React.HTMLAttributes<HTMLDivElement> & React.PropsWithChildren & {
     variant?: "square" | "line"
@@ -11,7 +11,7 @@ export default React.forwardRef<HTMLDivElement, Props>(({ variant, animation = "
         <div
             ref={ref}
             {...rest}
-            className={`${style.skeleton} ${rest.className || ""} ${variant ?? ""} ${style[animation]}`}
+            className={`${styles.skeleton} ${rest.className || ""} ${variant ?? ""} ${styles[animation]}`}
         >
             {children}
         </div>

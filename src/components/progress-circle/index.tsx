@@ -1,5 +1,5 @@
 import React from "react"
-import style from "./style.module.css"
+import styles from "./styles.module.css"
 
 type Props = {
     percent: number
@@ -23,7 +23,7 @@ export default function ProgressCircle({ percent }: Props) {
     }, [])
 
     return (
-        <div className={style["progress-circle"]}>
+        <div className={styles["progress-circle"]}>
             <svg ref={refSvg} style={styleSvg} data-percent={percent} width="92" height="92" viewBox="-11.5 -11.5 115 115">
                 <circle r="36" cx="46" cy="46" fill="transparent" stroke="#e0e0e0" strokeDasharray={"0"}></circle>
                 <circle r="36" cx="46" cy="46" stroke={getColor(percent)} strokeWidth="10px" fill="transparent"></circle>
