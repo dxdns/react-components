@@ -32,21 +32,21 @@
 
 @keyframes bgFadeIn {
     0% {
-        background: rgba(0, 0, 0, .0);
+        background: rgba(0, 0, 0, 0);
     }
 
     100% {
-        background: rgba(0, 0, 0, .7);
+        background: rgba(0, 0, 0, 0.7);
     }
 }
 
 @keyframes bgFadeOut {
     0% {
-        background: rgba(0, 0, 0, .7);
+        background: rgba(0, 0, 0, 0.7);
     }
 
     100% {
-        background: rgba(0, 0, 0, .0);
+        background: rgba(0, 0, 0, 0);
     }
 }
 

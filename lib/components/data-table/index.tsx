@@ -11,12 +11,21 @@ type Props = {
     renderExpandableRow?: (row: Record<string, any>) => JSX.Element
 }
 
-export default function DataTable({ columns, data, renderExpandableRow }: Props) {
+export default function DataTable({
+    columns,
+    data,
+    renderExpandableRow,
+}: Props) {
     const [currentIndex, setCurrentIndex] = React.useState(-1)
 
-    const columnsData = data.length > 0 ? Object.keys(data[0]).map((name) => ({ name, label: name })) : []
+    const columnsData =
+        data.length > 0
+            ? Object.keys(data[0]).map((name) => ({ name, label: name }))
+            : []
     const columnsNames = columns || columnsData
-    const colSpan = Boolean(renderExpandableRow) ? columnsNames.length + 1 : columnsNames.length
+    const colSpan = Boolean(renderExpandableRow)
+        ? columnsNames.length + 1
+        : columnsNames.length
 
     const customBodyRender = (value: any, index: number) => {
         const column = columns ? columns[index] : null
@@ -27,7 +36,7 @@ export default function DataTable({ columns, data, renderExpandableRow }: Props)
         setCurrentIndex((prev) => (prev === index ? -1 : index))
     }
 
-    function isActive(index:number) {
+    function isActive(index: number) {
         return currentIndex === index ? styles.active : ""
     }
 
@@ -35,10 +44,7 @@ export default function DataTable({ columns, data, renderExpandableRow }: Props)
         <table className={styles.table}>
             <thead>
                 <tr>
-                    {
-                        renderExpandableRow &&
-                        <th style={{ width: "5px" }}></th>
-                    }
+                    {renderExpandableRow && <th style={{ width: "5px" }}></th>}
                     {columnsNames.map((item) => (
                         <th key={item.name}>{item.label}</th>
                     ))}
@@ -49,15 +55,14 @@ export default function DataTable({ columns, data, renderExpandableRow }: Props)
                 {data.map((row, index) => (
                     <React.Fragment key={index}>
                         <tr>
-                            {
-                                renderExpandableRow &&
+                            {renderExpandableRow && (
                                 <td>
                                     <button
                                         className={`${styles["expand-btn"]} ${isActive(index)}`}
                                         onClick={() => handleClick(index)}
                                     />
                                 </td>
-                            }
+                            )}
 
                             {columnsNames.map((col, index) => (
                                 <td key={col.name}>
@@ -65,16 +70,17 @@ export default function DataTable({ columns, data, renderExpandableRow }: Props)
                                 </td>
                             ))}
                         </tr>
-                        {
-                            renderExpandableRow &&
-                            <tr className={`${styles.colappse} ${isActive(index)}`}>
+                        {renderExpandableRow && (
+                            <tr
+                                className={`${styles.colappse} ${isActive(index)}`}
+                            >
                                 <td colSpan={colSpan}>
                                     <div className={styles.content}>
                                         {renderExpandableRow(row)}
                                     </div>
                                 </td>
                             </tr>
-                        }
+                        )}
                     </React.Fragment>
                 ))}
             </tbody>

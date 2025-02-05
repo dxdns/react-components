@@ -3,13 +3,13 @@
     align-items: center;
     position: relative;
     gap: 0.5rem;
-  }
-  
-  .switch .wrapper {
+}
+
+.switch .wrapper {
     position: relative;
-  }
-  
-  .switch .wrapper > input[type="checkbox"] {
+}
+
+.switch .wrapper > input[type="checkbox"] {
     cursor: pointer;
     margin: 1rem auto;
     position: relative;
@@ -19,9 +19,9 @@
     outline: none;
     background: var(--color-light) !important;
     border: none;
-  }
-  
-  .switch .wrapper > input[type="checkbox"]::after {
+}
+
+.switch .wrapper > input[type="checkbox"]::after {
     content: "";
     position: absolute;
     top: 50%;
@@ -32,27 +32,26 @@
     width: 1.5rem;
     background: var(--color-primary);
     transition: left 0.3s;
-  }
-  
-  .switch .wrapper > input[type="checkbox"]:checked {
+}
+
+.switch .wrapper > input[type="checkbox"]:checked {
     background: var(--color-light-variant) !important;
-  }
-  
-  .switch .wrapper > input[type="checkbox"]:checked::after {
+}
+
+.switch .wrapper > input[type="checkbox"]:checked::after {
     left: 70%;
-  }
-  
-  .switch .wrapper > input[type="checkbox"]:checked + .icon {
+}
+
+.switch .wrapper > input[type="checkbox"]:checked + .icon {
     left: 55%;
     transform: rotate(-180deg);
-  }
-  
-  .switch .wrapper > .icon {
+}
+
+.switch .wrapper > .icon {
     position: absolute;
     top: 21px;
     pointer-events: none;
     left: 7px;
     transition: 0.3s;
     font-size: 16px;
-  }
-  
+}

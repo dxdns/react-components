@@ -1,7 +1,8 @@
 import React from "react"
 import styles from "./styles.module.css"
 
-type Props = React.ImgHTMLAttributes<HTMLImageElement> & React.PropsWithChildren & {}
+type Props = React.ImgHTMLAttributes<HTMLImageElement> &
+    React.PropsWithChildren & {}
 
 export default React.forwardRef<HTMLImageElement, Props>((props, ref) => {
     const { children, ...rest } = props
@@ -12,15 +13,14 @@ export default React.forwardRef<HTMLImageElement, Props>((props, ref) => {
         <div
             className={styles.avatar}
             style={{
-                background: bgColor
+                background: bgColor,
             }}
         >
-            <img
-                ref={ref}
-                {...rest}
-            />
+            <img ref={ref} {...rest} />
             <span>
-                {typeof (children) === "string" ? children.substring(0, 1) : children}
+                {typeof children === "string"
+                    ? children.substring(0, 1)
+                    : children}
             </span>
         </div>
     )

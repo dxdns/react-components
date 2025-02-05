@@ -13,7 +13,11 @@ export default function AutoComplete({ data }: Props) {
 
     function handleChange(e: React.ChangeEvent<HTMLInputElement>) {
         setText(e.target.value)
-        setFiltered(data.filter(item => item.title.toLowerCase().includes(e.target.value.toLowerCase())))
+        setFiltered(
+            data.filter((item) =>
+                item.title.toLowerCase().includes(e.target.value.toLowerCase()),
+            ),
+        )
     }
 
     function handleClick(text: string) {
@@ -60,22 +64,19 @@ export default function AutoComplete({ data }: Props) {
                 onKeyDown={handleKeyDown}
             />
 
-            {
-                filtered.length !== 0 &&
+            {filtered.length !== 0 && (
                 <div className={styles.items}>
-                    {
-                        filtered.map((item, index) => (
-                            <div
-                                key={item.id}
-                                className={focused === index ? styles.focused : ""}
-                                onClick={() => handleClick(item.title)}
-                            >
-                                <p>{item.title}</p>
-                            </div>
-                        ))
-                    }
+                    {filtered.map((item, index) => (
+                        <div
+                            key={item.id}
+                            className={focused === index ? styles.focused : ""}
+                            onClick={() => handleClick(item.title)}
+                        >
+                            <p>{item.title}</p>
+                        </div>
+                    ))}
                 </div>
-            }
+            )}
         </div>
     )
 }

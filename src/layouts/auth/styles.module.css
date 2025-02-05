@@ -22,7 +22,7 @@
     align-items: center;
 }
 
-.auth-layout .left .header>svg {
+.auth-layout .left .header > svg {
     fill: var(--color-white);
     height: 40px;
     width: auto;
@@ -40,11 +40,11 @@
     animation: opacityFadeIn 5s;
 }
 
-.auth-layout .left .content>button {
+.auth-layout .left .content > button {
     border-color: var(--color-white);
 }
 
-.auth-layout .left .content>button:hover {
+.auth-layout .left .content > button:hover {
     background: var(--color-light);
 }
 
@@ -57,11 +57,11 @@
     grid-area: right;
 }
 
-.auth-layout .right>form {
+.auth-layout .right > form {
     width: 50%;
 }
 
-.auth-layout .right>form :global {
+.auth-layout .right > form :global {
     animation: opacityFadeIn 1s;
 }
 

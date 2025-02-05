@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom"
-import Button from "@/components/button"
-import Input from "@/components/input"
+import { Button, Input } from "@components"
 import styles from "./styles.module.css"
 
 export default function SignIn() {
@@ -17,19 +16,15 @@ export default function SignIn() {
         <form className={styles["sign-in"]} onSubmit={handleSubmit}>
             <div className={styles.header}>
                 <h1>Sign In</h1>
-                <p>New user?
+                <p>
+                    New user?
                     <Link to={"sign-up"}>
                         <strong> Create an account</strong>
                     </Link>
                 </p>
             </div>
             <div className={styles.content}>
-                <Input
-                    type="email"
-                    name="email"
-                    label="Email"
-                    required
-                />
+                <Input type="email" name="email" label="Email" required />
                 <Input
                     type="password"
                     name="password"

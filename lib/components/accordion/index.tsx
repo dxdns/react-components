@@ -8,7 +8,12 @@ type Props = React.PropsWithChildren & {
     variant?: VariantType
 }
 
-export default function Accordion({ label, open, variant = "contained", children }: Props) {
+export default function Accordion({
+    label,
+    open,
+    variant = "contained",
+    children,
+}: Props) {
     const isActive = open ? styles.active : ""
 
     return (
@@ -16,9 +21,7 @@ export default function Accordion({ label, open, variant = "contained", children
             <button className={`${isActive} ${styles[variant]}`}>
                 {label}
             </button>
-            <div className={`content ${isActive}`}>
-                {children}
-            </div>
+            <div className={`content ${isActive}`}>{children}</div>
         </div>
     )
 }

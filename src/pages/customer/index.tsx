@@ -1,11 +1,13 @@
 import React from "react"
-import TablePagination from "@/components/table-pagination"
-import DataTable from "@/components/data-table"
-import Card from "@/components/card"
-import Button from "@/components/button"
 import { columns } from "./data"
-import Input from "@/components/input"
-import Select from "@/components/select"
+import {
+    Button,
+    Input,
+    Select,
+    DataTable,
+    TablePagination,
+    Card,
+} from "@components"
 import styles from "./styles.module.css"
 import { MdAdd } from "react-icons/md"
 
@@ -13,7 +15,11 @@ export default function Customer() {
     const [currentPage, setCurrentPage] = React.useState(1)
     const [rowsPerPage, setRowsPerPage] = React.useState(10)
 
-    const data = Array.from({ length: 50 }, (_, i) => ({ id: i + 1, name: `test${i + 1}`, age: i * 2 }))
+    const data = Array.from({ length: 50 }, (_, i) => ({
+        id: i + 1,
+        name: `test${i + 1}`,
+        age: i * 2,
+    }))
     const lastIndex = currentPage * rowsPerPage
     const firstIndex = lastIndex - rowsPerPage
     const result = data.slice(firstIndex, lastIndex)
@@ -22,9 +28,7 @@ export default function Customer() {
         <div className={styles.customer}>
             <div className={styles.header}>
                 <h1>Page Customer</h1>
-                <Button left={<MdAdd />}>
-                    New Customer
-                </Button>
+                <Button left={<MdAdd />}>New Customer</Button>
             </div>
             <Card>
                 <div className={styles.header}>
@@ -41,10 +45,7 @@ export default function Customer() {
                     >
                         {[...Array(4)].map((_, i) => {
                             return (
-                                <option
-                                    key={i}
-                                    value={i}
-                                >
+                                <option key={i} value={i}>
                                     {i}
                                 </option>
                             )
@@ -64,12 +65,19 @@ export default function Customer() {
                     )}
                 />
                 <TablePagination
-                    rowsPerPageOptions={[5, 10, 25, { label: "All", value: -1 }]}
+                    rowsPerPageOptions={[
+                        5,
+                        10,
+                        25,
+                        { label: "All", value: -1 },
+                    ]}
                     count={data.length}
                     page={currentPage}
                     rowsPerPage={rowsPerPage}
                     onPageChange={(page) => setCurrentPage(page)}
-                    onRowsPerPageChange={(value) => setRowsPerPage(value === "All" ? data.length : +value)}
+                    onRowsPerPageChange={(value) =>
+                        setRowsPerPage(value === "All" ? data.length : +value)
+                    }
                 />
             </Card>
         </div>

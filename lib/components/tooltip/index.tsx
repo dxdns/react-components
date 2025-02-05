@@ -8,17 +8,10 @@ type Props = React.PropsWithChildren & {
 }
 
 export default function Tooltip(props: Props) {
-    const {
-        label,
-        position = "right",
-        children
-    } = props
+    const { label, position = "right", children } = props
 
     return (
-        <div
-            data-tooltip={label}
-            data-tooltip-location={position}
-        >
+        <div data-tooltip={label} data-tooltip-location={position}>
             {children}
         </div>
     )

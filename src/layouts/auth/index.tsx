@@ -1,5 +1,5 @@
 import { Outlet } from "react-router-dom"
-import Button from "@/components/button"
+import { Button } from "@components"
 import styles from "./styles.module.css"
 
 export default function AuthLayout() {
@@ -13,7 +13,9 @@ export default function AuthLayout() {
                     <h1>Welcome</h1>
                 </div>
                 <div className={styles.content}>
-                    <h2>Enter your personal details and start journey with us</h2>
+                    <h2>
+                        Enter your personal details and start journey with us
+                    </h2>
                     <Button variant="outlined">Sign Up</Button>
                 </div>
             </div>

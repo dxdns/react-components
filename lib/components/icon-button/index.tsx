@@ -8,16 +8,18 @@ type Props = React.ButtonHTMLAttributes<HTMLButtonElement> & {
     options?: IconBaseProps
 }
 
-export default React.forwardRef<HTMLButtonElement, Props>(({ Icon, options, ...rest }, ref) => {
-    return (
-        <Button
-            className={`${styles["icon-button"]} ${rest.className || ""}`}
-            ref={ref}
-            {...rest}
-            variant="text"
-            color={"inherit"}
-        >
-            <Icon {...options} />
-        </Button>
-    )
-})
+export default React.forwardRef<HTMLButtonElement, Props>(
+    ({ Icon, options, ...rest }, ref) => {
+        return (
+            <Button
+                className={`${styles["icon-button"]} ${rest.className || ""}`}
+                ref={ref}
+                {...rest}
+                variant="text"
+                color={"inherit"}
+            >
+                <Icon {...options} />
+            </Button>
+        )
+    },
+)

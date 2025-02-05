@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom"
-import Button from "@/components/button"
-import Input from "@/components/input"
+import { Button, Input } from "@components"
 import styles from "./styles.module.css"
 
 export default function SignUp() {
@@ -19,7 +18,8 @@ export default function SignUp() {
         <form className={styles["sign-up"]} onSubmit={handleSubmit}>
             <div className={styles.header}>
                 <h1>Get started absolutely free</h1>
-                <p>Already have an account?
+                <p>
+                    Already have an account?
                     <Link to={"/auth"}>
                         <strong> Sign in</strong>
                     </Link>
@@ -53,7 +53,9 @@ export default function SignUp() {
                     required
                 />
                 <Button type="submit">Create account</Button>
-                <p>By signing up, I agree to <Link to="#">Terms of Service </Link>
+                <p>
+                    By signing up, I agree to{" "}
+                    <Link to="#">Terms of Service </Link>
                     and <Link to="#">Privacy Policy.</Link>
                 </p>
             </div>

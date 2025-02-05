@@ -1,6 +1,13 @@
 // import profile1 from "../../assets/profile-1.jpg"
 // import profile2 from "../../assets/profile-2.jpg"
-import { MdGridView, MdLocalMall, MdLogout, MdPerson, MdPersonOutline, MdShoppingCart } from "react-icons/md"
+import {
+    MdGridView,
+    MdLocalMall,
+    MdLogout,
+    MdPerson,
+    MdPersonOutline,
+    MdShoppingCart,
+} from "react-icons/md"
 
 export const menuItems = [
     {
@@ -17,7 +24,7 @@ export const menuItems = [
         label: "Logout",
         icon: <MdLogout size={20} />,
         path: "auth",
-    }
+    },
 ]
 
 export const sales = [
@@ -38,18 +45,18 @@ export const sales = [
         title: "New Customers",
         percent: 25,
         value: 849,
-    }
+    },
 ]
 
 export const messages = [
     {
         // image: profile1,
         yourname: "Mike Tyson",
-        text: "received his order of Night lion tech GPS drone."
+        text: "received his order of Night lion tech GPS drone.",
     },
     {
         // image: profile2,
         yourname: "New Tyson",
-        text: "received his order of Night lion tech GPS drone."
-    }
+        text: "received his order of Night lion tech GPS drone.",
+    },
 ]

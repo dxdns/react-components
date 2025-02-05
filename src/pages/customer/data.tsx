@@ -1,9 +1,5 @@
 import React from "react"
-import IconButton from "@/components/icon-button"
-import Menu from "@/components/menu"
-import Button from "@/components/button"
-import MenuItem from "@/components/menu-item"
-import ProgressBar from "@/components/progress-bar"
+import { Button, ProgressBar, MenuItem, Menu, IconButton } from "@components"
 import { MdEdit, MdMoreVert, MdPrint } from "react-icons/md"
 
 export const columns = [
@@ -13,7 +9,7 @@ export const columns = [
     },
     {
         label: "Name",
-        name: "name"
+        name: "name",
     },
     {
         label: "Age",
@@ -27,7 +23,7 @@ export const columns = [
                     {v}
                 </React.Fragment>
             )
-        }
+        },
     },
     {
         label: "action",
@@ -36,7 +32,7 @@ export const columns = [
             const [open, setOpen] = React.useState(false)
 
             function handleClick() {
-                setOpen(old => !old)
+                setOpen((old) => !old)
             }
 
             function handleClose() {
@@ -45,34 +41,25 @@ export const columns = [
 
             return (
                 <div style={{ display: "-webkit-inline-box" }}>
-                    <IconButton
-                        Icon={MdMoreVert}
-                        onClick={handleClick}
-                    />
+                    <IconButton Icon={MdMoreVert} onClick={handleClick} />
                     <Menu
                         open={open}
                         onClick={handleClose}
                         onClose={handleClose}
                     >
                         <MenuItem onClick={() => null}>
-                            <Button
-                                variant="text"
-                                left={<MdEdit />}
-                            >
+                            <Button variant="text" left={<MdEdit />}>
                                 Editar
                             </Button>
                         </MenuItem>
                         <MenuItem onClick={() => null}>
-                            <Button
-                                variant="text"
-                                left={<MdPrint />}
-                            >
+                            <Button variant="text" left={<MdPrint />}>
                                 Imprimir
                             </Button>
                         </MenuItem>
                     </Menu>
                 </div>
             )
-        }
+        },
     },
 ]

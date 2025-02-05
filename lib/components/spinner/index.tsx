@@ -6,7 +6,5 @@ type Props = {
 }
 
 export default function Spinner({ size = "sm" }: Props) {
-    return (
-        <span className={`${styles.spinner} ${styles[size]}`}></span>
-    )
+    return <span className={`${styles.spinner} ${styles[size]}`}></span>
 }

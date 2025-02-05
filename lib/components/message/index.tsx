@@ -10,11 +10,11 @@ type Props = {
 export default function Message({ image, yourname, text }: Props) {
     return (
         <div className={styles.update}>
-            <Avatar src={image}>
-                {yourname}
-            </Avatar>
+            <Avatar src={image}>{yourname}</Avatar>
             <div className={styles.message}>
-                <p><b>{yourname}</b> {text}</p>
+                <p>
+                    <b>{yourname}</b> {text}
+                </p>
                 <small className="text-muted">2 Minutes Ago</small>
             </div>
         </div>

@@ -1,18 +1,21 @@
 import styles from "./styles.module.css"
 import React from "react"
 import { Link, NavLink, Outlet } from "react-router-dom"
-import IconButton from "@/components/icon-button"
-import Switch from "@/components/switch"
 import profile1 from "../../assets/profile-1.jpg"
-import Card from "@/components/card"
-import Message from "@/components/message"
-import CardAnalytic from "@/components/card-analytic"
-import Button from "@/components/button"
 import { menuItems, messages, sales } from "./data"
-import Logo from "@/components/logo"
 import { getTheme, setTheme } from "../../utils/theme"
-import Avatar from "@/components/avatar"
 import { MdAdd, MdClose, MdDarkMode, MdLightMode, MdMenu } from "react-icons/md"
+import {
+    Button,
+    Avatar,
+    IconButton,
+    Switch,
+    CardAnalytic,
+    Message,
+    Card,
+    Logo,
+} from "@components"
+import logo from "@/assets/react.svg"
 
 export default function Template() {
     const [open, setOpen] = React.useState(false)
@@ -48,7 +51,10 @@ export default function Template() {
             const menu = menuRef.current
             const a = menu?.getElementsByClassName("active").item(0)
 
-            if (!menu?.contains(e.target as Node) || menu?.contains(a as Node)) {
+            if (
+                !menu?.contains(e.target as Node) ||
+                menu?.contains(a as Node)
+            ) {
                 closeMenu()
             }
         }
@@ -65,7 +71,7 @@ export default function Template() {
             <aside ref={menuRef} className={open ? styles.show : styles.hide}>
                 <div className={styles.top}>
                     <Link to={""}>
-                        <Logo className={styles.logo} />
+                        <Logo className={styles.logo} src={logo} />
                     </Link>
                     <div className={styles.close} onClick={closeMenu}>
                         <MdClose size={20} />
@@ -76,7 +82,9 @@ export default function Template() {
                     {menuItems.map((item) => (
                         <NavLink
                             key={item.label}
-                            className={({ isActive }) => isActive ? styles.active : ""}
+                            className={({ isActive }) =>
+                                isActive ? styles.active : ""
+                            }
                             to={item.path}
                         >
                             <span>{item.icon}</span>
@@ -106,7 +114,9 @@ export default function Template() {
                     />
                     <div className={styles.profile}>
                         <div className={styles.info}>
-                            <p>Hey, <b>Test</b></p>
+                            <p>
+                                Hey, <b>Test</b>
+                            </p>
                             <small className="text-muted">Admin</small>
                         </div>
                         <Avatar src={profile1} />
@@ -117,10 +127,7 @@ export default function Template() {
                     <h2>Recent Updates</h2>
                     <Card>
                         {messages.map((item, index) => (
-                            <Message
-                                key={index}
-                                {...item}
-                            />
+                            <Message key={index} {...item} />
                         ))}
                     </Card>
                 </div>
@@ -128,15 +135,10 @@ export default function Template() {
                 <div className={styles["sales-analytics"]}>
                     <h2>Sales Analytics</h2>
                     {sales.map((item, index) => (
-                        <CardAnalytic
-                            key={index}
-                            {...item}
-                        />
+                        <CardAnalytic key={index} {...item} />
                     ))}
 
-                    <Button left={<MdAdd />}>
-                        Add Product
-                    </Button>
+                    <Button left={<MdAdd />}>Add Product</Button>
                 </div>
             </div>
         </div>

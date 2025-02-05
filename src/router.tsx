@@ -17,17 +17,17 @@ export const router = createBrowserRouter([
         children: [
             {
                 index: true,
-                element: <Dashboard />
+                element: <Dashboard />,
             },
             {
                 path: "customer",
-                element: <Customer />
+                element: <Customer />,
             },
             {
                 path: "home",
-                element: <Home />
-            }
-        ]
+                element: <Home />,
+            },
+        ],
     },
     {
         path: "auth",
@@ -35,28 +35,28 @@ export const router = createBrowserRouter([
         children: [
             {
                 index: true,
-                element: <SignIn />
+                element: <SignIn />,
             },
             {
                 path: "sign-up",
-                element: <SignUp />
+                element: <SignUp />,
             },
             {
                 path: "forgot-password",
-                element: <ForgotPassword />
+                element: <ForgotPassword />,
             },
             {
                 path: "check-pin",
-                element: <CheckPin />
+                element: <CheckPin />,
             },
             {
                 path: "new-password",
-                element: <NewPassword />
-            }
-        ]
+                element: <NewPassword />,
+            },
+        ],
     },
     {
         path: "*",
-        element: <>Not Found</>
-    }
+        element: <>Not Found</>,
+    },
 ])

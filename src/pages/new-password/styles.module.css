@@ -11,13 +11,13 @@
     gap: 20px;
 }
 
-.new-password .content:last-child>a {
+.new-password .content:last-child > a {
     line-height: 1.57143;
     font-weight: bold;
     align-self: center;
 }
 
-.new-password .content:last-child>a::before {
+.new-password .content:last-child > a::before {
     content: "\2039 ";
     font-size: 16px;
 }

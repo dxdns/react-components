@@ -10,7 +10,7 @@
     max-width: 80px;
 }
 
-.progress-bar>div {
+.progress-bar > div {
     width: 100%;
     position: absolute;
     left: 0px;
@@ -18,35 +18,35 @@
     top: 0px;
 }
 
-.progress-bar>div :global {
+.progress-bar > div :global {
     animation: load 3s normal forwards;
 }
 
-.progress-bar>div.inherit {
+.progress-bar > div.inherit {
     background: inherit;
 }
 
-.progress-bar>div.primary {
+.progress-bar > div.primary {
     background: var(--color-primary-variant);
 }
 
-.progress-bar>div.secondary {
+.progress-bar > div.secondary {
     background: var(--color-secondary-variant);
 }
 
-.progress-bar>div.info {
+.progress-bar > div.info {
     background: var(--color-info-light);
 }
 
-.progress-bar>div.success {
+.progress-bar > div.success {
     background: var(--color-success) !important;
 }
 
-.progress-bar>div.error {
+.progress-bar > div.error {
     background: var(--color-error) !important;
 }
 
-.progress-bar>div.warning {
+.progress-bar > div.warning {
     background: var(--color-warning) !important;
 }
 

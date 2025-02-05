@@ -18,13 +18,13 @@
     justify-content: center;
 }
 
-.check-pin .content:last-child>a {
+.check-pin .content:last-child > a {
     line-height: 1.57143;
     font-weight: bold;
     align-self: center;
 }
 
-.check-pin .content:last-child>a::before {
+.check-pin .content:last-child > a::before {
     content: "\2039 ";
     font-size: 16px;
 }

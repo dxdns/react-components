@@ -1,6 +1,12 @@
 .skeleton {
     /* background: linear-gradient(-45deg, #dddddd, #f0f0f0, #dddddd, #f0f0f0); */
-    background: linear-gradient(-45deg, var(--color-light), var(--color-white), var(--color-light), var(--color-white));
+    background: linear-gradient(
+        -45deg,
+        var(--color-light),
+        var(--color-white),
+        var(--color-light),
+        var(--color-white)
+    );
     background-size: 400% 400%;
     border-radius: 15px;
 }

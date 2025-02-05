@@ -1,7 +1,7 @@
 import { ThemeType } from "../../lib/types"
 
 export function getTheme() {
-    return localStorage.getItem("theme") || "light" as ThemeType
+    return localStorage.getItem("theme") || ("light" as ThemeType)
 }
 
 export function setTheme(theme: ThemeType) {

@@ -9,7 +9,7 @@ type Props = {
     percent: number
 }
 
-export default function({ icon, label, value, percent }: Props) {
+export default function ({ icon, label, value, percent }: Props) {
     return (
         <Card>
             {icon}
@@ -20,9 +20,7 @@ export default function({ icon, label, value, percent }: Props) {
                 </div>
                 <ProgressCircle percent={percent} />
             </div>
-            <small className="text-muted">
-                Last 24 Hours
-            </small>
+            <small className="text-muted">Last 24 Hours</small>
         </Card>
     )
 }

@@ -16,7 +16,9 @@
     pointer-events: none;
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
     transform: translateY(-10px);
-    transition: opacity 150ms ease-in-out, transform 150ms ease-in-out;
+    transition:
+        opacity 150ms ease-in-out,
+        transform 150ms ease-in-out;
 }
 
 .menu-content.show {

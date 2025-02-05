@@ -5,29 +5,29 @@
     border-radius: 50%;
 }
 
-.progress-circle>svg {
+.progress-circle > svg {
     width: 7rem;
     height: 7rem;
     stroke-width: 10;
 }
 
-.progress-circle>svg>text {
+.progress-circle > svg > text {
     font-size: 21px;
     font-weight: bold;
 }
 
-.progress-circle>svg>circle {
+.progress-circle > svg > circle {
     fill: none;
     stroke-linecap: round;
     stroke-dashoffset: 100;
 }
 
-.progress-circle>svg>circle :global {
+.progress-circle > svg > circle :global {
     animation: draw 1s linear forwards;
 }
 
 @media screen and (max-width: 1440px) {
-    .progress-circle>svg>text {
+    .progress-circle > svg > text {
         font-size: 18px;
     }
 }

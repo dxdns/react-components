@@ -5,7 +5,7 @@
     gap: 1rem;
 }
 
-.customer .header>.select {
+.customer .header > .select {
     width: 10rem;
 }
 

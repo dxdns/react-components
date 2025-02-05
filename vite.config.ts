@@ -8,7 +8,7 @@ import { libInjectCss } from "vite-plugin-lib-inject-css"
 import fs from "fs"
 
 function generateCssDeclaration() {
-  const cssDeclaration = `
+    const cssDeclaration = `
   declare module "*.module.css" {
   const classes: { [key: string]: string }
   export default classes
@@ -20,49 +20,71 @@ function generateCssDeclaration() {
   }
   `
 
-  const outputPath = resolve(__dirname, "lib/css.d.ts")
-  fs.writeFileSync(outputPath, cssDeclaration, "utf-8")
+    const outputPath = resolve(__dirname, "lib/css.d.ts")
+    fs.writeFileSync(outputPath, cssDeclaration, "utf-8")
 }
 
 generateCssDeclaration()
 
 // https://vitejs.dev/config/
-export default defineConfig({
-  plugins: 
-  [
-    react(),
-    libInjectCss(),
-    dts({ include: ["lib"] }),
-  ],
-  build: {
-      copyPublicDir: false,
-      cssCodeSplit: true,
-      lib: {
-        entry: resolve(__dirname, "lib/index.ts"),
-        formats: ["es"],
-      },
-      rollupOptions: {
-        external: ["react", "react/jsx-runtime"],
-        input: Object.fromEntries(
-          glob.sync("lib/**/*.{ts,tsx}", {
-            ignore: ["lib/**/*.d.ts"],
-          }).map(file => [
-            relative(
-              "lib",
-              file.slice(0, file.length - extname(file).length)
-            ),
-            fileURLToPath(new URL(file, import.meta.url))
-          ])
-        ),
-        output: {
-          assetFileNames: "assets/[name][extname]",
-          entryFileNames: "[name].js",
+export default defineConfig(({ mode }) => {
+    const defaultConfig = {
+        plugins: [react()],
+        resolve: {
+            alias: [
+                {
+                    find: "@",
+                    replacement: resolve(__dirname, "src"),
+                },
+                {
+                    find: "@components",
+                    replacement: resolve(__dirname, "lib"),
+                },
+            ],
+        },
+    }
+
+    if (mode === "pkg") {
+        return {
+            plugins: [
+                ...defaultConfig.plugins,
+                libInjectCss(),
+                dts({ include: ["lib"] }),
+            ],
+            build: {
+                copyPublicDir: false,
+                cssCodeSplit: true,
+                lib: {
+                    entry: resolve(__dirname, "lib/index.ts"),
+                    formats: ["es"],
+                },
+                rollupOptions: {
+                    external: ["react", "react/jsx-runtime"],
+                    input: Object.fromEntries(
+                        glob
+                            .sync("lib/**/*.{ts,tsx}", {
+                                ignore: ["lib/**/*.d.ts"],
+                            })
+                            .map((file) => [
+                                relative(
+                                    "lib",
+                                    file.slice(
+                                        0,
+                                        file.length - extname(file).length,
+                                    ),
+                                ),
+                                fileURLToPath(new URL(file, import.meta.url)),
+                            ]),
+                    ),
+                    output: {
+                        assetFileNames: "assets/[name][extname]",
+                        entryFileNames: "[name].js",
+                    },
+                },
+            },
+            ...defaultConfig.resolve,
         }
-      }
-  },
-  resolve: {
-    alias: [{
-      find: "@", replacement: resolve(__dirname, "src"),
-    }],
-  },
+    }
+
+    return defaultConfig
 })

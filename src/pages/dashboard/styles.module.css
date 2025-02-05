@@ -8,7 +8,7 @@
     gap: 1.6rem;
 }
 
-.dashboard .insights>* small {
+.dashboard .insights > * small {
     margin-top: 1.3rem;
     display: block;
 }
@@ -17,11 +17,11 @@
     margin-top: 2rem;
 }
 
-.dashboard .recent-orders>h2 {
+.dashboard .recent-orders > h2 {
     margin-bottom: 2rem;
 }
 
-.dashboard .recent-orders:last-child>a {
+.dashboard .recent-orders:last-child > a {
     text-align: center;
     display: block;
     margin-top: 2rem;
@@ -54,7 +54,7 @@
         width: 100%;
     }
 
-    .dashboard .recent-orders>table {
+    .dashboard .recent-orders > table {
         width: 100%;
         margin: 0;
     }

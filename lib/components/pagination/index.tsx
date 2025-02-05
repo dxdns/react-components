@@ -8,7 +8,12 @@ type Props = {
     onPageChange: (newPage: number) => void
 }
 
-export default function Pagination({ rowsPerPage, count, currentPage, onPageChange }: Props) {
+export default function Pagination({
+    rowsPerPage,
+    count,
+    currentPage,
+    onPageChange,
+}: Props) {
     const nPage = Math.ceil(count / rowsPerPage)
     const numbers = [...Array(nPage + 1).keys()].slice(1)
 

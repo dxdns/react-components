@@ -8,7 +8,7 @@
     overflow: hidden;
 }
 
-.select>select {
+.select > select {
     appearance: none;
     border: 0;
     box-shadow: none;
@@ -20,12 +20,12 @@
     cursor: pointer;
 }
 
-.select>select::-ms-expand {
+.select > select::-ms-expand {
     display: none;
 }
 
 .select::after {
-    content: '\25BC';
+    content: "\25BC";
     position: absolute;
     top: 0;
     right: 0;

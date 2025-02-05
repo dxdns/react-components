@@ -14,38 +14,38 @@
     color: var(--color-dark);
 }
 
-.table>thead {
+.table > thead {
     height: 50px;
 }
 
-.table>thead tr th {
+.table > thead tr th {
     font-size: 0.85em;
     letter-spacing: 0.1em;
     text-transform: uppercase;
 }
 
-.table>caption {
+.table > caption {
     font-size: 1.5em;
     margin: 0.5em 0 0.75em;
 }
 
-.table>tbody>tr {
+.table > tbody > tr {
     padding: 0.35em;
 }
 
-.table>tbody>tr:not(.colappse) {
+.table > tbody > tr:not(.colappse) {
     border-bottom: 1px solid var(--color-light);
 }
 
-.table>tbody>tr:not(.colappse):hover {
+.table > tbody > tr:not(.colappse):hover {
     background-color: var(--color-light);
 }
 
-.table>tbody>tr:last-child {
+.table > tbody > tr:last-child {
     border: none;
 }
 
-.table>tbody .colappse>td {
+.table > tbody .colappse > td {
     height: 0;
     padding-bottom: 0;
     padding-top: 0;
@@ -53,20 +53,22 @@
     letter-spacing: 0.01071em;
 }
 
-.table>tbody .colappse,
-.table>tbody .colappse .content {
+.table > tbody .colappse,
+.table > tbody .colappse .content {
     max-height: 0px;
     overflow: hidden;
-    transition: max-height, padding 0.2s ease-out;
+    transition:
+        max-height,
+        padding 0.2s ease-out;
 }
 
-.table>tbody .colappse.active>td {
+.table > tbody .colappse.active > td {
     height: 100%;
     border-bottom: 1px solid var(--color-light);
 }
 
-.table>tbody .colappse.active,
-.table>tbody .colappse.active .content {
+.table > tbody .colappse.active,
+.table > tbody .colappse.active .content {
     max-height: 400px;
     padding: 16px;
 }
@@ -80,7 +82,7 @@
 }
 
 .table .expand-btn:after {
-    content: '\25BC';
+    content: "\25BC";
     color: #777;
     font-weight: bold;
     float: right;
@@ -97,7 +99,7 @@
         border: 0;
     }
 
-    .table>thead {
+    .table > thead {
         border: none;
         clip: rect(0 0 0 0);
         height: 1px;
@@ -125,7 +127,7 @@
         border-bottom: 0;
     }
 
-    .table>caption {
+    .table > caption {
         font-size: 1.3em;
     }
 }
