@@ -1,4 +1,4 @@
-import { ColorType, SizeType, VariantType } from "@/types"
+import { ColorType, SizeType, VariantType } from "../../types"
 import styles from "./styles.module.css"
 import React from "react"
 

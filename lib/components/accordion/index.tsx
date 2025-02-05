@@ -1,5 +1,5 @@
 import styles from "./styles.module.css"
-import { VariantType } from "@/types"
+import { VariantType } from "../../types"
 import React from "react"
 
 type Props = React.PropsWithChildren & {

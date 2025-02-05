@@ -1,7 +1,7 @@
 import styles from "./styles.module.css"
 import React from "react"
 import IconButton from "../icon-button"
-import { VariantType } from "@/types"
+import { VariantType } from "../../types"
 import { FaSearch } from "react-icons/fa"
 import { MdVisibility, MdVisibilityOff } from "react-icons/md"
 

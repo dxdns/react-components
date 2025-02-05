@@ -23,8 +23,9 @@
     "noFallthroughCasesInSwitch": true,
     "paths": {
       "@/*": [
-        "./src/*"
-      ]
+        "./src/*",
+        "./lib/*"
+      ],
     },
     "plugins": [
       {
@@ -33,7 +34,8 @@
     ],
   },
   "include": [
-    "src"
+    "src",
+    "lib"
   ],
   "references": [
     {

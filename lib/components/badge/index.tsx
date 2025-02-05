@@ -1,6 +1,6 @@
 import styles from "./styles.module.css"
 import React from "react"
-import { SizeType, VariantType } from "@/types"
+import { SizeType, VariantType } from "../../types"
 
 type Props = React.HTMLAttributes<HTMLSpanElement> & React.PropsWithChildren<{
     size?: SizeType

@@ -1,4 +1,4 @@
-import { ThemeType } from "@/types"
+import { ThemeType } from "../../lib/types"
 
 export function getTheme() {
     return localStorage.getItem("theme") || "light" as ThemeType

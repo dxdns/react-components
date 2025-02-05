@@ -9,7 +9,7 @@ type Props = {
     percent: number
 }
 
-export function CardStatistic({ icon, label, value, percent }: Props) {
+export default function({ icon, label, value, percent }: Props) {
     return (
         <Card>
             {icon}

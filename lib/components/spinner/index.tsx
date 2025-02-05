@@ -1,4 +1,4 @@
-import { SizeType } from "@/types"
+import { SizeType } from "../../types"
 import styles from "./styles.module.css"
 
 type Props = {

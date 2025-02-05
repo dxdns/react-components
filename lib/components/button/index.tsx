@@ -1,7 +1,7 @@
 import styles from "./styles.module.css"
 import React from "react"
 import Spinner from "../spinner"
-import { ColorType, SizeType, VariantType } from "@/types"
+import { ColorType, SizeType, VariantType } from "../../types"
 
 type Props = React.ButtonHTMLAttributes<HTMLButtonElement> & React.PropsWithChildren & {
     isLoading?: boolean

@@ -1,6 +1,6 @@
 import styles from "./styles.module.css"
 import Card from "@/components/card"
-import { CardStatistic } from "@/components/card-statistic"
+import CardStatistic from "@/components/card-statistic"
 import DataTable from "@/components/data-table"
 import { columns, insights, rows } from "./data"
 import Input from "@/components/input"
