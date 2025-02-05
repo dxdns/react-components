@@ -1,4 +1,4 @@
-import "../src/index.css"
+import "./index.css"
 export { default as Accordion } from "./components/accordion"
 export { default as Autocomplete } from "./components/autocomplete"
 export { default as Avatar } from "./components/avatar"
