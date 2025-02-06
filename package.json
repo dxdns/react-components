@@ -4,11 +4,12 @@
     "files": [
         "dist"
     ],
-    "version": "1.0.7",
+    "version": "1.0.8",
     "type": "module",
     "scripts": {
         "dev": "npm run format && vite",
         "build": "npm run format && tsc && vite build",
+        "build-pkg": "npm run build -- --mode pkg",
         "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
         "preview": "vite preview",
         "format": "prettier --write ."
@@ -39,7 +40,7 @@
     },
     "description": "This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.",
     "main": "dist/index.js",
-    "types": "dist/types/index.d.ts",
+    "types": "dist/index.d.ts",
     "repository": {
         "type": "git",
         "url": "git+https://github.com/dxdns/react-components.git"
