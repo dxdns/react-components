@@ -19,6 +19,7 @@
     outline: none;
     background: var(--color-light) !important;
     border: none;
+    appearance: none;
 }
 
 .switch .wrapper > input[type="checkbox"]::after {
@@ -49,7 +50,7 @@
 
 .switch .wrapper > .icon {
     position: absolute;
-    top: 21px;
+    top: 23px;
     pointer-events: none;
     left: 7px;
     transition: 0.3s;
